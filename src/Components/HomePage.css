@@ -1,0 +1,27 @@
+.hp {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hp-wrapper {
+    width: 70%;
+}
+
+.hp-name {
+    margin-bottom: 2%;
+    font-size: 1.2rem;
+}
+
+.hp-title1 {
+    margin-bottom: 2%;
+    font-weight: 500;
+    font-size: 5rem;
+}
+
+.hp-title2 {
+    font-weight: 500;
+    font-size: 5rem;
+}
