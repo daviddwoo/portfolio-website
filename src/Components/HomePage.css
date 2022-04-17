@@ -1,6 +1,6 @@
 .hp {
     display: flex;
-    height: 80vh;
+    height: 90vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -12,16 +12,16 @@
 
 .hp-name {
     margin-bottom: 2%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .hp-title1 {
     margin-bottom: 2%;
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 
 .hp-title2 {
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
