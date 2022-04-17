@@ -1,6 +1,6 @@
 import './App.css';
 import HomePage from './Components/HomePage'
-import Projects from './Components/Projects';
+import Projects from './Components/Projects'
 
 function App() {
   return (
