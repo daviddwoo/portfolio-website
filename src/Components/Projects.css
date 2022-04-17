@@ -1,6 +1,6 @@
 .pj {
     /* height: 100vh; */
-    /* background-color: antiquewhite; */
+    background-color: #f7f8fb;
 }
 
 .pj-title {
@@ -9,10 +9,9 @@
     width: 70%;
     font-size: 4rem;
     font-weight: 500;
-    margin-top: 2%;
 }
 
-.pj-title h2{
+.pj-title h3{
     font-weight: 500;
 }
 
