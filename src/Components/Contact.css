@@ -1,12 +1,21 @@
 .ct {
+    margin-top: 30px;
+}
+
+.ct-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.ct-form{
+.ct-info-wrapper {
+    width: 1310px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.ct-form {
+    margin-top: 25px;
+    width: 685px;
 }
 
 .ct-title {
@@ -14,20 +23,20 @@
     font-size: 4rem;
     font-weight: 500;
     flex-direction: column;
-    margin-left: 19%;
     margin-bottom: 20px;
 }
 
-.ct-title h3{
+.ct-title h3 {
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: 4rem;
 }
 
 .ct-title span {
     color: gray;
     font-weight: 200;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .ct-field {
