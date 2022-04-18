@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Contact.css'
 import { TextField } from '@mui/material'
 import { styled } from '@mui/material';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -25,6 +27,12 @@ const CssTextField = styled(TextField)({
   
 
 const Contact = () => {
+    const [text, setText] = useState('');
+
+    const onSubmit = (ev) => {
+        ev.preventDefault();
+    }
+
     return (
         <div className='ct'>
             <div className='ct-title'>
@@ -32,6 +40,7 @@ const Contact = () => {
                 <span>Feel free to leave a message!</span>
             </div>
             <div className='ct-form'>
+                <form onSubmit={onSubmit}>
                     <div className='ct-field'>
                         <CssTextField  
                             className='field' 
@@ -60,16 +69,33 @@ const Contact = () => {
                         <CssTextField  
                             className='field' 
                             label="Message" 
+                            multiline
+                            rows={4}
                             variant="outlined"     
                             inputProps={{
                                 style: {
                                     height: '100px',
-                                    width: '640px'
+                                    width: '640px',
                                 }
                             }}
                         />
                     </div>
-                <button className='form-btn'>Submit Message</button>
+                    <Button 
+                        variant='contained' 
+                        size='large' 
+                        endIcon={<SendIcon />} 
+                        sx={{
+                            backgroundColor: '#3d3d40', 
+                            width: '670px', 
+                            marginLeft: '15px',
+                            '&:hover': {
+                                backgroundColor: '#3d3d40',
+                            }
+                        }}
+                    >
+                        Send Message
+                    </Button>
+                </form>
             </div>
         </div>
     )
