@@ -13,10 +13,29 @@ const Footer = () => {
         <div className='ft'>
             <hr className='ft-hr'/>
             <div className='ft-info'>
-                <div className='ft-cr'>&copy; Copyright | David Woo | All rights reserved</div>
+                <div className='ft-cr'>&copy; 2022 | David Woo | All rights reserved</div>
                 <div className='ft-icons'>
-                    <LinkedInIcon onClick={() => openSite('linkedin')} sx={{cursor: 'pointer'}} fontSize='large'/>
-                    <GitHubIcon onClick={() => openSite('github')} sx={{cursor: 'pointer'}} fontSize='large'/>                
+                    <LinkedInIcon 
+                        onClick={() => openSite('linkedin')} 
+                        sx={{
+                            cursor: 'pointer', 
+                            '&:hover': {
+                                color: 'blue',
+                            },
+                            transition: 'all 0.5s ease'
+                        }} 
+                        fontSize='large'
+                    />
+                    <GitHubIcon 
+                        onClick={() => openSite('github')} 
+                        sx={{
+                            cursor: 'pointer',
+                            '&:hover': {
+                                color: 'blue',
+                            },
+                            transition: 'all 0.5s ease'
+                        }} 
+                        fontSize='large'/>                
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 .ct {
     display: flex;
-    height: 50vh;
+    height: 40vh;
 }
 
 .ct-form{
@@ -19,7 +19,7 @@
     flex-direction: column;
     margin-left: 19%;
     margin-bottom: 20px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .ct-title h3{
