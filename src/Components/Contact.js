@@ -27,11 +27,49 @@ const CssTextField = styled(TextField)({
 const Contact = () => {
     return (
         <div className='ct'>
-            Contact Form
-            <div className='ct-wrapper'>
-                <CssTextField  className='field' label="Name" variant="outlined" />
-                <CssTextField  className='field' label="Email" variant="outlined" />
-                <CssTextField  className='field' label="Message" variant="outlined" />
+            <div className='ct-title'>
+                <h3>Get in touch</h3>
+                <span>Feel free to leave a message!</span>
+            </div>
+            <div className='ct-form'>
+                    <div className='ct-field'>
+                        <CssTextField  
+                            className='field' 
+                            label="Name" 
+                            variant="outlined"     
+                            inputProps={{
+                                style: {
+                                    width: '640px'
+                                }
+                            }}
+                        />
+                    </div>
+                    <div className='ct-field'>
+                        <CssTextField  
+                            className='field' 
+                            label="Email" 
+                            variant="outlined"     
+                            inputProps={{
+                                style: {
+                                    width: '640px'
+                                }
+                            }}
+                        />
+                    </div>
+                    <div className='ct-field'>
+                        <CssTextField  
+                            className='field' 
+                            label="Message" 
+                            variant="outlined"     
+                            inputProps={{
+                                style: {
+                                    height: '100px',
+                                    width: '640px'
+                                }
+                            }}
+                        />
+                    </div>
+                <button className='form-btn'>Submit Message</button>
             </div>
         </div>
     )
