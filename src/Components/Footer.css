@@ -1,0 +1,28 @@
+.ft {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* background-color: #f7f8fb; */
+}
+
+.ft-hr {
+    color: black;
+    width: 50%;
+}
+
+.ft-info {
+    width: 50%;
+    display: flex;
+    margin-left: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ft-cr {
+    margin-top: 25px;
+}
+
+.ft-icons {
+    margin-top: 25px;
+}
