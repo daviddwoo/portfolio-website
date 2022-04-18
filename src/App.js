@@ -1,16 +1,18 @@
 import './App.css';
-import HomePage from './Components/HomePage'
-import Projects from './Components/Projects'
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+// import HomePage from './Components/HomePage'
+// import Projects from './Components/Projects'
+// import Contact from './Components/Contact';
+// import Footer from './Components/Footer';
+import Project1 from './Components/Project1'
 
 function App() {
   return (
     <div>
-      <HomePage />
+      {/* <HomePage />
       <Projects />
       <Contact />
-      <Footer />
+      <Footer /> */}
+      <Project1 />
     </div>
   );
 }
