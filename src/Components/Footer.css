@@ -1,5 +1,5 @@
 .ft {
-    height: 15vh;
+    height: 10vh;
     margin-top: 40px;
     /* align-items: center; */
     /* background-color: #f7f8fb; */
@@ -12,12 +12,12 @@
 
 .ft-hr {
     color: black;
-    max-width: 1313px;
+    max-width: 1310px;
     /* width: 1313px; */
 }
 
 .ft-info {
-    width: 1313px;
+    width: 1310px;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */

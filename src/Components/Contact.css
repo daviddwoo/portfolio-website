@@ -1,25 +1,21 @@
 .ct {
     display: flex;
-    height: 40vh;
+    justify-content: center;
 }
 
 .ct-form{
     display: flex;
     flex-direction: column;
-    margin-left: 19%;
-    margin-top: 20px;
     justify-content: center;
 }
 
 .ct-title {
     display: flex;
-    /* justify-content: center; */
     font-size: 4rem;
     font-weight: 500;
     flex-direction: column;
     margin-left: 19%;
     margin-bottom: 20px;
-    margin-top: 50px;
 }
 
 .ct-title h3{
