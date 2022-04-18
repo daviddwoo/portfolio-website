@@ -55,7 +55,7 @@
 .pj-info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
 
 .pj-info-title h4 {
