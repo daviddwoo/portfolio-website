@@ -1,23 +1,29 @@
 .ft {
     height: 15vh;
-    display: flex;
-    flex-direction: column;
     margin-top: 40px;
     /* align-items: center; */
     /* background-color: #f7f8fb; */
 }
 
+.ft-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .ft-hr {
     color: black;
-    width: 50%;
+    max-width: 1313px;
+    /* width: 1313px; */
 }
 
 .ft-info {
-    width: 50%;
+    width: 1313px;
     display: flex;
-    margin-left: 25%;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+}
+
+.ft-info-wrapper {
 }
 
 .ft-cr {
