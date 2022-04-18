@@ -17,9 +17,11 @@ const CssTextField = styled(TextField)({
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: 'black',
+        borderRadius: 0
       },
       '&:hover fieldset': {
         borderColor: 'black',
+        borderRadius: 0
       },
       '&.Mui-focused fieldset': {
         borderColor: 'black',
@@ -46,17 +48,11 @@ const Contact = () => {
         <div className='ct'>
             <div className='ct-title'>
                 <h3>Get in touch</h3>
-                <span>Feel free to leave a message!</span>
+                <span>Feel free to leave a message,</span>
+                <span>or connect with me on LinkedIn!</span>
             </div>
             <div className='ct-form'>
                 <form ref={form} onSubmit={onSubmit}>
-                    {/* <label>Name</label>
-                    <input type="text" name="user_name" />
-                    <label>Email</label>
-                    <input type="email" name="user_email" />
-                    <label>Message</label>
-                    <textarea name="message" />
-                    <input type="submit" value="Send" /> */}
                     <div className='ct-field'>
                         <CssTextField
                             required
@@ -113,8 +109,10 @@ const Contact = () => {
                             backgroundColor: '#3d3d40', 
                             width: '670px', 
                             marginLeft: '15px',
+                            borderRadius: 0,
                             '&:hover': {
                                 backgroundColor: '#3d3d40',
+                                borderRadius: 0
                             }
                         }}
                     >
