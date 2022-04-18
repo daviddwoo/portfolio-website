@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import './Contact.css'
 import { TextField } from '@mui/material'
 import { styled } from '@mui/material';
+import { FormControl } from '@mui/material';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import emailjs from '@emailjs/browser'
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -33,6 +35,12 @@ const Contact = () => {
         ev.preventDefault();
     }
 
+    const onChange = (ev) => {
+        const change = {};
+        change[ev.target.name] = ev.target.value
+        setText(ev.target.value);
+    }
+
     return (
         <div className='ct'>
             <div className='ct-title'>
@@ -42,7 +50,7 @@ const Contact = () => {
             <div className='ct-form'>
                 <form onSubmit={onSubmit}>
                     <div className='ct-field'>
-                        <CssTextField  
+                        <CssTextField
                             className='field' 
                             label="Name" 
                             variant="outlined"     
@@ -66,7 +74,7 @@ const Contact = () => {
                         />
                     </div>
                     <div className='ct-field'>
-                        <CssTextField  
+                        <CssTextField 
                             className='field' 
                             label="Message" 
                             multiline
