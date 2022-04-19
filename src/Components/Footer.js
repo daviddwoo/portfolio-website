@@ -23,7 +23,7 @@ const Footer = () => {
                                     '&:hover': {
                                         color: '#0A66C2',
                                     },
-                                    transition: 'all 0.4s ease'
+                                    transition: 'all 0.5s ease'
                                 }} 
                                 fontSize='large'
                             />
@@ -32,9 +32,9 @@ const Footer = () => {
                                 sx={{
                                     cursor: 'pointer',
                                     '&:hover': {
-                                        color: '#0A66C2',
+                                        color: '#AD5C51',
                                     },
-                                    transition: 'all 0.4s ease'
+                                    transition: 'all 0.5s ease'
                                 }} 
                                 fontSize='large'
                             />                
