@@ -1,11 +1,6 @@
 import React from 'react'
 import './Project1.css'
 import projImg1 from '../gs-hp.png'
-import Footer from './Footer';
-import Contact from './Contact';
-
-// import projImg2 from '../podify.png'
-// import projImg3 from '../proj3.jpg'
 
 const Project1 = () => {
     return (
@@ -47,9 +42,7 @@ const Project1 = () => {
                         </p>
                     </div>
                 </div>
-                <hr className='p1-hr'/>
-                <Contact />
-                <Footer />
+                {/* <hr className='p1-hr'/> */}
             </div>
             
         </div>

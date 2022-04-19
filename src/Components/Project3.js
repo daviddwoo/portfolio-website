@@ -1,8 +1,6 @@
 import React from 'react'
 import './Project1.css'
 import projImg1 from '../podify-hp.png'
-import Footer from './Footer';
-import Contact from './Contact';
 
 const Project3 = () => {
     return (
@@ -43,9 +41,7 @@ const Project3 = () => {
                         </p>
                     </div>
                 </div>
-                <hr className='p1-hr'/>
-                <Contact />
-                <Footer />
+                {/* <hr className='p1-hr'/> */}
             </div>
             
         </div>

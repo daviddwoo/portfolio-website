@@ -39,6 +39,10 @@
     margin-top: 30px;
 }
 
+.p1-info {
+    padding-bottom: 50px;
+}
+
 .p1-info-wrapper {
     display: flex;
     margin-top: 20px;
