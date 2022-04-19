@@ -1,6 +1,7 @@
 import './App.css';
 // import HomePage from './Components/HomePage'
 // import Projects from './Components/Projects'
+import Navbar from './Components/Navbar';
 import LandingPage from './Components/LandingPage';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
@@ -13,6 +14,7 @@ import { Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <div>
+      <Navbar />
       <ScrollToTop>
         <Routes>
           <Route path='/' element={<LandingPage />}/>

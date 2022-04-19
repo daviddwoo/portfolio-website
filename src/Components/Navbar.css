@@ -1,0 +1,22 @@
+.nb {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+.nb-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1310px;
+    font-size: 1.2rem;
+}
+
+.nb-right {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nb-right div {
+    margin-left: 50px;
+}
