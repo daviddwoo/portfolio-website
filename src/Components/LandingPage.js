@@ -2,16 +2,11 @@ import React from 'react'
 import HomePage from './HomePage'
 import Projects from './Projects'
 
-const LandingPage = () => {
-
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, []);
-
+const LandingPage = ({ projRef }) => {
     return (
         <>
             <HomePage />
-            <Projects />
+            <Projects projRef={projRef}/>
         </>
     )
 }

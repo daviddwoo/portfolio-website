@@ -6,11 +6,11 @@ import Project3 from '../proj3.jpg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useNavigate } from 'react-router-dom'
 
-const Projects = () => {
+const Projects = ({ projRef }) => {
     const navigate = useNavigate();
 
     return (
-        <div className='pj'>
+        <div className='pj' ref={projRef}> 
             <div className='pj-wrapper'>
                 <div className='pj-cards'>
                     <div className='pj-img-wrapper'>

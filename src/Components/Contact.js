@@ -31,7 +31,7 @@ const CssTextField = styled(TextField)({
 });
   
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
 
     const form = useRef();
     const [formData, setFormData] = useState({'from_name': '', 'from_email': '', 'message': ''})
@@ -55,7 +55,7 @@ const Contact = () => {
     }
 
     return (
-        <div className='ct'>
+        <div className='ct' ref={contactRef}>
             <div className='ct-wrapper'>
                 <div className='ct-info-wrapper'>
                     <div className='ct-title'>
