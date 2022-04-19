@@ -1,8 +1,7 @@
 .p1 {
-    /* height: 100vh; */
-    /* background-color: brown; */
     display: flex;
     justify-content: center;
+    background-color: #f7f8fb;
 }
 
 .p1-img-wrapper {
@@ -10,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1300px;
+    width: 1310px;
 }
 
 .p1-img-wrapper h1 {
@@ -23,6 +22,7 @@
     font-size: 1.5em;
     font-weight: 400;
     color: gray;
+    margin-top: 0;
 }
 
 .proj-img {
@@ -36,10 +36,52 @@
 .p1-hr {
     color: black;
     width: 1300px;
-    margin-top: 50px;
+    margin-top: 30px;
+}
+
+.p1-info-wrapper {
+    display: flex;
+    margin-top: 20px;
 }
 
 .p1-info p {
-    line-height: 4rem;
+    line-height: 2.5rem;
     font-size: 2em;
+    margin: 0;
+}
+
+.p1-info span {
+    font-size: 1.8em;
+}
+
+.p1-info h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 400;
+    color: gray;
+}
+
+.p1-info-role {
+    margin-right: 100px;
+}
+
+.contr h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.p1-contr {
+    margin-top: 30px;
+}
+
+.p1-contr span{
+    font-weight: 500;
+}
+
+.p1-contr p {
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 2rem;
 }

@@ -17,10 +17,12 @@ const CssTextField = styled(TextField)({
       '& fieldset': {
         borderColor: 'black',
         borderRadius: 0,
+        backgroundColor: 'white'
       },
       '&:hover fieldset': {
         borderColor: 'black',
-        borderRadius: 0
+        borderRadius: 0,
+        backgroundColor: 'white'
       },
       '&.Mui-focused fieldset': {
         borderColor: 'black',
