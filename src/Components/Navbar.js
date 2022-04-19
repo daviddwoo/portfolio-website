@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom'
 
 const Navbar = ({ scrollToProj, scrollToContact }) => {
 
-    const navigate = useNavigate();
+    const history = useNavigate();
 
     return (
         <div className='nb'>
             <div className='nb-wrapper'>
-                <div className='nb-left' onClick={() => navigate('/')}>Home</div>
+                <div className='nb-left' onClick={() => history('/')}>Home</div>
                 <div className='nb-right'>
                     <div>About</div>
                     {/* <NavHashLink smooth to='/#projects'>Portfolio</NavHashLink> */}
