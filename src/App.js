@@ -7,17 +7,20 @@ import Footer from './Components/Footer';
 import Project1 from './Components/Project1'
 import Project2 from './Components/Project2'
 import Project3 from './Components/Project3'
+import ScrollToTop from './Components/ScrollToTop';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path='/' element={<LandingPage />}/>
-        <Route exact path='/unplgd' element={<Project1 />}/>
-        <Route exact path='/podify' element={<Project2 />}/>
-        <Route exact path='/conductor' element={<Project3 />}/>
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path='/' element={<LandingPage />}/>
+          <Route exact path='/unplgd' element={<Project1 />}/>
+          <Route exact path='/podify' element={<Project2 />}/>
+          <Route exact path='/conductor' element={<Project3 />}/>
+        </Routes>
+      </ScrollToTop>
       <Contact />
       <Footer /> 
     </div>
