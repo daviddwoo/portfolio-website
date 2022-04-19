@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import { NavHashLink } from 'react-router-hash-link'
 
 const Navbar = ({ scrollToProj, scrollToContact }) => {
@@ -12,13 +13,9 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
             <div className='nb-wrapper'>
                 <div className='nb-left' onClick={() => history('/')}>Home</div>
                 <div className='nb-right'>
-                    <div>About</div>
-                    {/* <NavHashLink smooth to='/#projects'>Portfolio</NavHashLink> */}
-                    {/* <div onClick={() => {
-                        navigate('/');
-                        scrollToProj();
-                    }}>Portfolio</div> */}
-                    <div onClick={scrollToProj}>Portfolio</div>
+                    <div onClick={() => history('/about')}>About</div>
+                    {/* <Link to='/#projects'>Portfolio</Link> */}
+                    <div onClick={() => history('/#projects')}>Portfolio</div>
                     <div onClick={scrollToContact}>Contact</div>
                     <div>Resume</div>
                 </div>

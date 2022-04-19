@@ -1,0 +1,52 @@
+.ab {
+
+}
+
+.ab-title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ab-title-wrapper {
+    width: 1312px;
+}
+
+.ab-title h1 {
+    font-size: 6em;
+    font-weight: 500;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.ab-pic {
+    width: 310px;
+    height: 398px;
+    object-fit: contain;
+    box-shadow: rgba(50, 50, 93, 0.7) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 8px;
+}
+
+.ab-info-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.ab-details {
+    display: flex;
+    width: 1310px;
+    justify-content: space-evenly;
+}
+
+.ab-details p {
+    margin-top: 0;
+    margin-left: 50px;
+    /* text-align: justify; */
+}
+
+.ab-details-p {
+    width: 850px;
+    font-size: 1.8em;
+    line-height: 1.6em;
+}
