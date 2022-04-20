@@ -9,7 +9,7 @@ const HomePage = () => {
                 {/* <div className='hp-name'>David Woo</div> */}
                 <div className='hp-title1'><h1>Software Engineer</h1></div>
                 <hr className='hr'/>
-                <div className='hp-title2'><h1>Software Developer</h1></div>
+                <div className='hp-title2'><h1>Fullstack Developer</h1></div>
             </div>
         </div>
     )

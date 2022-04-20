@@ -1,6 +1,8 @@
 import React from 'react'
 import './Project1.css'
 import projImg1 from '../gs-hp.png'
+import LinkIcon from '@mui/icons-material/Link';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Project1 = () => {
     return (
@@ -17,11 +19,21 @@ const Project1 = () => {
                         </div>
                         <div className='p1-info-role'>
                             <span>Date</span>
-                            <h4>Mar 2022</h4>
+                            <h4>Feb 2022</h4>
                         </div>
-                        <div>
+                        <div className='p1-info-role'>
                             <span>Technologies</span>
                             <h4>Javascript, React/Redux, Express, Sequelize, PostgreSQL, Stripe API</h4>
+                        </div>
+                        <div className='p1-info-links'>
+                            <div className='p1-links'>
+                                <LinkIcon fontSize='large'/>
+                                <h4>Deployed Link</h4>
+                            </div>
+                            <div className='p1-links'>
+                                <GitHubIcon fontSize='large'/>
+                                <h4>Github Repo</h4>
+                            </div>
                         </div>
                     </div>
                     <p>

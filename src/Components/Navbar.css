@@ -5,6 +5,13 @@
     background-color: transparent;
 }
 
+.nb-bg {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
 .nb-wrapper {
     display: flex;
     justify-content: space-between;
