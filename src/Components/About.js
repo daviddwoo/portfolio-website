@@ -33,8 +33,45 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                Experience
+            <div className='ab-exp'>
+                <div className='ab-title'>
+                    <div className='ab-title-wrapper'>
+                        <h3>Experience</h3>
+                    </div>
+                </div>
+                <div className='ab-exp-wrapper'>
+                    <div className='ab-exp-info'>
+                        <div className='ab-details-title'>
+                            <h2>2019 - Present</h2>
+                        </div>
+                        <div className='ab-details-p'>
+                            <h2>Minaris Regenerative Medicine · Allendale, NJ</h2>
+                            <span>Validation Specialist</span>
+                        </div>
+                    </div>
+                </div>
+                <div className='ab-exp-wrapper'>
+                    <div className='ab-exp-info'>
+                        <div className='ab-details-title'>
+                            <h2>2017 - 2019</h2>
+                        </div>
+                        <div className='ab-details-p'>
+                            <h2>Allergan · Branchburg, NJ</h2>
+                            <span>Quality Engineer I</span>
+                        </div>
+                    </div>
+                </div>
+                <div className='ab-exp-wrapper'>
+                    <div className='ab-exp-info'>
+                        <div className='ab-details-title'>
+                            <h2>2016 - 2017</h2>
+                        </div>
+                        <div className='ab-details-p'>
+                            <h2>Collagen Matrix · Oakland, NJ</h2>
+                            <span>Integration Technician</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
