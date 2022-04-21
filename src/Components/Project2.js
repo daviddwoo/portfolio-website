@@ -42,20 +42,27 @@ const Project2 = () => {
                         </div>
                     </div>
                     <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
-                        ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
-                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                        This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, a fullstack application where users can access, search,  
+                        and add timestamps/comments for their favorite podcasts!
+                    </p>
+                    <p>
+                        Users will login with their Spotify account and can have the capability of browsing through top podcasts, adding shows to their favorities, liking / disliking specific episodes and more.                         
+                    </p>
+                    <p>
+                        Below is the video presentation of our project!
                     </p>
                     <hr className='p1-hr'/>
 
                     <div className='p1-contr'>
                         <span>Contributions</span>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
-                            velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                            Helped implement Spotify OAuth login and integrated user access token into our database used for data retrieval from the Spotify API.
+                        </p>
+                        <p>
+                            Developed Redux store and action creators / thunks for asynchronous calls to backend server used for CRUD functionality.
+                        </p>
+                        <p>
+                            Created Single Podcast page with timestamp, comments & replies, and liking / disliking comments functionality. This was built using React functional components with hooks and Express API routes.  
                         </p>
                     </div>
                 </div>

@@ -42,19 +42,25 @@ const Project3 = () => {
                         </div>
                     </div>
                     <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
-                        ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
-                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                        This was a solo project I built in a week span during the Flex program. I was fascinated by machine learning and decided to work with this technology to build Conductor! 
+                    </p>
+                    <p>
+                        Conductor is a web based game where character movement is not actually controlled by the keyboard or mouse, but instead by hand motions in the webcam!
+                    </p>
+                    <p>
+                        The player will press start to turn on the webcam and make certain hand motions in the camera in order to control the character. The probability percentages of which hand motion is being detected will be displayed under the camera.
+                    </p>
+                    <p>
+                        Please check out the screen demo of the game below!
                     </p>
                     <hr className='p1-hr'/>
                     <div className='p1-contr'>
                         <span>Contributions</span>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
-                            velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                            Utilized Teachable Machine to train different image classification models based on TensorFlow.js technology.
+                        </p>
+                        <p>
+                            Built the web game using the Phaser3 library.
                         </p>
                     </div>
                 </div>

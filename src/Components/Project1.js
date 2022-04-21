@@ -42,20 +42,23 @@ const Project1 = () => {
                         </div>
                     </div>
                     <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
-                        ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
-                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                        UNPLGD is the first project I worked on during the Flex program. It is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
                     </p>
                     <hr className='p1-hr'/>
 
                     <div className='p1-contr'>
                         <span>Contributions</span>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. qui dolorem ipsum quia dolor sit amet, consectetur, adipisci 
-                        velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                            Integrated guest and user cart experience, where both can add, edit, or remove products in the shopping cart. This functionality was built using React / Redux and Express API routes
+                        </p>
+                        <p>
+                            Implemented the Stripe API for registered user checkout process.                           
+                        </p>
+                        <p>
+                            Built and designed entire UX / UI experience for both guest and registered users. CSS and Material UI were utilized to design the application.                          
+                        </p>
+                        <p>
+                            Helped set up Sequelize models / associations and Express routes for back-end data implementation. 
                         </p>
                     </div>
                 </div>

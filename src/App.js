@@ -23,11 +23,11 @@ function App() {
 
   return (
     <div>
-      <Navbar scrollToProj={scrollToProj} scrollToContact={scrollToContact}/>
-      <AppRoutes projRef={projRef}/>
-      <Contact contactRef={contactRef}/>
-      <Footer /> 
-      <ScrollToTop />
+        <Navbar scrollToProj={scrollToProj} scrollToContact={scrollToContact}/>
+        <AppRoutes projRef={projRef}/>
+        <Contact contactRef={contactRef}/>
+        <Footer /> 
+        <ScrollToTop />
     </div>
   );
 }
