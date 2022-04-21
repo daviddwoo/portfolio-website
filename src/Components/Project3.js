@@ -1,10 +1,15 @@
 import React from 'react'
 import './Project1.css'
 import projImg1 from '../podify-hp.png'
-import LinkIcon from '@mui/icons-material/Link';
+// import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Project3 = () => {
+
+    // const openSite = (site) => {
+    //     return site === 'live' ? window.open('https://graceshopper-unplgd.herokuapp.com/') : window.open('https://github.com/daviddwoo/unplgd')
+    // }
+
     return (
         <div className='p1'>
             <div className='p1-img-wrapper'>
@@ -26,11 +31,11 @@ const Project3 = () => {
                             <h4>Javascript, TensorFlow.js, Teachable Machine, Phaser3</h4>
                         </div>
                         <div className='p1-info-links'>
-                            <div className='p1-links'>
+                            {/* <div className='p1-links' onClick={() => window.open('https://graceshopper-unplgd.herokuapp.com/')}>
                                 <LinkIcon fontSize='large'/>
                                 <h4>Deployed Link</h4>
-                            </div>
-                            <div className='p1-links'>
+                            </div> */}
+                            <div className='p1-links' onClick={() => window.open('https://github.com/daviddwoo/conductor')}>
                                 <GitHubIcon fontSize='large'/>
                                 <h4>Github Repo</h4>
                             </div>

@@ -1,15 +1,13 @@
 import React from 'react'
 import './Navbar.css'
-import { useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-// import { NavHashLink } from 'react-router-hash-link'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const Navbar = ({ scrollToProj, scrollToContact }) => {
-
     const history = useNavigate();
-
+    const location = useLocation();
+    
     return (
-        <div className='nb'>
+        <div className={location.pathname === '/' || location.pathname === '/about' ? 'nb': 'nb-bg'}>
             <div className='nb-wrapper'>
                 <div className='nb-left' onClick={() => history('/')}>Home</div>
                 <div className='nb-right'>

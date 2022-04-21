@@ -33,6 +33,9 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <div>
+                Experience
+            </div>
         </div>
     )
 }

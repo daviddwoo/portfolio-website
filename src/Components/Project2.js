@@ -5,6 +5,11 @@ import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Project2 = () => {
+
+    const openSite = (site) => {
+        return site === 'live' ? window.open('https://podify-fsa.herokuapp.com/aboutUs') : window.open('https://github.com/daviddwoo/podify')
+    }
+
     return (
         <div className='p1'>
             <div className='p1-img-wrapper'>
@@ -26,11 +31,11 @@ const Project2 = () => {
                             <h4>Javascript, React/Redux, Express, Sequelize, PostgreSQL, Spotify API</h4>
                         </div>
                         <div className='p1-info-links'>
-                            <div className='p1-links'>
+                            <div className='p1-links' onClick={() => openSite('live')}>
                                 <LinkIcon fontSize='large'/>
                                 <h4>Deployed Link</h4>
                             </div>
-                            <div className='p1-links'>
+                            <div className='p1-links' onClick={() => openSite('gh')}>
                                 <GitHubIcon fontSize='large'/>
                                 <h4>Github Repo</h4>
                             </div>
