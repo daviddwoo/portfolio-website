@@ -25,13 +25,14 @@ const About = () => {
                             tech field. I am passionate about learning and improving my skillset to become a valuable asset to any team.
                         </p>
                         <p>
-                            While I'm not coding, I am an avid golfer, music lover, basketball enthusiast (go Knicks!) and am learning how to DJ! Please feel free to reach out to me
+                            While I'm not coding, I am an avid golfer, music lover, basketball enthusiast (go Knicks!) and am learning how to DJ. Please feel free to reach out to me
                             with a message or connect with me on LinkedIn!
                         </p>
                     </div>
                 </div>
             </div>
-            <div className='ab-exp'>
+            <hr className='ab-hr'/>
+            {/* <div className='ab-exp'>
                 <div className='ab-title'>
                     <div className='ab-title-wrapper'>
                         <h3>Experience</h3>
@@ -70,7 +71,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

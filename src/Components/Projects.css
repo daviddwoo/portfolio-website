@@ -53,7 +53,7 @@
 
 .pj-cards h2 {
     font-size: 3.5em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .pj-info {
@@ -80,6 +80,7 @@
 .pj-info-title {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 .pj-info-tall {

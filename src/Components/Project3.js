@@ -42,13 +42,13 @@ const Project3 = () => {
                         </div>
                     </div>
                     <p>
-                        This was a solo project I built in a week span during the Flex program. I was fascinated by machine learning and decided to work with this technology to build Conductor! 
+                        This was a solo project I built in a week span during the Flex program. I was fascinated by machine learning and decided to work with this technology to build Conductor. 
                     </p>
                     <p>
-                        Conductor is a web based game where character movement is not actually controlled by the keyboard or mouse, but instead by hand motions in the webcam!
+                        Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
                     </p>
                     <p>
-                        The player will press start to turn on the webcam and make certain hand motions in the camera in order to control the character. The probability percentages of which hand motion is being detected will be displayed under the camera.
+                        The player will press start to turn on the webcam and make certain hand motions in the camera in order to control the character. The probability percentages of which motion being detected will be displayed under the camera.
                     </p>
                     <p>
                         Please check out the screen demo of the game below!

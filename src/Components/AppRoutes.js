@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 // import LandingPage from './LandingPage';
 import HomePage from './HomePage';
 import Projects from './Projects';

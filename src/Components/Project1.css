@@ -50,19 +50,20 @@
 
 .p1-info p {
     line-height: 2.5rem;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
     margin-bottom: 20px;
 }
 
 .p1-info span {
     font-size: 1.8em;
+    font-weight: 700;
 }
 
 .p1-info h4 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-top: 10px;
-    font-weight: 400;
+    font-weight: 500;
     color: gray;
 }
 
@@ -98,12 +99,19 @@
 }
 
 .p1-contr span{
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .p1-contr p {
     margin-top: 20px;
-    font-weight: 300;
-    font-size: 1.5em;
+    font-weight: 400;
+    font-size: 1.4em;
     line-height: 2rem;
+    color: gray;
+}
+
+.react-player {
+    margin-top: 30px;
+    box-shadow: rgba(50, 50, 93, 0.7) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }

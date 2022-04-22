@@ -3,6 +3,7 @@ import './Project1.css'
 import projImg1 from '../podify-hp.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ReactPlayer from 'react-player';
 
 const Project2 = () => {
 
@@ -43,7 +44,7 @@ const Project2 = () => {
                     </div>
                     <p>
                         This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, a fullstack application where users can access, search,  
-                        and add timestamps/comments for their favorite podcasts!
+                        and add timestamps & comments for their favorite podcasts!
                     </p>
                     <p>
                         Users will login with their Spotify account and can have the capability of browsing through top podcasts, adding shows to their favorities, liking / disliking specific episodes and more.                         
@@ -52,7 +53,10 @@ const Project2 = () => {
                         Below is the video presentation of our project!
                     </p>
                     <hr className='p1-hr'/>
-
+                    <div className='react-player' >
+                        <ReactPlayer url={'https://vimeo.com/701864385'} width={1312} height={740}/>
+                    </div>
+                    <hr className='p1-hr'/>
                     <div className='p1-contr'>
                         <span>Contributions</span>
                         <p>
