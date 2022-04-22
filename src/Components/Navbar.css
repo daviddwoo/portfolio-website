@@ -25,6 +25,12 @@
     cursor: pointer;
 }
 
+.nb-left img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+}
+
 .nb-right {
     display: flex;
     justify-content: space-evenly;

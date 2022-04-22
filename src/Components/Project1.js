@@ -42,7 +42,7 @@ const Project1 = () => {
                         </div>
                     </div>
                     <p>
-                        UNPLGD is the first project I worked on during the Flex program. It is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
+                        UNPLGD is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
                     </p>
                     <hr className='p1-hr'/>
 

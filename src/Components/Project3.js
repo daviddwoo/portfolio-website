@@ -3,6 +3,7 @@ import './Project1.css'
 import projImg1 from '../podify-hp.png'
 // import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ReactPlayer from 'react-player';
 
 const Project3 = () => {
 
@@ -53,6 +54,10 @@ const Project3 = () => {
                     <p>
                         Please check out the screen demo of the game below!
                     </p>
+                    <hr className='p1-hr'/>
+                    <div className='react-player' >
+                        <ReactPlayer url={'https://vimeo.com/701864385'} width={1312} height={740}/>
+                    </div>
                     <hr className='p1-hr'/>
                     <div className='p1-contr'>
                         <span>Contributions</span>

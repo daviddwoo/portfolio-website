@@ -44,7 +44,7 @@ const Project2 = () => {
                     </div>
                     <p>
                         This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, a fullstack application where users can access, search,  
-                        and add timestamps & comments for their favorite podcasts!
+                        and add timestamps & comments for their favorite podcasts.
                     </p>
                     <p>
                         Users will login with their Spotify account and can have the capability of browsing through top podcasts, adding shows to their favorities, liking / disliking specific episodes and more.                         
