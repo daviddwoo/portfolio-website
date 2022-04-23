@@ -95,3 +95,43 @@
 .arrowIcon {
     margin-top: 4px;
 }
+
+@media only screen and (max-width: 420px) {
+    .pj-img {
+        max-width: 340px;
+        max-height: 340px;
+    }
+
+    .pj-cards h2 {
+        font-size: 2em;
+    }
+
+    .pj-cards {
+        flex-direction: column;
+    }
+
+    .pj-img-tall {
+        max-height: 400px;
+    }
+
+    .pj-info {
+        margin-bottom: 30px;
+    }
+
+    .pj-info-tall {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: -40px;
+    }
+
+    .pj-info-title h4 {
+        font-size: 1.5em;
+    }
+
+    .pj-img-wrapper {
+        width: 100%;
+        align-items: center;
+    }
+    
+}

@@ -15,30 +15,30 @@ const Footer = () => {
             <div className='ft-wrapper'>
                 <div className='ft-info'>
                     <div className='ft-cr'>&copy; 2022 | David Woo | All rights reserved</div>
-                        <div className='ft-icons'>
-                            <LinkedInIcon 
-                                onClick={() => openSite('linkedin')} 
-                                sx={{
-                                    cursor: 'pointer', 
-                                    '&:hover': {
-                                        color: '#0A66C2',
-                                    },
-                                    transition: 'all 0.5s ease'
-                                }} 
-                                fontSize='large'
-                            />
-                            <GitHubIcon 
-                                onClick={() => openSite('github')} 
-                                sx={{
-                                    cursor: 'pointer',
-                                    '&:hover': {
-                                        color: '#AD5C51',
-                                    },
-                                    transition: 'all 0.5s ease'
-                                }} 
-                                fontSize='large'
-                            />                
-                        </div>
+                    <div className='ft-icons'>
+                        <LinkedInIcon 
+                            onClick={() => openSite('linkedin')} 
+                            sx={{
+                                cursor: 'pointer', 
+                                '&:hover': {
+                                    color: '#0A66C2',
+                                },
+                                transition: 'all 0.5s ease'
+                            }} 
+                            fontSize='large'
+                        />
+                        <GitHubIcon 
+                            onClick={() => openSite('github')} 
+                            sx={{
+                                cursor: 'pointer',
+                                '&:hover': {
+                                    color: '#AD5C51',
+                                },
+                                transition: 'all 0.5s ease'
+                            }} 
+                            fontSize='large'
+                        />                
+                    </div>
                 </div>
             </div>
         </div>

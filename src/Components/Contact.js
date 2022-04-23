@@ -119,14 +119,16 @@ const Contact = ({ contactRef }) => {
                                 />
                             </div>
                             <Button
+                                className='btn'
                                 type='submit' 
                                 variant='contained' 
                                 size='large' 
                                 endIcon={<SendIcon />} 
                                 sx={{
                                     backgroundColor: '#3d3d40', 
-                                    width: '670px', 
-                                    marginLeft: '15px',
+                                    maxWidth: '668px',
+                                    minWidth: '340px', 
+                                    marginLeft: '16px',
                                     borderRadius: 0,
                                     '&:hover': {
                                         backgroundColor: '#3d3d40',

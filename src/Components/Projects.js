@@ -24,18 +24,18 @@ const Projects = ({ projRef }) => {
             <div className='pj-wrapper'>
                 <div className='pj-cards'>
                     <div className='pj-img-wrapper'>
-                    <h2>Current Portfolio</h2>
+                        <h2>Current Portfolio</h2>
                         {/* <Link to='/unplgd'> */}
-                            <div className='pj-info' onClick={() => navigate('/unplgd')}>
-                                <img className='pj-img' alt='' src={Project1}/>
-                                <div className='pj-title-wrapper'> 
-                                    <div className='pj-info-title'>
-                                        <h4>UNPLGD</h4>
-                                        <ArrowRightAltIcon className='arrowIcon' fontSize='large'/>
-                                    </div>
-                                    <span>Fullstack e-commerce application</span>
+                        <div className='pj-info' onClick={() => navigate('/unplgd')}>
+                            <img className='pj-img' alt='' src={Project1}/>
+                            <div className='pj-title-wrapper'> 
+                                <div className='pj-info-title'>
+                                    <h4>UNPLGD</h4>
+                                    <ArrowRightAltIcon className='arrowIcon' fontSize='large'/>
                                 </div>
+                                <span>Fullstack e-commerce application</span>
                             </div>
+                        </div>
                         {/* </Link> */}
                         <div className='pj-info' onClick={() => navigate('/podify')}>
                             <img className='pj-img' alt='' src={Project2}/>

@@ -48,3 +48,32 @@
     width: 670px;
     margin-left: 15px;
 }
+
+@media only screen and (max-width: 420px) {
+    .ct-info-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ct-title h3 {
+        font-size: 2.5rem;
+    }
+
+    .ct-title span {
+        font-size: 1.5rem;
+    }
+
+    .ct-form {
+        width: 370px;
+        margin-top: 0;
+    }
+
+    .field {
+        width: 340px;
+    }
+
+    .btn {
+        width: 340px;
+    }
+}
