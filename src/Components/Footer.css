@@ -1,6 +1,9 @@
 .ft {
     height: 10vh;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* align-items: center; */
     /* background-color: #f7f8fb; */
 }
@@ -8,16 +11,19 @@
 .ft-wrapper {
     display: flex;
     justify-content: center;
+    width: 87.8%;
 }
 
 .ft-hr {
     color: black;
-    width: 1310px;
+    /* max-width: 1310px;
+    margin: auto; */
+    width: 87.8%;
     /* width: 1313px; */
 }
 
 .ft-info {
-    width: 1310px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
@@ -32,10 +38,7 @@
 }
 
 
-@media only screen and (max-width: 420px) {
-    .ft-hr {
-        width: 340px;
-    }
+@media only screen and (max-width: 800px) {
 
     .ft-info {
         width: 340px;
@@ -47,5 +50,9 @@
     .ft {
         margin-top: 35px;
         margin-bottom: 20px;
+    }
+
+    .ft-hr {
+        width: 80%;
     }
 }

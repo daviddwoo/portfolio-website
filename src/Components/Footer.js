@@ -11,7 +11,9 @@ const Footer = () => {
 
     return (
         <div className='ft'>
-            <hr className='ft-hr'/>
+            <div className='ft-hr'>
+                <hr />
+            </div>
             <div className='ft-wrapper'>
                 <div className='ft-info'>
                     <div className='ft-cr'>&copy; 2022 | David Woo | All rights reserved</div>

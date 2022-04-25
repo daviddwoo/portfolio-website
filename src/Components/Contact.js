@@ -17,12 +17,10 @@ const CssTextField = styled(TextField)({
       '& fieldset': {
         borderColor: 'black',
         borderRadius: 0,
-        backgroundColor: 'white'
       },
       '&:hover fieldset': {
         borderColor: 'black',
         borderRadius: 0,
-        backgroundColor: 'white'
       },
       '&.Mui-focused fieldset': {
         borderColor: 'black',
@@ -74,11 +72,14 @@ const Contact = ({ contactRef }) => {
                                     label="Name"
                                     name='from_name' 
                                     variant="outlined"     
-                                    inputProps={{
-                                        style: {
-                                            width: '640px'
-                                        }
-                                    }}
+                                    // inputProps={{
+                                    //     style: {
+                                    //         width: '640px'
+                                    //     }
+                                    // }}
+                                    sx={{
+                                        width: '98%'
+                                    }} 
                                     value={formData['from_name']}
                                 />
                             </div>
@@ -90,12 +91,16 @@ const Contact = ({ contactRef }) => {
                                     className='field' 
                                     label="Email"
                                     name='from_email' 
-                                    variant="outlined"     
-                                    inputProps={{
-                                        style: {
-                                            width: '640px'
-                                        }
-                                    }}
+                                    variant="outlined"
+                                    sx={{
+                                        width: '98%'
+                                    }}     
+                                    // inputProps={{
+                                    //     style: {
+                                    //         minWidth: '375px',
+                                    //         width: '640px'
+                                    //     }
+                                    // }}
                                     value={formData['from_email']}
                                 />
                             </div>
@@ -109,35 +114,41 @@ const Contact = ({ contactRef }) => {
                                     multiline
                                     rows={4}
                                     variant="outlined"     
-                                    inputProps={{
-                                        style: {
-                                            height: '100px',
-                                            width: '640px',
-                                        }
-                                    }}
+                                    // inputProps={{
+                                    //     style: {
+                                    //         height: '100px',
+                                    //         width: '640px',
+                                    //     }
+                                    // }}
+                                    sx={{
+                                        width: '98%'
+                                    }} 
                                     value={formData['message']}
                                 />
                             </div>
-                            <Button
-                                className='btn'
-                                type='submit' 
-                                variant='contained' 
-                                size='large' 
-                                endIcon={<SendIcon />} 
-                                sx={{
-                                    backgroundColor: '#3d3d40', 
-                                    maxWidth: '668px',
-                                    minWidth: '340px', 
-                                    marginLeft: '16px',
-                                    borderRadius: 0,
-                                    '&:hover': {
-                                        backgroundColor: '#3d3d40',
-                                        borderRadius: 0
-                                    }
-                                }}
-                            >
-                                Send Message
-                            </Button>
+                            <div className='form-btn'>                       
+                                <Button
+                                    className='btn'
+                                    type='submit' 
+                                    variant='contained' 
+                                    size='large' 
+                                    endIcon={<SendIcon />} 
+                                    sx={{
+                                        backgroundColor: '#3d3d40', 
+                                        // minWidth: '340px', 
+                                        // maxWidth: '668px',
+                                        width: '98%',
+                                        marginLeft: '16px',
+                                        borderRadius: 0,
+                                        '&:hover': {
+                                            backgroundColor: '#3d3d40',
+                                            borderRadius: 0
+                                        }
+                                    }}
+                                >
+                                    Send Message
+                                </Button>
+                            </div>
                         </form>
                     </div>
                 </div>

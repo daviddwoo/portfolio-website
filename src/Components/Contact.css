@@ -8,14 +8,15 @@
 }
 
 .ct-info-wrapper {
-    width: 1310px;
+    width: 87.5%;
     display: flex;
     justify-content: space-between;
 }
 
 .ct-form {
     margin-top: 25px;
-    width: 685px;
+    /* width: 685px; */
+    width: 50%;
 }
 
 .ct-title {
@@ -41,15 +42,14 @@
 
 .ct-field {
     padding: 1rem;
+    width: 100%; 
 }
 
 .form-btn {
-    padding: 1rem;
-    width: 670px;
-    margin-left: 15px;
+    width: 100%;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 800px) {
     .ct-info-wrapper {
         flex-direction: column;
         align-items: center;
@@ -65,15 +65,17 @@
     }
 
     .ct-form {
-        width: 370px;
+        width: 94%;
+        margin-right: 6%;
         margin-top: 0;
     }
 
     .field {
-        width: 340px;
+        width: 100%;
     }
 
-    .btn {
-        width: 340px;
+    .form-btn {
+        margin-left: 0;
+        width: 100%;  
     }
 }

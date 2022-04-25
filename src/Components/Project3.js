@@ -55,8 +55,13 @@ const Project3 = () => {
                         Please check out the screen demo of the game below!
                     </p>
                     <hr className='p1-hr'/>
-                    <div className='react-player' >
-                        <ReactPlayer url={'https://vimeo.com/701864385'} width={1312} height={740}/>
+                    <div className='player-wrapper'>
+                        <ReactPlayer 
+                            url={'https://vimeo.com/701864385'} 
+                            width='100%' 
+                            height='100%'
+                            className='react-player' 
+                        />
                     </div>
                     <hr className='p1-hr'/>
                     <div className='p1-contr'>

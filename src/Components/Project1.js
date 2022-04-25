@@ -64,7 +64,6 @@ const Project1 = () => {
                 </div>
                 {/* <hr className='p1-hr'/> */}
             </div>
-            
         </div>
     )
 }
