@@ -1,17 +1,38 @@
 import React from 'react'
 import './About.css'
 import Picture from '../profile.jpeg'
+import { motion } from 'framer-motion'
 
 const About = () => {
     return (
         <div className='ab'>
             <div className='ab-container-all'>
-                <div className='ab-title'>
+                <motion.div 
+                    initial='hidden'
+                    whileInView={'visible'}
+                    viewport={{once: true}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                    variants={{
+                        visible: { opacity: 1, y: 0},
+                        hidden: { opacity: 0, y: 40}
+                    }}
+                    className='ab-title'
+                >
                     <div className='ab-title-wrapper'>
                         <h1><span>👋 </span>there! I'm David Woo</h1>
                     </div>
-                </div>
-                <div className='ab-container'>
+                </motion.div>
+                <motion.div
+                    className='ab-container'
+                    initial='hidden'
+                    whileInView={'visible'}
+                    viewport={{once: true}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                    variants={{
+                        visible: { opacity: 1, y: 0},
+                        hidden: { opacity: 0, y: 40}
+                    }}
+                >
                     <div className='ab-info-wrapper'>
                         <div className='ab-details'>
                             <div>
@@ -19,7 +40,7 @@ const About = () => {
                             </div>
                             <div className='ab-details-p'>
                                     <p>
-                                        I currently work as a Validation Specialist in the biotech industry, with over 5+ years experience specializing in equipment 
+                                        I currently work in the biotech industry with over 5+ years experience specializing in equipment 
                                         validation. I previously attended Rutgers University majoring in chemical engineering.
                                     </p>
                                     <p>
@@ -33,7 +54,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
             <hr className='ab-hr'/>

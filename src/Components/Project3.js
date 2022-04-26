@@ -43,18 +43,21 @@ const Project3 = () => {
                             </div>
                         </div>
                     </div>
-                    <p>
-                        This was a solo project I built in a week span during the Flex program. I was fascinated by machine learning and decided to work with this technology to build Conductor. 
-                    </p>
-                    <p>
-                        Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
-                    </p>
-                    <p>
-                        The player will press start to turn on the webcam and make certain hand motions in the camera in order to control the character. The probability percentages of which motion being detected will be displayed under the camera.
-                    </p>
-                    <p>
-                        Please check out the screen demo of the game below!
-                    </p>
+                    <div className='p1-contr'>
+                        <span>Overview</span>
+                        <p>
+                            This was a solo project I built in a week span during the Flex program. I was fascinated by machine learning and decided to work with this technology to build Conductor. 
+                        </p>
+                        <p>
+                            Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
+                        </p>
+                        <p>
+                            The player will press start to turn on the webcam and make certain hand motions in the camera in order to control the character. The probability percentages of which motion being detected will be displayed under the camera.
+                        </p>
+                        <p>
+                            Please check out the screen demo of the game below!
+                        </p>
+                    </div>
                     <div className='player-wrapper'>
                         <ReactPlayer 
                             url={'https://vimeo.com/701864385'} 
@@ -64,7 +67,7 @@ const Project3 = () => {
                         />
                     </div>
                     {/* <hr className='p1-hr'/> */}
-                    <div className='p1-contr'>
+                    <div className='p1-contr2'>
                         <span>Contributions</span>
                         <p>
                             Utilized Teachable Machine to train different image classification models based on TensorFlow.js technology.

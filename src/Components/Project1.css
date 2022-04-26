@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     /* width: 1310px; */
-    max-width: 1210px;
+    max-width: 1200px;
     /* width: 70%; */
     margin: auto;
 }
@@ -46,7 +46,7 @@
 }
 
 .p1-info {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .p1-info-wrapper {
@@ -55,11 +55,13 @@
 }
 
 .p1-info p {
-    line-height: 2.5rem;
+    line-height: 2.3rem;
     font-size: 1.5em;
     margin: 0;
     margin-bottom: 20px;
     color: gray;
+    /* margin-top: 10px; */
+    /* width: 1000px; */
 }
 
 .p1-info span {
@@ -103,7 +105,7 @@
 }
 
 .p1-contr {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .p1-contr span{
@@ -111,6 +113,22 @@
 }
 
 .p1-contr p {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 2rem;
+    color: gray;
+}
+
+.p1-contr2 {
+    margin-top: 20px;
+}
+
+.p1-contr2 span{
+    font-weight: 700;
+}
+
+.p1-contr2 p {
     margin-top: 20px;
     font-weight: 400;
     font-size: 1.4em;

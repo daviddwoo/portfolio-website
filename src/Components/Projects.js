@@ -5,7 +5,7 @@ import Project2 from '../podify.png'
 import Project3 from '../proj3.jpg'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useNavigate, useLocation } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const Projects = ({ projRef }) => {
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Projects = ({ projRef }) => {
     }, [location])
 
     return (
-        <div id='projects' ref={projRef}>
+        <div id='projects'>
             <div className='pj-container'>
                 <div className='pj-wrapper'>
                     <div className='pj-title'>

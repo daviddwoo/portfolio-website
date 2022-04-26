@@ -43,16 +43,18 @@ const Project2 = () => {
                             </div>
                         </div>
                     </div>
-                    <p>
-                        This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, a fullstack application where users can access, search,  
-                        and add timestamps & comments for their favorite podcasts.
-                    </p>
-                    <p>
-                        Users will login with their Spotify account and can have the capability of browsing through top podcasts, adding shows to their favorities, liking / disliking specific episodes and more.                         
-                    </p>
-                    <p>
-                        Below is the video presentation of our project!
-                    </p>
+                    <div className='p1-contr'>
+                        <span>Overview</span>
+                        <p>
+                            This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, a fullstack application where users can access, search,  
+                            and add timestamps & comments for their favorite podcasts.                        </p>
+                        <p>
+                            Users will login with their Spotify account and can have the capability of browsing through top podcasts, adding shows to their favorities, liking / disliking specific episodes and more.                         
+                        </p>
+                        <p>
+                         Below is the video presentation of our project!
+                        </p>
+                    </div>
                     <div className='player-wrapper'>
                         <ReactPlayer 
                             url={'https://vimeo.com/701864385'} 
@@ -62,7 +64,7 @@ const Project2 = () => {
                         />
                     </div>
                     {/* <hr className='p1-hr'/> */}
-                    <div className='p1-contr'>
+                    <div className='p1-contr2'>
                         <span>Contributions</span>
                         <p>
                             Helped implement Spotify OAuth login and integrated user access token into our database used for data retrieval from the Spotify API.
