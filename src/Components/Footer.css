@@ -11,14 +11,17 @@
 .ft-wrapper {
     display: flex;
     justify-content: center;
-    width: 87.8%;
+    max-width: 1350px;
+    width: 98%;
+    /* width: 87.8%; */
 }
 
 .ft-hr {
     color: black;
     /* max-width: 1310px;
     margin: auto; */
-    width: 87.8%;
+    max-width: 1350px;
+    width: 98%;
     /* width: 1313px; */
 }
 
@@ -37,9 +40,12 @@
     margin-top: 15px;
 }
 
+.waves {
+    /* height: 600%; */
+    /* height: 50%; */
+}
 
 @media only screen and (max-width: 800px) {
-
     .ft-info {
         width: 340px;
         flex-direction: column;

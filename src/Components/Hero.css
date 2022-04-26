@@ -4,7 +4,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2;
+    /* color: white;
+    background-color: black; */
     /* padding-bottom: 30px; */
+}
+
+.particles {
+    height: 75vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
 }
 
 .hp-wrapper {
@@ -28,7 +44,7 @@
 
 .hp-title1 {
     font-weight: 500;
-    font-size: 4.3em;
+    font-size: 4em;
     /* font-size: 3vw; */
 }
 
@@ -39,7 +55,7 @@
 }
 
 .hp-title2 {
-    font-size: 4.3em;
+    font-size: 4em;
     margin-left: 9px;
     /* font-size: 3vw; */
 }

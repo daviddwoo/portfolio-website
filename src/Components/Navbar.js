@@ -20,13 +20,18 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
         }
     }, [setWidth])
 
+    useEffect(() => {
+        setNavOpen(false);
+    }, [location.pathname])
+
     //whenever innerWidth changes remove the mobile navBar
     useEffect(() => {
         if (width > 420) setNavOpen(false)
     }, [width]);
     
     return (
-        <div className={location.pathname === '/' || location.pathname === '/about' ? 'nb': 'nb-bg'}>
+        // <div className={location.pathname === '/' || location.pathname === '/about' ? 'nb': 'nb-bg'}>
+        <div className='nb'>
             <div className='nb-menu-wrapper'>
                 <div className='nb-wrapper'>
                     <div className='nb-left' onClick={() => navigate('/')}>

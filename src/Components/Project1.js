@@ -1,5 +1,6 @@
 import React from 'react'
 import './Project1.css'
+import './About.css'
 import projImg1 from '../gs-hp.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -42,9 +43,12 @@ const Project1 = () => {
                         </div>
                     </div>
                     <p>
-                        UNPLGD is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
+                        UNPLGD is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. 
                     </p>
-                    <hr className='p1-hr'/>
+                    <p>
+                        In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
+                    </p>
+                    {/* <hr className='p1-hr'/> */}
 
                     <div className='p1-contr'>
                         <span>Contributions</span>
@@ -62,8 +66,10 @@ const Project1 = () => {
                         </p>
                     </div>
                 </div>
+                
                 {/* <hr className='p1-hr'/> */}
             </div>
+            <hr className='ab-hr'/>
         </div>
     )
 }

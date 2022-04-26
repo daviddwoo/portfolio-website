@@ -1,5 +1,6 @@
 import React from 'react'
 import './Project1.css'
+import './About.css'
 import projImg1 from '../podify-hp.png'
 // import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -54,7 +55,6 @@ const Project3 = () => {
                     <p>
                         Please check out the screen demo of the game below!
                     </p>
-                    <hr className='p1-hr'/>
                     <div className='player-wrapper'>
                         <ReactPlayer 
                             url={'https://vimeo.com/701864385'} 
@@ -63,7 +63,7 @@ const Project3 = () => {
                             className='react-player' 
                         />
                     </div>
-                    <hr className='p1-hr'/>
+                    {/* <hr className='p1-hr'/> */}
                     <div className='p1-contr'>
                         <span>Contributions</span>
                         <p>
@@ -76,7 +76,7 @@ const Project3 = () => {
                 </div>
                 {/* <hr className='p1-hr'/> */}
             </div>
-            
+            <hr className='ab-hr'/>
         </div>
     )
 }

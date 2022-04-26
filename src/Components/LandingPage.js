@@ -1,11 +1,11 @@
 import React from 'react'
-import HomePage from './HomePage'
+import Hero from './Hero'
 import Projects from './Projects'
 
 const LandingPage = ({ projRef }) => {
     return (
         <>
-            <HomePage />
+            <Hero />
             <Projects projRef={projRef}/>
         </>
     )
