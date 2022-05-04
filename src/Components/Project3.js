@@ -1,7 +1,7 @@
 import React from 'react'
 import './Project1.css'
 import './About.css'
-import projImg1 from '../podify-hp.png'
+import projImg1 from '../Conductor.png'
 // import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ReactPlayer from 'react-player';
@@ -52,18 +52,15 @@ const Project3 = () => {
                             Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
                         </p>
                         <p>
-                            The player will press start to turn on the webcam and make certain hand motions in the camera in order to control the character. The probability percentages of which motion being detected will be displayed under the camera.
-                        </p>
-                        <p>
                             Please check out the screen demo of the game below!
                         </p>
                     </div>
-                    <div className='player-wrapper'>
+                    <div className='player-wrapper-p3'>
                         <ReactPlayer 
-                            url={'https://vimeo.com/701864385'} 
+                            url={'https://vimeo.com/705247868'} 
                             width='100%' 
                             height='100%'
-                            className='react-player' 
+                            className='react-player-p3' 
                         />
                     </div>
                     {/* <hr className='p1-hr'/> */}

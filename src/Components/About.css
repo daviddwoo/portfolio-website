@@ -26,8 +26,8 @@
 .ab-title h1 {
     font-size: 6em;
     font-weight: 500;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .ab-title h3 {
@@ -52,7 +52,7 @@
 }
 
 .ab-info-wrapper {
-    padding-bottom: 100px;
+    padding-bottom: 60px;
 }
 
 .ab-details {

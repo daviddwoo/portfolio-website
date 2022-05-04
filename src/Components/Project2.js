@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player';
 const Project2 = () => {
 
     const openSite = (site) => {
-        return site === 'live' ? window.open('https://podify-fsa.herokuapp.com/aboutUs') : window.open('https://github.com/daviddwoo/podify')
+        return site === 'live' ? window.open('https://podify-fsa.herokuapp.com/') : window.open('https://github.com/daviddwoo/podify')
     }
 
     return (
@@ -46,8 +46,9 @@ const Project2 = () => {
                     <div className='p1-contr'>
                         <span>Overview</span>
                         <p>
-                            This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, a fullstack application where users can access, search,  
-                            and add timestamps & comments for their favorite podcasts.                        </p>
+                            This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, an application where users can access, search,  
+                            and add timestamps & comments for their favorite podcasts.  
+                        </p>
                         <p>
                             Users will login with their Spotify account and can have the capability of browsing through top podcasts, adding shows to their favorities, liking / disliking specific episodes and more.                         
                         </p>
