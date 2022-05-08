@@ -3,8 +3,14 @@ import './Footer.css'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Waves from '../waves.svg'
+import { useLocation, useNavigate } from 'react-router';
 
 const Footer = () => {
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    console.log(location.pathname)
 
     const openSite = (site) => {
         return site === 'linkedin' ? window.open('https://www.linkedin.com/in/daviddwoo/') : window.open('https://github.com/daviddwoo')
@@ -13,6 +19,7 @@ const Footer = () => {
     return (
         <div className='ft'>
             <div className='ft-hr'>
+                { location.pathname !== '/contact' && <h3>Don't hesitate to <span onClick={() => navigate('/contact')}>contact</span> me or connect on LinkedIn!</h3>}
                 <hr />
             </div>
             <div className='ft-wrapper'>

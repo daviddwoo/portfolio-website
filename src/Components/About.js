@@ -57,7 +57,7 @@ const About = () => {
                 </motion.div>
 
             </div>
-            <hr className='ab-hr'/>
+            {/* <hr className='ab-hr'/> */}
         </div>
     )
 }

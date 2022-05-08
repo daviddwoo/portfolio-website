@@ -25,6 +25,18 @@
     /* width: 1313px; */
 }
 
+.ft-hr h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.ft-hr span {
+    border-bottom: 2px solid #191963;
+    color: #191963;
+}
+
 .ft-info {
     width: 100%;
     display: flex;
@@ -41,7 +53,9 @@
 }
 
 .waves {
-    /* height: 600%; */
+    /* width: 100vw;
+    height: 100vh; */
+    /* height: 2000px; */
     /* height: 50%; */
 }
 

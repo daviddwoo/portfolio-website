@@ -13,19 +13,23 @@ function App() {
   const contactRef = useRef(null);
   const history = useNavigate();
 
-  const scrollToProj = () => {
-    history('/')
-    let elem = document.getElementById('pj');
-    elem.scrollIntoView({behavior: "smooth"})
-    console.log(elem);
-  }
-  const scrollToContact = () => contactRef.current.scrollIntoView({behavior: 'smooth'})
+  // const scrollToProj = () => {
+  //   history('/')
+  //   let elem = document.getElementById('pj');
+  //   elem.scrollIntoView({behavior: "smooth"})
+  // }
+  // const scrollToContact = () => {
+  //   history('/')
+  //   let elem = document.getElementById('contact');
+  //   elem.scrollIntoView({behavior: "smooth"})
+  //   // contactRef.current.scrollIntoView({behavior: 'smooth'})
+  // }
 
   return (
     <div>
-        <Navbar scrollToProj={scrollToProj} scrollToContact={scrollToContact}/>
-        <AppRoutes projRef={projRef}/>
-        <Contact contactRef={contactRef}/>
+        <Navbar />
+        <AppRoutes projRef={projRef} contactRef={contactRef}/>
+        {/* <Contact contactRef={contactRef}/> */}
         <Footer /> 
         <ScrollToTop />
     </div>

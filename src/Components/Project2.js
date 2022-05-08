@@ -80,7 +80,7 @@ const Project2 = () => {
                 </div>
                 {/* <hr className='p1-hr'/> */}
             </div>
-            <hr className='ab-hr'/>
+            {/* <hr className='ab-hr'/> */}
         </div>
     )
 }

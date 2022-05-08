@@ -7,9 +7,10 @@ import Project1 from './Project1'
 import Project2 from './Project2'
 import Project3 from './Project3'
 import About from './About';
+import Contact from './Contact';
 // import ScrollToTop from './ScrollToTop';
 
-const AppRoutes = () => {
+const AppRoutes = ({ contactRef }) => {
     return (
         <div>
             <Routes>
@@ -17,6 +18,7 @@ const AppRoutes = () => {
                 <Route exact path='/unplgd' element={<Project1 />}/>
                 <Route exact path='/podify' element={<Project2 />}/>
                 <Route exact path='/conductor' element={<Project3 />}/>
+                <Route exact path='/contact' element={<Contact contactRef={contactRef}/>}/>
                 <Route exact path='/about' element={<About />}/>
             </Routes>
         </div>

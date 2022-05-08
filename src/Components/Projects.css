@@ -54,9 +54,6 @@
 .pj-cards {
     width: 100%;
     display: flex;
-    /* justify-content: center; */
-    /* padding-left: 50px;
-    padding-right: 50px; */
 }
 
 .pj-cards h2 {
@@ -70,6 +67,12 @@
     margin-bottom: 60px;
 }
 
+.pj-tall {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
 .pj-info-title h4 {
     font-weight: 500;
     font-size: 2em;
@@ -78,10 +81,15 @@
 }
 
 .pj-info span {
+    margin-left: 5px;
     color: gray;
 }
 
 .pj-title-wrapper {
+    cursor: pointer;
+}
+
+.pj-title-wrapper-tall {
     cursor: pointer;
 }
 
@@ -99,6 +107,71 @@
 .arrowIcon {
     margin-top: 4px;
 }
+
+.btn-title {
+    padding: 10px 5px 10px 5px;
+    /* padding: 0; */
+    border: none;
+    color: #212121;
+    z-index: 1;
+    background: transparent;
+    position: relative;
+    font-weight: 500;
+    font-size: 2em;
+    transition: all 250ms;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.pj-info .btn-title::before {
+    color: white;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    /* background-color: #212121; */
+    background-color: #191963;
+    z-index: -1;
+    transition: all 250ms;
+}
+
+.pj-info:hover .btn-title {
+    color: white;
+}
+.pj-info:hover .btn-title::before {
+    width: 100%;
+    color: white;
+}
+
+.pj-title-wrapper-tall .btn-title::before {
+    color: white;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    /* background-color: #212121; */
+    background-color: #191963;
+    z-index: -1;
+    transition: all 250ms;
+}
+
+.pj-title-wrapper-tall:hover .btn-title {
+    color: white;
+}
+
+.pj-title-wrapper-tall:hover .btn-title::before {
+    width: 100%;
+    color: white;
+}
+
+/* .pj-info:hover  .btn-title:hover::before {
+    width: 100%;
+} */
 
 @media only screen and (max-width: 1520px) {
     .pj-title {

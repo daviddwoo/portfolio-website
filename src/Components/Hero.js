@@ -32,7 +32,7 @@ const Hero = () => {
                         }
                         },
                         "color": {
-                        "value": "#039be5"
+                        "value": "#191963"
                         },
                         "shape": {
                         "type": "circle",

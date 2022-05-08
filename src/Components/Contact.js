@@ -1,10 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import './Contact.css'
 import { TextField } from '@mui/material'
 import { styled } from '@mui/material';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com'
+import { useNavigate, useLocation } from 'react-router';
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -31,6 +32,7 @@ const CssTextField = styled(TextField)({
 
 const Contact = ({ contactRef }) => {
 
+
     const form = useRef();
     const [formData, setFormData] = useState({'from_name': '', 'from_email': '', 'message': ''})
 
@@ -53,14 +55,16 @@ const Contact = ({ contactRef }) => {
     }
 
     return (
-        <div className='ct' ref={contactRef}>
+        <div id='contact' ref={contactRef}>
             <div className='ct-wrapper'>
                 <div className='ct-info-wrapper'>
+                    {/* <div className='ct-title-wrapper'> */}
                     <div className='ct-title'>
                         <h3>Get in touch</h3>
-                        <span>Feel free to leave a message</span>
-                        <span>or connect with me on LinkedIn!</span>
+                        <span>Feel free to leave a message or connect with me on LinkedIn!</span>
+                        {/* <span>or connect with me on LinkedIn!</span> */}
                     </div>
+                    {/* </div> */}
                     <div className='ct-form'>
                         <form ref={form} onSubmit={onSubmit}>
                             <div className='ct-field'>
@@ -112,7 +116,7 @@ const Contact = ({ contactRef }) => {
                                     label="Message"
                                     name='message' 
                                     multiline
-                                    rows={4}
+                                    rows={9}
                                     variant="outlined"     
                                     // inputProps={{
                                     //     style: {

@@ -46,7 +46,8 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
                     <div className='nb-right'>
                         <div onClick={() => navigate('/about')}>About</div>
                         <div onClick={() => navigate('/#projects')}>Portfolio</div>
-                        <div onClick={scrollToContact}>Contact</div>
+                        <div onClick={() => navigate('/contact')}>Contact</div>
+                        {/* <div onClick={scrollToContact}>Contact</div> */}
                         <div
                             onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
                         >
@@ -59,7 +60,8 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
                     <div className='nb-menu-links'>
                         <div onClick={() => navigate('/about')}>About</div>
                         <div onClick={() => navigate('/#projects')}>Portfolio</div>
-                        <div onClick={scrollToContact}>Contact</div>
+                        <div onClick={() => navigate('/contact')}>Contact</div>
+                        {/* <div onClick={scrollToContact}>Contact</div> */}
                         <div
                             onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
                         >
