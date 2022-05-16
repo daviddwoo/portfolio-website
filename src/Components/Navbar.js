@@ -35,7 +35,8 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
             <div className='nb-menu-wrapper'>
                 <div className='nb-wrapper'>
                     <div className='nb-left' onClick={() => navigate('/')}>
-                        <img alt='' src={Logo}/>
+                        {/* <img alt='' src={Logo}/> */}
+                        <div>Home</div>
                     </div>
                     <div className='nb-right-menu'>
                         <MenuIcon 
@@ -45,7 +46,7 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
                     </div>
                     <div className='nb-right'>
                         <div onClick={() => navigate('/about')}>About</div>
-                        <div onClick={() => navigate('/#projects')}>Portfolio</div>
+                        <div onClick={() => navigate('/portfolio')}>Portfolio</div>
                         <div onClick={() => navigate('/contact')}>Contact</div>
                         {/* <div onClick={scrollToContact}>Contact</div> */}
                         <div
@@ -59,7 +60,7 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
                     navOpen &&
                     <div className='nb-menu-links'>
                         <div onClick={() => navigate('/about')}>About</div>
-                        <div onClick={() => navigate('/#projects')}>Portfolio</div>
+                        <div onClick={() => navigate('/portfolio')}>Portfolio</div>
                         <div onClick={() => navigate('/contact')}>Contact</div>
                         {/* <div onClick={scrollToContact}>Contact</div> */}
                         <div

@@ -2,6 +2,11 @@
   scroll-behavior: smooth;
 } */
 
+html {
+  background-color: #fafdf3;
+  /* background-color: #fff; */
+}
+
 .App {
   text-align: center;
 }

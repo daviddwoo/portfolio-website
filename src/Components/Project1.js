@@ -4,12 +4,17 @@ import './About.css'
 import projImg1 from '../gs-hp.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ViewComfyIcon from '@mui/icons-material/ViewComfy';
+import DensitySmallIcon from '@mui/icons-material/DensitySmall';
+import { useNavigate } from 'react-router';
 
 const Project1 = () => {
 
     const openSite = (site) => {
         return site === 'live' ? window.open('https://graceshopper-unplgd.herokuapp.com/') : window.open('https://github.com/daviddwoo/unplgd')
     }
+
+    const navigate = useNavigate();
 
     return (
         <div className='p1'>
@@ -67,9 +72,14 @@ const Project1 = () => {
                         </p>
                     </div>
                 </div>
-                
+                <div className='proj-icon'>
+                    <ViewComfyIcon fontSize='large' className='pj-icon' onClick={() => navigate('/portfolio')}/>
+                </div>
                 {/* <hr className='p1-hr'/> */}
             </div>
+            {/* <div className='proj-icon'>
+                    <ViewComfyIcon fontSize='large' className='pj-icon'/>
+                </div> */}
             {/* <hr className='ab-hr'/> */}
         </div>
     )

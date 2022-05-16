@@ -5,13 +5,12 @@ import Navbar from './Components/Navbar';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import ScrollToTop from './Components/ScrollToTop'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function App() {
 
-  const projRef = useRef(null);
-  const contactRef = useRef(null);
-  const history = useNavigate();
+
+  const location = useLocation();
 
   // const scrollToProj = () => {
   //   history('/')
@@ -28,9 +27,11 @@ function App() {
   return (
     <div>
         <Navbar />
-        <AppRoutes projRef={projRef} contactRef={contactRef}/>
+        <AppRoutes/>
         {/* <Contact contactRef={contactRef}/> */}
-        <Footer /> 
+        {
+          location === '/' ? '' : <Footer />
+        } 
         <ScrollToTop />
     </div>
   );

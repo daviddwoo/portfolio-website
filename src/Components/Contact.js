@@ -138,14 +138,14 @@ const Contact = ({ contactRef }) => {
                                     size='large' 
                                     endIcon={<SendIcon />} 
                                     sx={{
-                                        backgroundColor: '#3d3d40', 
+                                        backgroundColor: 'black', 
                                         // minWidth: '340px', 
                                         // maxWidth: '668px',
                                         width: '98%',
                                         marginLeft: '16px',
                                         borderRadius: 0,
                                         '&:hover': {
-                                            backgroundColor: '#3d3d40',
+                                            backgroundColor: '#000',
                                             borderRadius: 0
                                         }
                                     }}

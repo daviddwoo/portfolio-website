@@ -4,14 +4,17 @@ import './About.css'
 import projImg1 from '../Conductor.png'
 // import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import ReactPlayer from 'react-player';
+import { useNavigate } from 'react-router';
 
 const Project3 = () => {
 
     // const openSite = (site) => {
     //     return site === 'live' ? window.open('https://graceshopper-unplgd.herokuapp.com/') : window.open('https://github.com/daviddwoo/unplgd')
     // }
-
+    const navigate = useNavigate();
+    
     return (
         <div className='p1'>
             <div className='p1-img-wrapper'>
@@ -52,7 +55,7 @@ const Project3 = () => {
                             Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
                         </p>
                         <p>
-                            Please check out the screen demo of the game below!
+                            Please check out the screen demo of the game below.
                         </p>
                     </div>
                     <div className='player-wrapper-p3'>
@@ -73,6 +76,9 @@ const Project3 = () => {
                             Built the web game using the Phaser3 library.
                         </p>
                     </div>
+                </div>
+                <div className='proj-icon'>
+                    <ViewComfyIcon fontSize='large' className='pj-icon' onClick={() => navigate('/portfolio')}/>
                 </div>
                 {/* <hr className='p1-hr'/> */}
             </div>

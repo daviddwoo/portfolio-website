@@ -5,13 +5,16 @@ import projImg1 from '../podify-hp.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ReactPlayer from 'react-player';
+import { useNavigate } from 'react-router';
+import ViewComfyIcon from '@mui/icons-material/ViewComfy';
+
 
 const Project2 = () => {
 
     const openSite = (site) => {
         return site === 'live' ? window.open('https://podify-fsa.herokuapp.com/') : window.open('https://github.com/daviddwoo/podify')
     }
-
+    const navigate = useNavigate();
     return (
         <div className='p1'>
             <div className='p1-img-wrapper'>
@@ -77,6 +80,9 @@ const Project2 = () => {
                             Created Single Podcast page with timestamp, comments & replies, and liking / disliking comments functionality. This was built using React functional components with hooks and Express API routes.  
                         </p>
                     </div>
+                </div>
+                <div className='proj-icon'>
+                    <ViewComfyIcon fontSize='large' className='pj-icon' onClick={() => navigate('/portfolio')}/>
                 </div>
                 {/* <hr className='p1-hr'/> */}
             </div>

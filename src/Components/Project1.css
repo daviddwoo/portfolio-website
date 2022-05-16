@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-top: 20px;
     /* background-color: #f7f8fb; */
 }
 
@@ -10,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1100px;
+    max-width: 820px;
     margin: auto;
 }
 
@@ -58,19 +59,19 @@
 }
 
 .p1-info span {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
 .p1-info h4 {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 10px;
     font-weight: 500;
     color: gray;
 }
 
 .p1-info-role {
-    margin-right: 5%;
+    margin-right: 20px;
 }
 
 .p1-info-links {
@@ -97,7 +98,8 @@
 }
 
 .p1-contr {
-    margin-top: 0px;
+    /* margin-top: 0px; */
+    margin-bottom: 20px;
 }
 
 .p1-contr span{
@@ -107,7 +109,7 @@
 .p1-contr p {
     margin-top: 20px;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 2rem;
     color: gray;
 }
@@ -123,7 +125,7 @@
 .p1-contr2 p {
     margin-top: 20px;
     font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 2rem;
     color: gray;
 }
@@ -148,6 +150,16 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.proj-icon {
+    margin-top: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.proj-icon:hover {
+    transform: scale(1.2);
 }
 
 @media only screen and (max-width: 800px) {

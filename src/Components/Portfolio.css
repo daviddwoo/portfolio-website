@@ -1,0 +1,67 @@
+.pf {
+    /* height: 70vh; */
+}
+
+.pf-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pf-proj {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pf-proj-last {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.pf-proj h1 {
+    font-size: 6em;
+    padding: 0;
+    margin: 0;
+    /* padding-bottom: 80px; */
+}
+
+.pf-proj-last h1 {
+    font-size: 6em;
+    padding: 0;
+    margin: 0;
+}
+
+.pf-proj-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.pf-proj-name span {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.pf-img {
+    pointer-events: none;
+    width: 40rem;
+    position: absolute;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 3;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    /* width: 400px;
+    height: 400px;
+    object-fit: contain;
+    position: absolute; */
+}
