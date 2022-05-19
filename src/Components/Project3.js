@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Project1.css'
 import './About.css'
 import projImg1 from '../Conductor.png'
@@ -7,16 +7,26 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router';
+import { motion } from 'framer-motion';
 
 const Project3 = () => {
 
     // const openSite = (site) => {
     //     return site === 'live' ? window.open('https://graceshopper-unplgd.herokuapp.com/') : window.open('https://github.com/daviddwoo/unplgd')
     // }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     const navigate = useNavigate();
     
     return (
-        <div className='p1'>
+        <motion.div 
+            className='p1' 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}
+        }>
             <div className='p1-img-wrapper'>
                 <h1>Conductor</h1>
                 <h3>Solo Project</h3>
@@ -41,8 +51,8 @@ const Project3 = () => {
                                 <h4>Deployed Link</h4>
                             </div> */}
                             <div className='p1-links' onClick={() => window.open('https://github.com/daviddwoo/conductor')}>
-                                <GitHubIcon fontSize='large'/>
-                                <h4>Github Repo</h4>
+                                <GitHubIcon fontSize='medium'/>
+                                <h4>Github</h4>
                             </div>
                         </div>
                     </div>
@@ -83,7 +93,7 @@ const Project3 = () => {
                 {/* <hr className='p1-hr'/> */}
             </div>
             {/* <hr className='ab-hr'/> */}
-        </div>
+        </motion.div>
     )
 }
 

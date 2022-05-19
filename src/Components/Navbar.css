@@ -24,7 +24,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .nb-left {
@@ -43,7 +43,7 @@
 }
 
 .nb-right div {
-    margin-left: 50px;
+    margin-left: 35px;
     cursor: pointer;
 }
 

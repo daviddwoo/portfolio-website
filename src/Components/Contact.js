@@ -5,7 +5,7 @@ import { styled } from '@mui/material';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import emailjs from 'emailjs-com'
-import { useNavigate, useLocation } from 'react-router';
+import { motion } from 'framer-motion';
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -30,8 +30,7 @@ const CssTextField = styled(TextField)({
 });
   
 
-const Contact = ({ contactRef }) => {
-
+const Contact = () => {
 
     const form = useRef();
     const [formData, setFormData] = useState({'from_name': '', 'from_email': '', 'message': ''})
@@ -55,7 +54,12 @@ const Contact = ({ contactRef }) => {
     }
 
     return (
-        <div id='contact' ref={contactRef}>
+        <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            id='contact'
+        >
             <div className='ct-wrapper'>
                 <div className='ct-info-wrapper'>
                     {/* <div className='ct-title-wrapper'> */}
@@ -116,7 +120,7 @@ const Contact = ({ contactRef }) => {
                                     label="Message"
                                     name='message' 
                                     multiline
-                                    rows={9}
+                                    rows={7}
                                     variant="outlined"     
                                     // inputProps={{
                                     //     style: {
@@ -157,7 +161,7 @@ const Contact = ({ contactRef }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

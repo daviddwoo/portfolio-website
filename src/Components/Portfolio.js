@@ -1,28 +1,52 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Portfolio.css'
-import { useNavigate } from 'react-router'
+import { useLocation, useNavigate } from 'react-router-dom'
 import projImg1 from '../gs-hp.png'
 import projImg2 from '../podify-hp.png'
 import projImg3 from '../Conductor.png'
-import useMousePosition from './useMousePos'
 import { motion } from 'framer-motion'
 
-const Portfolio = () => {
-    const navigate = useNavigate();
+let easing = [0.6, -0.05, 0.01, 0.99];
 
-    const { x, y } = useMousePosition();
+const fadeInUp = {
+    initial: {
+      y: 60,
+      opacity: 0,
+      transition: { duration: 0.6, ease: easing }
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: easing
+      }
+    }
+  };
+
+const Portfolio = () => {
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    const navigate = useNavigate();
 
     const [hoverState1, setHoverState1] = useState(false);
     const [hoverState2, setHoverState2] = useState(false);
     const [hoverState3, setHoverState3] = useState(false);
 
-    const [state, setState] = useState({
-        top: 0,
-        left: 0,
-    })
+    // const [state, setState] = useState({
+    //     top: 0,
+    //     left: 0,
+    // })
 
     return (
-        <div className='pf'>
+        <motion.div 
+            className='pf' 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+        >
             <div className='pf-wrapper'>
                 <div className='pf-proj'>
                     <motion.div className='pf-proj-name' onClick={() => navigate('/unplgd')} onHoverStart={() => setHoverState1(true)} onHoverEnd={() => setHoverState1(false)}>
@@ -87,7 +111,7 @@ const Portfolio = () => {
                     </motion.div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

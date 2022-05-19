@@ -1,16 +1,22 @@
 import './App.css';
-import React, { useRef } from 'react'
+import React, { useRef, useLayoutEffect } from 'react'
 import AppRoutes from './Components/AppRoutes'
 import Navbar from './Components/Navbar';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import ScrollToTop from './Components/ScrollToTop'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
 
-
-  const location = useLocation();
+  const Wrapper = ({children}) => {
+    const location = useLocation();
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children
+  } 
 
   // const scrollToProj = () => {
   //   history('/')
@@ -26,13 +32,16 @@ function App() {
 
   return (
     <div>
+      {/* <Wrapper> */}
+      {/* <ScrollToTop /> */}
         <Navbar />
-        <AppRoutes/>
+        {/* <AnimatePresence exitBeforeEnter> */}
+          <AppRoutes/>
+        {/* </AnimatePresence> */}
         {/* <Contact contactRef={contactRef}/> */}
-        {
-          location === '/' ? '' : <Footer />
-        } 
-        <ScrollToTop />
+        <Footer />
+
+        {/* </Wrapper> */}
     </div>
   );
 }

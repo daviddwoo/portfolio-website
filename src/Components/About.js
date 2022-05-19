@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const About = () => {
     return (
-        <div className='ab'>
+        <motion.div className='ab' exit={{opacity: 0}}>
             <div className='ab-container-all'>
                 <motion.div 
                     initial='hidden'
@@ -41,7 +41,7 @@ const About = () => {
                             <div className='ab-details-p'>
                                     <p>
                                         I currently work in the biotech industry with over 5+ years experience specializing in equipment 
-                                        validation. I previously attended Rutgers University majoring in chemical engineering.
+                                        validation. I previously attended Rutgers University, earning a degree in chemical engineering.
                                     </p>
                                     <p>
                                         I am a recent graduate of the Fullstack Academy's part-time Flex Immersive program, currently seeking new opportunities to break into the
@@ -58,7 +58,7 @@ const About = () => {
 
             </div>
             {/* <hr className='ab-hr'/> */}
-        </div>
+        </motion.div>
     )
 }
 

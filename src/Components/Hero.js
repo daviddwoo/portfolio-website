@@ -2,19 +2,20 @@ import React from 'react'
 import './Hero.css'
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import { motion } from 'framer-motion';
 
 const Hero = () => {
-    const particlesInit = async (main) => {
-        await loadFull(main);
-      };
+    // const particlesInit = async (main) => {
+    //     await loadFull(main);
+    //   };
     
-    const particlesLoaded = (container) => {
-    // console.log(container);
-    };
+    // const particlesLoaded = (container) => {
+    // // console.log(container);
+    // };
 
     return (
-        <div className='hp'>
-            <Particles
+        <motion.div className='hp' exit={{opacity: 0}}>
+            {/* <Particles
                 className='particles'
                 id="tsparticles"
                 init={particlesInit}
@@ -135,7 +136,7 @@ const Hero = () => {
                         "color": "black",
                     }
                 }}
-            />
+            /> */}
             <div className='hp-wrapper'>
                 <div>
                     <div className='hp-name'><h1>David Woo</h1></div>
@@ -144,7 +145,7 @@ const Hero = () => {
                     <div className='hp-title2'><h1>Fullstack Developer</h1></div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

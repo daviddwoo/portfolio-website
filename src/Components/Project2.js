@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Project1.css'
 import './About.css'
 import projImg1 from '../podify-hp.png'
@@ -7,16 +7,26 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
+import { motion } from 'framer-motion';
 
 
 const Project2 = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     const openSite = (site) => {
         return site === 'live' ? window.open('https://podify-fsa.herokuapp.com/') : window.open('https://github.com/daviddwoo/podify')
     }
     const navigate = useNavigate();
     return (
-        <div className='p1'>
+        <motion.div 
+            className='p1' 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}
+        }>
             <div className='p1-img-wrapper'>
                 <h1>Podify</h1>
                 <h3>Capstone Project</h3>
@@ -33,16 +43,16 @@ const Project2 = () => {
                         </div>
                         <div className='p1-info-role'>
                             <span>Technologies</span>
-                            <h4>Javascript, React/Redux, Express, Sequelize, PostgreSQL, Spotify API</h4>
+                            <h4>React / Redux, Express, Sequelize, PostgreSQL, Spotify API</h4>
                         </div>
                         <div className='p1-info-links'>
                             <div className='p1-links' onClick={() => openSite('live')}>
-                                <LinkIcon fontSize='large'/>
-                                <h4>Deployed Link</h4>
+                                <LinkIcon fontSize='medium'/>
+                                <h4>Live</h4>
                             </div>
                             <div className='p1-links' onClick={() => openSite('gh')}>
-                                <GitHubIcon fontSize='large'/>
-                                <h4>Github Repo</h4>
+                                <GitHubIcon fontSize='medium'/>
+                                <h4>Github</h4>
                             </div>
                         </div>
                     </div>
@@ -87,7 +97,7 @@ const Project2 = () => {
                 {/* <hr className='p1-hr'/> */}
             </div>
             {/* <hr className='ab-hr'/> */}
-        </div>
+        </motion.div>
     )
 }
 
