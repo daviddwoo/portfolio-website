@@ -3,11 +3,14 @@ import './Navbar.css'
 import { useNavigate, useLocation } from 'react-router-dom'
 import Logo from '../logoDW.png'
 import MenuIcon from '@mui/icons-material/Menu';
+import { Turn as Hamburger } from 'hamburger-react'
 
 const Navbar = ({ scrollToProj, scrollToContact }) => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    const onMenu = location.pathname === '/menu' ? true : false
+    console.log(onMenu)
     const [navOpen, setNavOpen] = useState(false);
     const [width, setWidth] = useState(0);
 
@@ -38,11 +41,14 @@ const Navbar = ({ scrollToProj, scrollToContact }) => {
                         {/* <img alt='' src={Logo}/> */}
                         <div>Home</div>
                     </div>
-                    <div className='nb-right-menu'>
-                        <MenuIcon 
+                    <div className='nb-right-menu' onClick={() => location.pathname === '/menu' ? navigate(-1) : navigate('/menu')}>
+                        <Hamburger toggled={location.pathname === '/menu' ? true : false} onClick={() => setNavOpen(!navOpen)}
+                        />
+                        {/* <MenuIcon 
                             fontSize='large'
                             onClick={() => setNavOpen(!navOpen)}
-                        />
+                            sx={{cursor: 'pointer'}}
+                        /> */}
                     </div>
                     <div className='nb-right'>
                         <div onClick={() => navigate('/about')}>About</div>

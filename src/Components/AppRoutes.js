@@ -10,6 +10,7 @@ import About from './About';
 import Contact from './Contact';
 import { AnimatePresence } from 'framer-motion';
 import Footer from './Footer';
+import Menu from './Menu';
 // import ScrollToTop from './ScrollToTop';
 
 const AppRoutes = ({ contactRef }) => {
@@ -26,6 +27,7 @@ const AppRoutes = ({ contactRef }) => {
                     <Route exact path='/contact' element={<Contact />}/>
                     <Route exact path='/about' element={<About />}/>
                     <Route exact path='/portfolio' element={<Portfolio />}/>
+                    <Route exact path='/menu' element={<Menu />}/>
             </Routes>
             {/* <Footer /> */}
             </AnimatePresence>

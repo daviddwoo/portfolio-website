@@ -2,9 +2,8 @@ import React from 'react'
 import './Footer.css'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import Waves from '../waves.svg'
 import { useLocation, useNavigate } from 'react-router';
-import './Contact.css'
+
 
 const Footer = () => {
 

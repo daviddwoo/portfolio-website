@@ -59,7 +59,7 @@ const Project2 = () => {
                     <div className='p1-contr'>
                         <span>Overview</span>
                         <p>
-                            This was my capstone project during the Flex program. I worked in a team of 4 developers to create Podify, an application where users can access, search,  
+                            I worked in a team of 4 developers to create Podify, an application where users can access, search,  
                             and add timestamps & comments for their favorite podcasts.  
                         </p>
                         <p>

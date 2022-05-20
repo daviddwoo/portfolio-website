@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.menu div {
+    font-size: 5em;
+    margin-bottom: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.menu-1 {
+    margin-top: 30px;
+}
+

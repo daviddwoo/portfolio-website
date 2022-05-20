@@ -65,3 +65,14 @@
     object-fit: contain;
     position: absolute; */
 }
+
+@media only screen and (max-width: 800px) {
+    .pf-proj h1 {
+        font-size: 5em;
+        /* padding-bottom: 80px; */
+    }
+    
+    .pf-proj-last h1 {
+        font-size: 5em;
+    }
+}

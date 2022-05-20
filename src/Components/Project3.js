@@ -59,7 +59,7 @@ const Project3 = () => {
                     <div className='p1-contr'>
                         <span>Overview</span>
                         <p>
-                            This was a solo project I built in a week span during the Flex program. I was fascinated by machine learning and decided to work with this technology to build Conductor. 
+                            I was fascinated by machine learning and decided to work with this technology to build Conductor. 
                         </p>
                         <p>
                             Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
