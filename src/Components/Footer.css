@@ -104,17 +104,10 @@
     } */
 
     .outer-nb {
-        display: flex;
-        bottom: auto;
-        margin-right: auto;
-        position: relative;
-        right: 0;
-        transform: rotate(0deg);
-        transform-origin: bottom;
-        justify-content: center;
+        display: none;
     }
 
-    .outer-nb-list {
+    /* .outer-nb-list {
         display: flex;
         transform: rotate(0deg);
         list-style: none;
@@ -127,5 +120,5 @@
     
     .outer-nb-icon {
         transform: rotate(0deg);
-    }
+    } */
 }

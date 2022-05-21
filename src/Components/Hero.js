@@ -14,7 +14,12 @@ const Hero = () => {
     // };
 
     return (
-        <motion.div className='hp' exit={{opacity: 0}}>
+        <motion.div
+            className='hp' 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+        >
             {/* <Particles
                 className='particles'
                 id="tsparticles"
