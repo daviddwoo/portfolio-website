@@ -4,16 +4,46 @@
     margin-left: 9%;
 }
 
-.menu div {
+.menu-div {
     font-size: 4.5em;
     margin-bottom: 30px;
     font-weight: 600;
     cursor: pointer;
     letter-spacing: 3px;
+    width: 200px;
 }
 
 .menu-1 {
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    font-size: 4.5em;
+    margin-bottom: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 3px;
+    width: 200px;
+}
+
+.menu-last {
+    font-size: 4.5em;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 3px;
+    width: 200px;
+}
+
+.menu-connect {
+    display: none;
+    margin-top: 12px;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-connect div {
+    margin-right: 30px;
+    margin-bottom: 15px;
 }
 
 .menu span {
@@ -63,4 +93,11 @@
     width: 100%;
     transition: 0s;
     height: 4px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .menu-connect {
+        display: flex;
+    }
 }

@@ -2,6 +2,13 @@
   scroll-behavior: smooth;
 } */
 
+/* *{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+} */
+
 html {
   /* background-color: #fafdf3; */
   background-color: #f9f9f9;
