@@ -82,7 +82,6 @@
     display: flex;
     flex-direction: column;
     /* margin-top: -5px; */
-    cursor: pointer;
 }
 
 .p1-info-links h4 {
@@ -96,6 +95,11 @@
     margin-bottom: 8px;
 }
 
+.p1-links:hover {
+    text-decoration: underline;
+    color: gray;
+}
+
 .contr h4 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -105,7 +109,7 @@
 .p1-contr {
     /* margin-top: 0px; */
     margin-bottom: 20px;
-    width: 720px;
+    /* width: 720px; */
 }
 
 .p1-contr span{
@@ -161,7 +165,6 @@
 .proj-icon {
     margin-top: 40px;
     transition: all 0.5s ease;
-    cursor: pointer;
 }
 
 .proj-icon:hover {

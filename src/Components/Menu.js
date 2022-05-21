@@ -34,7 +34,6 @@ const Menu = () => {
                     <GitHubIcon 
                         onClick={() => openSite('github')} 
                         sx={{
-                            cursor: 'pointer',
                             '&:hover': {
                                 color: '#AD5C51',
                             },
@@ -47,7 +46,6 @@ const Menu = () => {
                     <LinkedInIcon 
                         onClick={() => openSite('linkedin')} 
                         sx={{
-                            cursor: 'pointer', 
                             '&:hover': {
                                 color: '#0A66C2',
                             },

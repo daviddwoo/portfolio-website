@@ -1,22 +1,19 @@
 import './App.css';
-import React, { useRef, useLayoutEffect } from 'react'
+import React from 'react'
 import AppRoutes from './Components/AppRoutes'
 import Navbar from './Components/Navbar';
-import Contact from './Components/Contact';
 import Footer from './Components/Footer';
-import ScrollToTop from './Components/ScrollToTop'
-import { useNavigate, useLocation } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion';
+import AnimatedCursor from 'react-animated-cursor'
 
 function App() {
 
-  const Wrapper = ({children}) => {
-    const location = useLocation();
-    useLayoutEffect(() => {
-      document.documentElement.scrollTo(0, 0);
-    }, [location.pathname]);
-    return children
-  } 
+  // const Wrapper = ({children}) => {
+  //   const location = useLocation();
+  //   useLayoutEffect(() => {
+  //     document.documentElement.scrollTo(0, 0);
+  //   }, [location.pathname]);
+  //   return children
+  // } 
 
   // const scrollToProj = () => {
   //   history('/')
@@ -32,6 +29,11 @@ function App() {
 
   return (
     <div>
+      <AnimatedCursor 
+        innerSize={10}
+        outerSize={0}
+        color='128, 128, 128'
+      />
       {/* <Wrapper> */}
       {/* <ScrollToTop /> */}
         <Navbar />

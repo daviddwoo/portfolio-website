@@ -35,7 +35,7 @@ const About = () => {
                 >
                     <div className='ab-info-wrapper'>
                         <div className='ab-details'>
-                            <div>
+                            <div className='ab-details-img'>
                                 <img alt='' src={Picture} className='ab-pic'/>
                             </div>
                             <div className='ab-details-p'>
@@ -55,9 +55,7 @@ const About = () => {
                         </div>
                     </div>
                 </motion.div>
-
             </div>
-            {/* <hr className='ab-hr'/> */}
         </motion.div>
     )
 }

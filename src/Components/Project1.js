@@ -5,7 +5,6 @@ import projImg1 from '../gs-hp.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
-import DensitySmallIcon from '@mui/icons-material/DensitySmall';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 
@@ -85,12 +84,7 @@ const Project1 = () => {
                 <div className='proj-icon'>
                     <ViewComfyIcon fontSize='large' className='pj-icon' onClick={() => navigate('/portfolio')}/>
                 </div>
-                {/* <hr className='p1-hr'/> */}
             </div>
-            {/* <div className='proj-icon'>
-                    <ViewComfyIcon fontSize='large' className='pj-icon'/>
-                </div> */}
-            {/* <hr className='ab-hr'/> */}
         </motion.div>
     )
 }

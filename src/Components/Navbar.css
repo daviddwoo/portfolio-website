@@ -28,10 +28,6 @@
     font-size: 0.88rem;
 }
 
-.nb-left {
-    cursor: pointer;
-}
-
 .nb-left img {
     width: 65px;
     height: 65px;
@@ -45,11 +41,11 @@
 
 .nb-right div {
     margin-left: 35px;
-    cursor: pointer;
 }
 
 .nb-right-menu {
     display: none;
+    cursor: none;
 }
 
 .nb-menu-links {
@@ -63,7 +59,6 @@
 .nb span {
     position: relative;
     display: block;
-    cursor: pointer;
     font-weight: 500;
     letter-spacing: 1.1px;
 }
@@ -98,6 +93,10 @@
     background: transparent;
     width: 100%;
     transition: 0s;
+}
+
+.ham-icon {
+    cursor: crosshair;
 }
 
 @media only screen and (max-width: 800px) {
