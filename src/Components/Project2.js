@@ -29,7 +29,7 @@ const Project2 = () => {
         }>
             <div className='p1-img-wrapper'>
                 <h1>Podify</h1>
-                <h3>Capstone Project</h3>
+                <h3>CAPSTONE PROJECT</h3>
                 <img alt='' src={projImg1} className='proj-img'/>
                 <div className='p1-info'>
                     <div className='p1-info-wrapper'>
@@ -39,7 +39,7 @@ const Project2 = () => {
                         </div>
                         <div className='p1-info-role'>
                             <span>Date</span>
-                            <h4>Mar - Apr 2022</h4>
+                            <h4>Mar 2022</h4>
                         </div>
                         <div className='p1-info-role'>
                             <span>Technologies</span>

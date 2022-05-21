@@ -1,17 +1,66 @@
 .menu {
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 9%;
 }
 
 .menu div {
-    font-size: 5em;
+    font-size: 4.5em;
     margin-bottom: 30px;
     font-weight: 600;
     cursor: pointer;
+    letter-spacing: 3px;
 }
 
 .menu-1 {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
+.menu span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.menu span:before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: black;
+}
+
+.menu span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: black;
+}
+
+.menu span:before {
+    left: -2.5px;
+}
+
+.menu span:after {
+    right: 2.5px;
+    background: black;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.menu span:hover:before {
+    background: black;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.menu span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+    height: 4px;
+}

@@ -30,7 +30,7 @@ const Project1 = () => {
         }>
             <div className='p1-img-wrapper'>
                 <h1>UNPLGD</h1>
-                <h3>Fullstack e-commerce application</h3>
+                <h3>E-COMMERCE APPLICATION</h3>
                 <img alt='' src={projImg1} className='proj-img'/>
                 <div className='p1-info'>
                     <div className='p1-info-wrapper'>

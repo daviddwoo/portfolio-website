@@ -1,25 +1,12 @@
 .hp {
     display: flex;
     height: 90vh;
-    flex-direction: column;
+    /* flex-direction: column; */
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     /* z-index: 2; */
-}
-
-.particles {
-    height: 90vh;
-    /* height: 900px;
-    width: 2200px; */
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 0;
-    margin: 0;
-    z-index: -1;
 }
 
 .hp-wrapper {
@@ -32,50 +19,28 @@
 }
 
 .hp-name {
-    margin: 0;
-    margin-left: 10px;
+    display: flex;
+    font-size: 5.8em;
+    font-weight: 800;
     /* font-size: 0.8vw; */
 }
 
-.hp-name h1 {
-    font-weight: 700;
+.hp-title {
+    margin-top: 15px;
+    display: flex;
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
-.hp-title1 {
-    font-weight: 500;
-    font-size: 4em;
-    /* color: white;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
-    /* -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black; */
-    /* font-size: 3vw; */
+.hp-char {
+    margin-right: 14px;
 }
 
-.hp-title1 h1 {
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 20px;
+.hp-title-char {
+    margin-right: 9px;
 }
 
-.hp-title2 {
-    font-size: 4em;
-    margin-left: 7px;
-    /* font-size: 3vw; */
-}
-
-.hp-title2 h1 {
-    font-weight: 500;
-    margin: 0;
-    /* margin-top: 20px; */
-}
-
-.hr {
-    color: black;
-    width: 600px;
-}
-
-@media only screen and (max-width: 1520px) {
+/* @media only screen and (max-width: 1520px) {
     .hp-title1 {
         font-size: 3.3em;
     }
@@ -83,20 +48,14 @@
     .hp-title2 {
         font-size: 3.3em;
     }
-}
+} */
 
 @media only screen and (max-width: 800px) {
-    .hp-title1 {
-        font-size: 1.3em;
-        margin-left: 9px;
+    .hp-name {
+        font-size: 3.5em;
     }
 
-    .hp-title2 {
-        font-size: 1.3em;
-    }
-
-    .hp-name h1 {
-        font-weight: 500;
-        font-size: 1.5em;
+    .hp-title {
+        font-size: 1em;
     }
 }

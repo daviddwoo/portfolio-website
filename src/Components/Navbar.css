@@ -24,7 +24,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 1rem;
+    font-size: 0.88rem;
 }
 
 .nb-left {
@@ -59,6 +59,44 @@
     margin-top: 20px;
 }
 
+.nb span {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+  
+.nb span:before, span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: black;
+}
+
+.nb span:before {
+    left: -2.5px;
+}
+
+.nb span:after {
+    right: 2.5px;
+    background: black;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nb span:hover:before {
+    background: black;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nb span:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
+
 @media only screen and (max-width: 800px) {
     .nb-right-menu {
         display: block;
@@ -67,9 +105,13 @@
     .nb-right {
         display: none;
     }
+    
+    .nb-left-home {
+        display: none;
+    }
 
     .nb-wrapper {
         /* width: 360px; */
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }

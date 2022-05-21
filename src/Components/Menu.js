@@ -12,13 +12,14 @@ const Menu = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}}
         >
-            <div className='menu-1'onClick={() => navigate('/about')}>About</div>
-            <div onClick={() => navigate('/portfolio')}>Portfolio</div>
-            <div onClick={() => navigate('/contact')}>Contact</div>
+            <div className='menu-1' onClick={() => navigate('/')}><span>HOME</span></div>
+            <div onClick={() => navigate('/about')}><span>ABOUT</span></div>
+            <div onClick={() => navigate('/portfolio')}><span>PORTFOLIO</span></div>
+            <div onClick={() => navigate('/contact')}><span>CONTACT</span></div>
             <div
                 onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
             >
-                Resume
+                <span>RESUME</span>
             </div>
         </motion.div>
     )

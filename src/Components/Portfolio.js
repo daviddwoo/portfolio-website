@@ -53,7 +53,7 @@ const Portfolio = () => {
                         {/* <img className='pf-img' src={projImg1} alt=''/> */}
 
                         <h1>UNPLGD</h1>
-                        <span>Fullstack e-commerce application</span>
+                        <span>e-commerce application</span>
                     </motion.div>
                     <motion.div
                         initial={{opacity: 0}}

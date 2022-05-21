@@ -71,57 +71,59 @@ const Contact = () => {
                     {/* </div> */}
                     <div className='ct-form'>
                         <form ref={form} onSubmit={onSubmit}>
-                            <div className='ct-field'>
-                                <CssTextField
-                                    onChange={onChange}
-                                    required
-                                    type='text'
-                                    className='field' 
-                                    label="Name"
-                                    name='from_name' 
-                                    variant="outlined"     
-                                    // inputProps={{
-                                    //     style: {
-                                    //         width: '640px'
-                                    //     }
-                                    // }}
-                                    sx={{
-                                        width: '98%'
-                                    }} 
-                                    value={formData['from_name']}
-                                />
-                            </div>
-                            <div className='ct-field'>
-                                <CssTextField
-                                    onChange={onChange}
-                                    required 
-                                    type='email' 
-                                    className='field' 
-                                    label="Email"
-                                    name='from_email' 
-                                    variant="outlined"
-                                    sx={{
-                                        width: '98%'
-                                    }}     
-                                    // inputProps={{
-                                    //     style: {
-                                    //         minWidth: '375px',
-                                    //         width: '640px'
-                                    //     }
-                                    // }}
-                                    value={formData['from_email']}
-                                />
+                            <div className='ct-form-ne'>
+                                <div className='ct-field'>
+                                    <CssTextField
+                                        onChange={onChange}
+                                        required
+                                        type='text'
+                                        className='field' 
+                                        label="NAME"
+                                        name='from_name' 
+                                        variant="standard"     
+                                        // inputProps={{
+                                        //     style: {
+                                        //         width: '640px'
+                                        //     }
+                                        // }}
+                                        sx={{
+                                            width: '98%'
+                                        }} 
+                                        value={formData['from_name']}
+                                    />
+                                </div>
+                                <div className='ct-field'>
+                                    <CssTextField
+                                        onChange={onChange}
+                                        required 
+                                        type='email' 
+                                        className='field' 
+                                        label="EMAIL"
+                                        name='from_email' 
+                                        variant="standard"
+                                        sx={{
+                                            width: '98%'
+                                        }}     
+                                        // inputProps={{
+                                        //     style: {
+                                        //         minWidth: '375px',
+                                        //         width: '640px'
+                                        //     }
+                                        // }}
+                                        value={formData['from_email']}
+                                    />
+                                </div>
                             </div>
                             <div className='ct-field'>
                                 <CssTextField
                                     onChange={onChange} 
                                     required
                                     className='field' 
-                                    label="Message"
+                                    label="MESSAGE"
                                     name='message' 
                                     multiline
-                                    rows={7}
-                                    variant="outlined"     
+                                    rows={3}
+                                    variant="standard"     
                                     // inputProps={{
                                     //     style: {
                                     //         height: '100px',
