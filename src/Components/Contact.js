@@ -1,10 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState } from 'react'
 import './Contact.css'
 import { TextField } from '@mui/material'
 import { styled } from '@mui/material';
 import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
 import EastIcon from '@mui/icons-material/East';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import emailjs from 'emailjs-com'
 import { motion } from 'framer-motion';
 
@@ -35,17 +37,44 @@ const Contact = () => {
 
     const form = useRef();
     const [formData, setFormData] = useState({'from_name': '', 'from_email': '', 'message': ''})
+    const [open, setOpen] = useState(false);
+    const [pos, setPos] = useState({
+        vertical: 'bottom',
+        horizontal: 'center'
+    });
+
+    const { vertical, horizontal } = pos;
+
+    const handleClick = () => setOpen(true);
+
+    const handleClose = (ev, reason) => {
+        if (reason === 'clickaway') return;
+        setOpen(false);
+    };
+
+    const action = (
+        <React.Fragment>
+          <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+          >
+              <CloseIcon fontSize="small" />
+          </IconButton>
+        </React.Fragment>
+    );
 
     const onSubmit = (ev) => {
         ev.preventDefault();
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((res) => {
-                // console.log(res.text)
+                handleClick();
             }, (err) => {
                 console.log(err.text)
             }
         )
-        setFormData({'from_name': '', 'from_email': '', 'message': ''})
+        setFormData({'from_name': '', 'from_email': '', 'message': ''});
     }
 
     const onChange = (ev) => {
@@ -63,13 +92,10 @@ const Contact = () => {
         >
             <div className='ct-wrapper'>
                 <div className='ct-info-wrapper'>
-                    {/* <div className='ct-title-wrapper'> */}
                     <div className='ct-title'>
                         <h3>Get in touch</h3>
                         <span>Feel free to leave a message or connect with me on LinkedIn!</span>
-                        {/* <span>or connect with me on LinkedIn!</span> */}
                     </div>
-                    {/* </div> */}
                     <div className='ct-form'>
                         <form ref={form} onSubmit={onSubmit}>
                             <div className='ct-form-ne'>
@@ -82,11 +108,6 @@ const Contact = () => {
                                         label="NAME"
                                         name='from_name' 
                                         variant="standard"     
-                                        // inputProps={{
-                                        //     style: {
-                                        //         width: '640px'
-                                        //     }
-                                        // }}
                                         sx={{
                                             width: '98%'
                                         }} 
@@ -105,12 +126,6 @@ const Contact = () => {
                                         sx={{
                                             width: '98%'
                                         }}     
-                                        // inputProps={{
-                                        //     style: {
-                                        //         minWidth: '375px',
-                                        //         width: '640px'
-                                        //     }
-                                        // }}
                                         value={formData['from_email']}
                                     />
                                 </div>
@@ -125,12 +140,6 @@ const Contact = () => {
                                     multiline
                                     rows={3}
                                     variant="standard"     
-                                    // inputProps={{
-                                    //     style: {
-                                    //         height: '100px',
-                                    //         width: '640px',
-                                    //     }
-                                    // }}
                                     sx={{
                                         width: '94%'
                                     }} 
@@ -140,7 +149,6 @@ const Contact = () => {
                             <div className='form-btn'>         
                                 <Button
                                     variant="text"
-                                    // disableRipple
                                     type='submit' 
                                     sx={{
                                         color: 'black',
@@ -161,27 +169,6 @@ const Contact = () => {
                                 >
                                     SEND MESSAGE
                                 </Button>              
-                                {/* <Button
-                                    className='btn'
-                                    type='submit' 
-                                    variant='contained' 
-                                    size='large' 
-                                    endIcon={<SendIcon />} 
-                                    sx={{
-                                        backgroundColor: 'black', 
-                                        // minWidth: '340px', 
-                                        // maxWidth: '668px',
-                                        width: '250px',
-                                        marginLeft: '16px',
-                                        borderRadius: 0,
-                                        '&:hover': {
-                                            backgroundColor: '#000',
-                                            borderRadius: 0
-                                        }
-                                    }}
-                                >
-                                    Send Message
-                                </Button> */}
                             </div>
                         </form>
                         <div className='ct-pref'>
@@ -192,6 +179,14 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+                <Snackbar
+                    anchorOrigin={{vertical, horizontal}}
+                    open={open}
+                    autoHideDuration={3000}
+                    onClose={handleClose}
+                    message="Message sent. Thank you!"
+                    action={action}
+                />
             </div>
         </motion.div>
     )

@@ -100,20 +100,23 @@
     .ct-title {
         width: 340px;
         text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
 
     .ct-title h3 {
-        font-size: 2.5rem;
+        font-size: 3.2rem;
         margin-top: -15px;
     }
 
     .ct-title span {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        width: 340px;
     }
 
     .ct-form {
         width: 340px;
-        margin-right: 6%;
+        /* margin-right: 6%; */
         margin-top: 0;
     }
 
