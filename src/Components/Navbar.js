@@ -43,10 +43,7 @@ const Navbar = () => {
                         <Hamburger 
                             toggled={location.pathname === '/menu' ? true : false} 
                             onClick={() => setNavOpen(!navOpen)}
-                            className='ham-icon'
-                            style={{
-                                cursor: 'none'
-                            }}
+                            className='hamburger-react'
                         />
                     </div>
                     <div className='nb-right'>

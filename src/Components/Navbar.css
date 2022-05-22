@@ -45,7 +45,7 @@
 
 .nb-right-menu {
     display: none;
-    cursor: none;
+    cursor: copy;
 }
 
 .nb-menu-links {
@@ -95,8 +95,8 @@
     transition: 0s;
 }
 
-.ham-icon {
-    cursor: crosshair;
+.hamburger-react {
+    cursor: none !important;
 }
 
 @media only screen and (max-width: 800px) {

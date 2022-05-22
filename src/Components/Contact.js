@@ -4,6 +4,7 @@ import { TextField } from '@mui/material'
 import { styled } from '@mui/material';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import EastIcon from '@mui/icons-material/East';
 import emailjs from 'emailjs-com'
 import { motion } from 'framer-motion';
 
@@ -131,13 +132,36 @@ const Contact = () => {
                                     //     }
                                     // }}
                                     sx={{
-                                        width: '98%'
+                                        width: '94%'
                                     }} 
                                     value={formData['message']}
                                 />
                             </div>
-                            <div className='form-btn'>                       
+                            <div className='form-btn'>         
                                 <Button
+                                    variant="text"
+                                    // disableRipple
+                                    type='submit' 
+                                    sx={{
+                                        color: 'black',
+                                        fontWeight: 'bold',
+                                        backgroundColor: '#f9f9f9',
+                                        '&:hover': {
+                                            backgroundColor: '#f9f9f9',
+                                        },
+                                        width: 187,
+                                        height: 30,
+                                        fontSize: '1rem',
+                                        padding: 0,
+                                        marginLeft: '15px',
+                                        justifyContent: 'flex-start',
+                                        letterSpacing: '2px'
+                                    }}
+                                    endIcon={<EastIcon />}
+                                >
+                                    SEND MESSAGE
+                                </Button>              
+                                {/* <Button
                                     className='btn'
                                     type='submit' 
                                     variant='contained' 
@@ -147,7 +171,7 @@ const Contact = () => {
                                         backgroundColor: 'black', 
                                         // minWidth: '340px', 
                                         // maxWidth: '668px',
-                                        width: '98%',
+                                        width: '250px',
                                         marginLeft: '16px',
                                         borderRadius: 0,
                                         '&:hover': {
@@ -157,9 +181,15 @@ const Contact = () => {
                                     }}
                                 >
                                     Send Message
-                                </Button>
+                                </Button> */}
                             </div>
                         </form>
+                        <div className='ct-pref'>
+                            PREFER EMAIL?
+                        </div>
+                        <div className='ct-em'>
+                            dwoo1016@gmail.com
+                        </div>
                     </div>
                 </div>
             </div>
