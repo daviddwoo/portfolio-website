@@ -35,7 +35,7 @@
     margin-left: 10px;
     display: inline-block;
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .ab-title h1 {
@@ -115,6 +115,14 @@
     font-size: 1.5rem;
 }
 
+.ab-details-span {
+    /* display: inline-block;
+    overflow: hidden; */
+    margin-bottom: 100px;
+    /* white-space: nowrap; */
+    /* width: 400px; */
+}
+
 .ab-hr {
     color: black;
     max-width: 1350px;
@@ -178,5 +186,14 @@
 
     .ab-details-img {
         margin-left: 0;
+    }
+
+    .ab-span {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-left: 20px;
+        /* display: inline-block;
+        overflow: hidden; */
+        /* white-space: nowrap; */
     }
 }

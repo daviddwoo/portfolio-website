@@ -2,10 +2,31 @@ import React from 'react'
 import './Hero.css'
 import { motion } from 'framer-motion';
 
+const item = {
+    initial: {
+      y: 400,
+      color: "#000",
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.4 }
+    },
+    animate: {
+      y: 0,
+      color: "#000",
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.4}
+    }
+};
+
+const container = {
+    animate: {
+      transition: {
+        staggerChildren: 0.9
+      }
+    }
+};
+
 const Hero = () => {
 
-    const name = 'DAVID WOO';
-    const title = 'SOFTWARE ENGINEER';
+    // const name = 'DAVID WOO';
+    // const title = 'SOFTWARE ENGINEER';
 
     return (
         <motion.div
@@ -14,9 +35,26 @@ const Hero = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}}
         >
-            <div className='hp-wrapper'>
-                <div className='hp-name'>
-                    {
+            <motion.div 
+                className='hp-wrapper'
+                initial='initial'
+                animate='animate'
+                variants={container}
+            >
+                <motion.div 
+                    className='hp-name'
+                    initial='initial'
+                    animate='animate'
+                >
+                    <span className='hp-name-span'>
+                        <motion.span
+                            style={{ display: "inline-block" }}
+                            variants={item}
+                        >
+                            DAVID WOO
+                        </motion.span>
+                    </span>
+                    {/* {
                         name.split('').map((char) => {
                             return (
                                 <div className='hp-char'>
@@ -24,10 +62,22 @@ const Hero = () => {
                                 </div>
                             )
                         })
-                    }
-                </div>
-                <div className='hp-title'>
-                    {
+                    } */}
+                </motion.div>
+                <motion.div 
+                    className='hp-title'
+                    initial='initial'
+                    animate='animate'
+                >
+                    <span className='hp-title-span'>
+                        <motion.span
+                            style={{ display: "inline-block" }}
+                            variants={item}
+                        >
+                            SOFTWARE ENGINEER
+                        </motion.span>
+                    </span>
+                    {/* {
                         title.split('').map((char) => {
                             return (
                                 <div className='hp-title-char'>
@@ -35,9 +85,9 @@ const Hero = () => {
                                 </div>
                             )
                         })
-                    }
-                </div>
-            </div>
+                    } */}
+                </motion.div>
+            </motion.div>
         </motion.div>
     )
 }

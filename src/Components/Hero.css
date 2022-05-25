@@ -40,6 +40,20 @@
     margin-right: 9px;
 }
 
+.hp-name-span {
+    letter-spacing: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.hp-title-span {
+    letter-spacing: 0.5rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 /* @media only screen and (max-width: 1520px) {
     .hp-title1 {
         font-size: 3.3em;
