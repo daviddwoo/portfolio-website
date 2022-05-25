@@ -71,7 +71,7 @@ const Project2 = () => {
                     </div>
                     <div className='player-wrapper'>
                         <ReactPlayer 
-                            url={'https://vimeo.com/701864385'} 
+                            url={'https://vimeo.com/713519825'} 
                             width='100%' 
                             height='100%'
                             className='react-player' 

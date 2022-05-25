@@ -3,35 +3,51 @@ import './About.css'
 import Picture from '../profile.jpeg'
 import { motion } from 'framer-motion'
 
+const item = {
+    hidden: {
+      y: 400,
+      color: "#000",
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.2 }
+    },
+    visible: {
+      y: 0,
+      color: "#000",
+      transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.2}
+    }
+  };
+
 const About = () => {
     return (
-        <motion.div className='ab' exit={{opacity: 0}}>
+        <motion.div 
+            className='ab'
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}} 
+        >
             <div className='ab-container-all'>
-                <motion.div 
-                    initial='hidden'
-                    whileInView={'visible'}
-                    viewport={{once: true}}
-                    transition={{duration: 1, ease: 'easeInOut'}}
-                    variants={{
-                        visible: { opacity: 1, y: 0},
-                        hidden: { opacity: 0, y: 40}
-                    }}
-                    className='ab-title'
-                >
-                    <div className='ab-title-wrapper'>
-                        <h1><span>👋 </span>there! I'm David Woo</h1>
-                    </div>
-                </motion.div>
-                <motion.div
+                <div className='ab-title'>
+                    <motion.div 
+                        className='ab-title-wrapper'
+                        initial='hidden'
+                        animate='visible'
+                        // variants={container}
+                    >
+                        <span
+                            className='ab-span'
+                        >
+                            
+                            <motion.span
+                                style={{ display: "inline-block" }}
+                                variants={item}
+                            >
+                                👋 there! I'm David Woo
+                            </motion.span>
+                            
+                        </span>
+                    </motion.div>
+                </div>
+                <div
                     className='ab-container'
-                    initial='hidden'
-                    whileInView={'visible'}
-                    viewport={{once: true}}
-                    transition={{duration: 1, ease: 'easeInOut'}}
-                    variants={{
-                        visible: { opacity: 1, y: 0},
-                        hidden: { opacity: 0, y: 40}
-                    }}
                 >
                     <div className='ab-info-wrapper'>
                         <div className='ab-details'>
@@ -54,7 +70,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </motion.div>
     )
