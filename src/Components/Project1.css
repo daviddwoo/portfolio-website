@@ -30,6 +30,13 @@
     letter-spacing: 3.5px;
 }
 
+.project-img {
+    width: 100%;
+    object-fit: contain;
+    box-shadow: rgba(50, 50, 93, 0.7) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
 .proj-img {
     width: 100%;
     object-fit: contain;
@@ -171,6 +178,10 @@
     transform: scale(1.2);
 }
 
+.p1-carousel {
+    margin-bottom: 20px;
+}
+
 .carousel {
     box-shadow: rgba(50, 50, 93, 0.7) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px !important;
@@ -188,6 +199,10 @@
     }
 
     .proj-img {
+        width: 340px;
+    }
+
+    .project-img {
         width: 340px;
     }
 

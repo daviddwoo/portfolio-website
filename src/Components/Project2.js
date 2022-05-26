@@ -56,7 +56,7 @@ const Project2 = () => {
             >
                 <motion.h1 variants={para}>Podify</motion.h1>
                 <motion.h3 variants={para}>CAPSTONE PROJECT</motion.h3>
-                <motion.img variants={para} alt='' src={projImg1} className='proj-img'/>
+                <motion.img variants={para} alt='' src={projImg1} className='project-img'/>
                 <motion.div className='p1-info'>
                     <motion.div variants={para} className='p1-info-wrapper'>
                         <div className='p1-info-role'>

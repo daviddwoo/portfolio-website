@@ -64,32 +64,8 @@ const Project1 = () => {
             >
                 <motion.h1 variants={para}>UNPLGD</motion.h1>
                 <motion.h3 variants={para}>E-COMMERCE APPLICATION</motion.h3>
-                <motion.div variants={para}>
-                    <Carousel infiniteLoop={true} showThumbs={false} autoPlay={true}>
-                        <div>
-                            <img alt='' src={projImg1} className='proj-img'/>
-                        </div>
-                        <div>
-                            <img alt='' src={projImg2} className='proj-img'/>
-                        </div>
-                        <div>
-                            <img alt='' src={projImg3} className='proj-img'/>
-                        </div>
-                        <div>
-                            <img alt='' src={projImg5} className='proj-img'/>
-                        </div>
-                        <div>
-                            <img alt='' src={projImg6} className='proj-img'/>
-                        </div>
-                        <div>
-                            <img alt='' src={projImg7} className='proj-img'/>
-                        </div>
-                        <div>
-                            <img alt='' src={projImg8} className='proj-img'/>
-                        </div>
-                    </Carousel>
-                </motion.div>
-                {/* <img alt='' src={projImg1} className='proj-img'/> */}
+
+                <motion.img variants={para} alt='' src={projImg1} className='project-img'/>
                 <motion.div className='p1-info'>
                     <motion.div variants={para} className='p1-info-wrapper'>
                         <motion.div className='p1-info-role'>
@@ -124,6 +100,31 @@ const Project1 = () => {
                             In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
                         </motion.p>
                     </motion.div>
+                    <motion.div variants={para} className='p1-carousel'>
+                        <Carousel infiniteLoop={true} showThumbs={false} autoPlay={true}>
+                            <div>
+                                <img alt='' src={projImg1} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg2} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg3} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg5} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg6} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg7} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg8} className='proj-img'/>
+                            </div>
+                        </Carousel>
+                     </motion.div>
                     <motion.div variants={para} className='p1-contr'>
                         <motion.span>Contributions</motion.span>
                         <motion.p variants={para}>
