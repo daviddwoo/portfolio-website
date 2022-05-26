@@ -9,6 +9,28 @@ import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 
+
+const para = {
+    initial: {
+      opacity: 0,  
+      y: 40,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
+    }
+};
+
+const container = {
+    animate: {
+      transition: {
+        staggerChildren: 0.12
+      }
+    }
+};
+
 const Project3 = () => {
 
     // const openSite = (site) => {
@@ -27,12 +49,17 @@ const Project3 = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}
         }>
-            <div className='p1-img-wrapper'>
-                <h1>Conductor</h1>
-                <h3>SOLO PROJECT</h3>
-                <img alt='' src={projImg1} className='proj-img'/>
-                <div className='p1-info'>
-                    <div className='p1-info-wrapper'>
+            <motion.div 
+                className='p1-img-wrapper'
+                initial='initial'
+                animate='animate'
+                variants={container}
+            >
+                <motion.h1 variants={para}>Conductor</motion.h1>
+                <motion.h3 variants={para}>SOLO PROJECT</motion.h3>
+                <motion.img variants={para} alt='' src={projImg1} className='proj-img'/>
+                <motion.div className='p1-info'>
+                    <motion.div variants={para} className='p1-info-wrapper'>
                         <div className='p1-info-role'>
                             <span>Role</span>
                             <h4>Sole Developer</h4>
@@ -55,43 +82,43 @@ const Project3 = () => {
                                 <h4>Github</h4>
                             </div>
                         </div>
-                    </div>
-                    <div className='p1-contr'>
-                        <span>Overview</span>
-                        <p>
+                    </motion.div>
+                    <motion.div variants={para} className='p1-contr'>
+                        <motion.span>Overview</motion.span>
+                        <motion.p variants={para}>
                             I was fascinated by machine learning and decided to work with this technology to build Conductor. 
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p variants={para}>
                             Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p variants={para}>
                             Please check out the screen demo of the game below.
-                        </p>
-                    </div>
-                    <div className='player-wrapper-p3'>
+                        </motion.p>
+                    </motion.div>
+                    <motion.div variants={para} className='player-wrapper-p3'>
                         <ReactPlayer 
                             url={'https://vimeo.com/705247868'} 
                             width='100%' 
                             height='100%'
                             className='react-player-p3' 
                         />
-                    </div>
+                    </motion.div>
                     {/* <hr className='p1-hr'/> */}
-                    <div className='p1-contr2'>
-                        <span>Contributions</span>
-                        <p>
+                    <motion.div variants={para} className='p1-contr2'>
+                        <motion.span>Contributions</motion.span>
+                        <motion.p variants={para}>
                             Utilized Teachable Machine to train different image classification models based on TensorFlow.js technology.
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p variants={para}>
                             Built the web game using the Phaser3 library.
-                        </p>
-                    </div>
-                </div>
-                <div className='proj-icon'>
+                        </motion.p>
+                    </motion.div>
+                </motion.div>
+                <motion.div className='proj-icon'>
                     <ViewComfyIcon fontSize='large' className='pj-icon' onClick={() => navigate('/portfolio')}/>
-                </div>
+                </motion.div>
                 {/* <hr className='p1-hr'/> */}
-            </div>
+            </motion.div>
             {/* <hr className='ab-hr'/> */}
         </motion.div>
     )

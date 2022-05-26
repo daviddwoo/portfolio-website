@@ -2,11 +2,40 @@ import React, { useEffect } from 'react'
 import './Project1.css'
 import './About.css'
 import projImg1 from '../gs-hp.png'
+import projImg2 from '../unplgd11.png'
+import projImg3 from '../unplgd10.png'
+import projImg5 from '../unplgd5.png'
+import projImg6 from '../unplgd6.png'
+import projImg7 from '../unplgd7.png'
+import projImg8 from '../unplgd8.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"
+
+const para = {
+    initial: {
+      opacity: 0,  
+      y: 40,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
+    }
+};
+
+const container = {
+    animate: {
+      transition: {
+        staggerChildren: 0.12
+      }
+    }
+};
 
 const Project1 = () => {
 
@@ -27,64 +56,94 @@ const Project1 = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}
         }>
-            <div className='p1-img-wrapper'>
-                <h1>UNPLGD</h1>
-                <h3>E-COMMERCE APPLICATION</h3>
-                <img alt='' src={projImg1} className='proj-img'/>
-                <div className='p1-info'>
-                    <div className='p1-info-wrapper'>
-                        <div className='p1-info-role'>
+            <motion.div 
+                className='p1-img-wrapper'
+                initial='initial'
+                animate='animate'
+                variants={container}
+            >
+                <motion.h1 variants={para}>UNPLGD</motion.h1>
+                <motion.h3 variants={para}>E-COMMERCE APPLICATION</motion.h3>
+                <motion.div variants={para}>
+                    <Carousel infiniteLoop={true} showThumbs={false} autoPlay={true}>
+                        <div>
+                            <img alt='' src={projImg1} className='proj-img'/>
+                        </div>
+                        <div>
+                            <img alt='' src={projImg2} className='proj-img'/>
+                        </div>
+                        <div>
+                            <img alt='' src={projImg3} className='proj-img'/>
+                        </div>
+                        <div>
+                            <img alt='' src={projImg5} className='proj-img'/>
+                        </div>
+                        <div>
+                            <img alt='' src={projImg6} className='proj-img'/>
+                        </div>
+                        <div>
+                            <img alt='' src={projImg7} className='proj-img'/>
+                        </div>
+                        <div>
+                            <img alt='' src={projImg8} className='proj-img'/>
+                        </div>
+                    </Carousel>
+                </motion.div>
+                {/* <img alt='' src={projImg1} className='proj-img'/> */}
+                <motion.div className='p1-info'>
+                    <motion.div variants={para} className='p1-info-wrapper'>
+                        <motion.div className='p1-info-role'>
                             <span>Role</span>
                             <h4>Developer</h4>
-                        </div>
-                        <div className='p1-info-role'>
+                        </motion.div>
+                        <motion.div className='p1-info-role'>
                             <span>Date</span>
                             <h4>Feb 2022</h4>
-                        </div>
-                        <div className='p1-info-role'>
+                        </motion.div>
+                        <motion.div className='p1-info-role'>
                             <span>Technologies</span>
                             <h4>React / Redux, Express, Sequelize, PostgreSQL, Stripe API</h4>
-                        </div>
-                        <div className='p1-info-links'>
+                        </motion.div>
+                        <motion.div className='p1-info-links'>
                             <div className='p1-links' onClick={() => openSite('live')}>
                                 <LinkIcon fontSize='medium'/>
-                                <h4>Live</h4>
+                                <h4>Demo</h4>
                             </div>
                             <div className='p1-links' onClick={() => openSite('gh')}>
                                 <GitHubIcon fontSize='medium'/>
                                 <h4>Github</h4>
                             </div>
-                        </div>
-                    </div>
-                    <div className='p1-contr'>
-                        <span>Overview</span>
-                        <p>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div variants={para} className='p1-contr'>
+                        <motion.span >Overview</motion.span>
+                        <motion.p variants={para}>
                             UNPLGD is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. 
-                        </p>
-                        <p>
+                        </motion.p >
+                        <motion.p variants={para}>
                             In my team of three developers, we were all either current or previous musicians, so we thought it would be a good idea to use musical instruments for our site!
-                        </p>
-                    </div>
-                    <div className='p1-contr'>
-                        <span>Contributions</span>
-                        <p>
+                        </motion.p>
+                    </motion.div>
+                    <motion.div variants={para} className='p1-contr'>
+                        <motion.span>Contributions</motion.span>
+                        <motion.p variants={para}>
                             Integrated guest and user cart experience, where both can add, edit, or remove products in the shopping cart. This functionality was built using React / Redux and Express API routes
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p variants={para}>
                             Implemented the Stripe API for registered user checkout process.                           
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p variants={para}>
                             Built and designed entire UX / UI experience for both guest and registered users. CSS and Material UI were utilized to design the application.                          
-                        </p>
-                        <p>
+                        </motion.p>
+                        <motion.p variants={para}>
                             Helped set up Sequelize models / associations and Express routes for back-end data implementation. 
-                        </p>
-                    </div>
-                </div>
-                <div className='proj-icon'>
+                        </motion.p>
+                    </motion.div>
+                </motion.div>
+                <motion.div className='proj-icon'>
                     <ViewComfyIcon fontSize='large' className='pj-icon' onClick={() => navigate('/portfolio')}/>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </motion.div>
     )
 }

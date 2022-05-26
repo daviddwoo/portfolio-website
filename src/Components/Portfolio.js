@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import './Portfolio.css'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import projImg1 from '../gs-hp.png'
 import projImg2 from '../podify-hp.png'
 import projImg3 from '../Conductor.png'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+
 
 const para = {
     initial: {
@@ -31,32 +31,11 @@ const container = {
 };
 
 const Portfolio = () => {
-    // const { pathname } = useLocation();
-
-    // const { ref, inView } = useInView();
-
-    // const controls = useAnimation();
-    // const [ref, inView] = useInView();
-  
-    // useEffect(() => {
-    //   if (inView) {
-    //     controls.start("visible");
-    //   }
-    // }, [controls, inView]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
     const navigate = useNavigate();
-
-    // const [hoverState1, setHoverState1] = useState(false);
-    // const [hoverState2, setHoverState2] = useState(false);
-    // const [hoverState3, setHoverState3] = useState(false);
-
-    // const [state, setState] = useState({
-    //     top: 0,
-    //     left: 0,
-    // })
 
     return (
         <motion.div 
