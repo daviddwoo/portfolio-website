@@ -31,6 +31,27 @@ const CssTextField = styled(TextField)({
       },
     },
 });
+
+const para = {
+    initial: {
+      opacity: 0,  
+      y: 40,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
+    }
+};
+
+const container = {
+    animate: {
+      transition: {
+        staggerChildren: 0.12
+      }
+    }
+};
   
 
 const Contact = () => {
@@ -91,14 +112,18 @@ const Contact = () => {
             id='contact'
         >
             <div className='ct-wrapper'>
-                <div className='ct-info-wrapper'>
-                    <div className='ct-title'>
-                        <h3>Get in touch</h3>
-                        <span>Feel free to leave a message or connect with me on LinkedIn!</span>
-                    </div>
-                    <div className='ct-form'>
+                <motion.div 
+                    className='ct-info-wrapper'
+                    initial='initial'
+                    animate='animate'
+                >
+                    <motion.div className='ct-title' variants={container}>
+                        <motion.h3 variants={para}>Get in touch</motion.h3>
+                        <motion.span variants={para}>Feel free to leave a message or connect with me on LinkedIn!</motion.span>
+                    </motion.div>
+                    <motion.div className='ct-form' variants={container}>
                         <form ref={form} onSubmit={onSubmit}>
-                            <div className='ct-form-ne'>
+                            <motion.div variants={para} className='ct-form-ne'>
                                 <div className='ct-field'>
                                     <CssTextField
                                         onChange={onChange}
@@ -129,8 +154,8 @@ const Contact = () => {
                                         value={formData['from_email']}
                                     />
                                 </div>
-                            </div>
-                            <div className='ct-field'>
+                            </motion.div>
+                            <motion.div variants={para} className='ct-field'>
                                 <CssTextField
                                     onChange={onChange} 
                                     required
@@ -145,8 +170,8 @@ const Contact = () => {
                                     }} 
                                     value={formData['message']}
                                 />
-                            </div>
-                            <div className='form-btn'>         
+                            </motion.div>
+                            <motion.div variants={para} className='form-btn'>         
                                 <Button
                                     variant="text"
                                     type='submit' 
@@ -169,16 +194,16 @@ const Contact = () => {
                                 >
                                     SEND MESSAGE
                                 </Button>              
-                            </div>
+                            </motion.div>
                         </form>
-                        <div className='ct-pref'>
+                        <motion.div variants={para} className='ct-pref'>
                             PREFER EMAIL?
-                        </div>
-                        <div className='ct-em'>
+                        </motion.div>
+                        <motion.div variants={para} className='ct-em'>
                             dwoo1016@gmail.com
-                        </div>
-                    </div>
-                </div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
                 <Snackbar
                     anchorOrigin={{vertical, horizontal}}
                     open={open}

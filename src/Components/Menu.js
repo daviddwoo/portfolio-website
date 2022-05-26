@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Menu.css'
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+const para = {
+    initial: {
+      opacity: 0,  
+      y: 40,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
+    }
+};
+
+const container = {
+    animate: {
+      transition: {
+        staggerChildren: 0.12
+      }
+    }
+};
+
 const Menu = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (window.innerWidth > 800) navigate('/')
+    })
 
     const openSite = (site) => {
         return site === 'linkedin' ? window.open('https://www.linkedin.com/in/daviddwoo/') : window.open('https://github.com/daviddwoo')
@@ -19,16 +44,23 @@ const Menu = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}}
         >
-            <div className='menu-1' onClick={() => navigate('/')}><span>HOME</span></div>
-            <div onClick={() => navigate('/about')} className='menu-div'><span>ABOUT</span></div>
-            <div onClick={() => navigate('/portfolio')} className='menu-div'><span>PORTFOLIO</span></div>
-            <div onClick={() => navigate('/contact')} className='menu-div'><span>CONTACT</span></div>
-            <div
-                onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
-                className='menu-last'
+            <motion.div                             
+                initial='initial'
+                animate='animate'
+                variants={container}
             >
-                <span>RESUME</span>
-            </div>
+                <motion.div variants={para} className='menu-1' onClick={() => navigate('/')}><span>HOME</span></motion.div>
+                <motion.div variants={para} onClick={() => navigate('/about')} className='menu-div'><span>ABOUT</span></motion.div>
+                <motion.div variants={para} onClick={() => navigate('/portfolio')} className='menu-div'><span>PORTFOLIO</span></motion.div>
+                <motion.div variants={para} onClick={() => navigate('/contact')} className='menu-div'><span>CONTACT</span></motion.div>
+                <motion.div 
+                    onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
+                    className='menu-last'
+                    variants={para}
+                >
+                    <span>RESUME</span>
+                </motion.div>
+            </motion.div>
             <div className='menu-connect'>
                 <div>
                     <GitHubIcon 

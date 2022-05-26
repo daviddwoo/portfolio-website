@@ -4,36 +4,54 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import projImg1 from '../gs-hp.png'
 import projImg2 from '../podify-hp.png'
 import projImg3 from '../Conductor.png'
-import { motion } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
-let easing = [0.6, -0.05, 0.01, 0.99];
-
-const fadeInUp = {
+const para = {
     initial: {
-      y: 60,
-      opacity: 0,
-      transition: { duration: 0.6, ease: easing }
+      opacity: 0,  
+      y: 40,
+      color: "#000",
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
     },
     animate: {
-      y: 0,
       opacity: 1,
+      y: 0,
+      color: "#000",
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
+    }
+};
+
+const container = {
+    animate: {
       transition: {
-        duration: 0.6,
-        ease: easing
+        staggerChildren: 0.2
       }
     }
-  };
+};
 
 const Portfolio = () => {
-    const { pathname } = useLocation();
+    // const { pathname } = useLocation();
+
+    // const { ref, inView } = useInView();
+
+    // const controls = useAnimation();
+    // const [ref, inView] = useInView();
+  
+    // useEffect(() => {
+    //   if (inView) {
+    //     controls.start("visible");
+    //   }
+    // }, [controls, inView]);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
     const navigate = useNavigate();
 
-    const [hoverState1, setHoverState1] = useState(false);
-    const [hoverState2, setHoverState2] = useState(false);
-    const [hoverState3, setHoverState3] = useState(false);
+    // const [hoverState1, setHoverState1] = useState(false);
+    // const [hoverState2, setHoverState2] = useState(false);
+    // const [hoverState3, setHoverState3] = useState(false);
 
     // const [state, setState] = useState({
     //     top: 0,
@@ -47,70 +65,50 @@ const Portfolio = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}}
         >
-            <div className='pf-wrapper'>
-                <div className='pf-proj'>
-                    <motion.div className='pf-proj-name' onClick={() => navigate('/unplgd')} onHoverStart={() => setHoverState1(true)} onHoverEnd={() => setHoverState1(false)}>
-                        {/* <img className='pf-img' src={projImg1} alt=''/> */}
+            <motion.div 
+                className='pf-wrapper'
+                initial='initial'
+                animate='animate'
+                variants={container}
+            >
+                <motion.div variants={para} className='pf-proj1'>
+                    <div 
+                        className='pf-proj-name' 
+                        onClick={() => navigate('/unplgd')} 
 
+                    >
                         <h1>UNPLGD</h1>
                         <span>e-commerce application</span>
-                    </motion.div>
-                    <motion.div
-                        initial={{opacity: 0}}
-                        className='float-img'
-                        animate={{
-                            opacity: hoverState1 ? 1 : 0,
-                            x: -323,
-                            y: -220
-                        }}
-                        transition={{
-                            ease: 'linear'
-                        }}
-                    >
+                    </div>
+                    <div className='pf-proj-cover' onClick={() => navigate('/unplgd')}>
                         <img className='pf-img' src={projImg1} alt=''/>
-                    </motion.div>
-                </div>
-                <div className='pf-proj'>
-                    <motion.div className='pf-proj-name' onClick={() => navigate('/podify') } onHoverStart={() => setHoverState2(true)} onHoverEnd={() => setHoverState2(false)}>
+                    </div>
+                </motion.div>
+                <motion.div variants={para} className='pf-proj'>
+                    <div 
+                        className='pf-proj-name' 
+                        onClick={() => navigate('/podify')} 
+                    >
                         <h1>Podify</h1>
                         <span>Capstone Project</span>
-                    </motion.div>
-                    <motion.div
-                        initial={{opacity: 0}}
-                        className='float-img'
-                        animate={{
-                            opacity: hoverState2 ? 1 : 0,
-                            x: -320,
-                            y: -220
-                        }}
-                        transition={{
-                            ease: 'linear'
-                        }}
-                    >
+                    </div>
+                    <div className='pf-proj-cover' onClick={() => navigate('/podify')} >
                         <img className='pf-img' src={projImg2} alt=''/>
-                    </motion.div>
-                </div>
-                <div className='pf-proj-last'>
-                    <motion.div className='pf-proj-name' onClick={() => navigate('/conductor')} onHoverStart={() => setHoverState3(true)} onHoverEnd={() => setHoverState3(false)}>
+                    </div>
+                </motion.div>
+                <motion.div variants={para} className='pf-proj'>
+                    <div 
+                        className='pf-proj-name'
+                        onClick={() => navigate('/conductor')}  
+                    >
                         <h1>Conductor</h1>
                         <span>Solo Project</span>
-                    </motion.div>
-                    <motion.div
-                        initial={{opacity: 0}}
-                        className='float-img'
-                        animate={{
-                            opacity: hoverState3 ? 1 : 0,
-                            x: -320,
-                            y: -220
-                        }}
-                        transition={{
-                            ease: 'linear'
-                        }}
-                    >
+                    </div>
+                    <div className='pf-proj-cover' onClick={() => navigate('/conductor')} >
                         <img className='pf-img' src={projImg3} alt=''/>
-                    </motion.div>
-                </div>
-            </div>
+                    </div>
+                </motion.div>
+            </motion.div>
         </motion.div>
     )
 }

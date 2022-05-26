@@ -62,6 +62,10 @@
     margin-left: 3px;
 }
 
+.ct-title-span {
+    color: gray;
+}
+
 .ct-field {
     padding: 1rem;
     width: 100%; 

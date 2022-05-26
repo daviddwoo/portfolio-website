@@ -1,37 +1,55 @@
 .pf {
-    margin-bottom: 50px;/* height: 70vh; */
+    /* margin-bottom: 50px;height: 70vh; */
 }
 
 .pf-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.pf-proj1 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .pf-proj {
-    margin-top: 120px;
+    /* margin-top: 30px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 
+
+
 .pf-proj-last {
-    margin-top: 120px;
+    /* margin-top: 30px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
+}
+
+.pf-proj1 h1 {
+    font-size: 5em;
+    padding: 0;
+    margin: 0;   
 }
 
 .pf-proj h1 {
-    font-size: 6em;
+    font-size: 5em;
     padding: 0;
     margin: 0;
     /* padding-bottom: 80px; */
 }
 
 .pf-proj-last h1 {
-    font-size: 6em;
+    font-size: 5em;
     padding: 0;
     margin: 0;
 }
@@ -40,12 +58,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
     z-index: 5;
+    margin-bottom: 20px;
 }
 
 .pf-proj-name span {
     color: black;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 3.5px;
@@ -53,26 +75,39 @@
 
 .pf-img {
     pointer-events: none;
-    width: 40rem;
-    position: absolute;
-    background-size: cover;
-    background-position: 50%;
-    z-index: 3;
-    overflow: hidden;
-    opacity: 0.7;
-    /* width: 400px;
-    height: 400px;
-    object-fit: contain;
-    position: absolute; */
+    width: 37rem;
+    /* margin-bottom: -50px; */
+    margin-right: 10px;
+    transition: all 0.5s ease;
+    box-shadow: rgba(50, 50, 93, 0.7) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* .pf-img:hover {
+    
+} */
+
+.pf-proj-cover:hover .pf-img {
+    transform: scale(1.06);
 }
 
 @media only screen and (max-width: 800px) {
+
+    .pf-proj1 h1 {
+        font-size: 4.2em;
+    }
+
     .pf-proj h1 {
-        font-size: 5em;
+        font-size: 4.2em;
         /* padding-bottom: 80px; */
     }
     
     .pf-proj-last h1 {
-        font-size: 5em;
+        font-size: 4.5em;
+    }
+
+    .pf-img {
+        width: 23rem;
+        margin-left: 10px;
     }
 }

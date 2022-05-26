@@ -18,10 +18,18 @@ const item = {
 const container = {
     animate: {
       transition: {
-        staggerChildren: 0.9
+        staggerChildren: 0.09
       }
     }
 };
+
+const exitAni = {
+    animate: {
+        y: 400,
+        color: '#000',
+        transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.4 }
+    }
+}
 
 const Hero = () => {
 
@@ -29,7 +37,7 @@ const Hero = () => {
     // const title = 'SOFTWARE ENGINEER';
 
     return (
-        <motion.div
+        <motion.div 
             className='hp' 
             initial={{opacity: 0}}
             animate={{opacity: 1}}
@@ -43,8 +51,6 @@ const Hero = () => {
             >
                 <motion.div 
                     className='hp-name'
-                    initial='initial'
-                    animate='animate'
                 >
                     <span className='hp-name-span'>
                         <motion.span
@@ -66,8 +72,6 @@ const Hero = () => {
                 </motion.div>
                 <motion.div 
                     className='hp-title'
-                    initial='initial'
-                    animate='animate'
                 >
                     <span className='hp-title-span'>
                         <motion.span
