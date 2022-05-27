@@ -41,12 +41,6 @@
     object-fit: contain;
 }
 
-.p1-hr {
-    color: black;
-    width: 100%;
-    margin-top: 30px;
-}
-
 .p1-info-wrapper {
     display: flex;
     margin-top: 20px;
@@ -178,7 +172,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-
     .p1-img-wrapper h1 {
         font-size: 3.9em;
     }

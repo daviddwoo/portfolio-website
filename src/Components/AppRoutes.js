@@ -1,17 +1,16 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import Hero from './Hero';
-import Portfolio from './Portfolio';
-import Project1 from './Project1'
-import Project2 from './Project2'
-import Project3 from './Project3'
-import About from './About';
-import Contact from './Contact';
+import Hero from './Hero/Hero';
+import Portfolio from './Portfolio/Portfolio';
+import Project1 from './Projects/Project1'
+import Project2 from './Projects/Project2'
+import Project3 from './Projects/Project3'
+import About from './About/About';
+import Contact from './Contact/Contact';
 import { AnimatePresence } from 'framer-motion';
-import Menu from './Menu';
+import Menu from './Menu/Menu';
 
 const AppRoutes = () => {
-    
     const location = useLocation();
 
     return (

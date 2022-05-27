@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Menu.css'
-import { motion, useAnimation } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { animations, stagger2 } from '../framer'
+import { animations, stagger2 } from '../../framer'
 
 const Menu = ({setNavOpen}) => {
     const navigate = useNavigate();
@@ -54,7 +54,6 @@ const Menu = ({setNavOpen}) => {
                 <motion.div
                     className='menu-div' 
                     onClick={() => {
-                        
                         navigate('/about');
                         setNavOpen(false);
                     }}
@@ -75,8 +74,8 @@ const Menu = ({setNavOpen}) => {
                 <motion.div 
                     variants={animations} 
                     onClick={() => {
-                        setNavOpen(false);
                         navigate('/contact');
+                        setNavOpen(false);
                     }}
                     className='menu-div'
                 >

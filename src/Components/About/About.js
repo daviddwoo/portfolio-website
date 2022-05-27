@@ -1,8 +1,8 @@
 import React from 'react'
 import './About.css'
-import Picture from '../Screenshots/profile.jpeg'
+import Picture from '../../Screenshots/profile.jpeg'
 import { motion } from 'framer-motion'
-import { animations, stagger1 } from '../framer'
+import { animations, stagger1 } from '../../framer'
 
 const About = () => {
     return (
@@ -20,17 +20,13 @@ const About = () => {
             >
                 <div className='ab-title'>
                     <motion.div className='ab-title-wrapper'>
-                        <span
-                            className='ab-span'
-                        >
-                            
+                        <span className='ab-span'>
                             <motion.span
                                 style={{ display: "inline-block" }}
                                 variants={animations}
                             >
                                 👋 there! I'm David Woo
                             </motion.span>
-                            
                         </span>
                     </motion.div>
                 </div>
@@ -40,23 +36,16 @@ const About = () => {
                             <motion.div 
                                 className='ab-details-img'
                                 variants={animations}
-                                // initial={{opacity: 0}}
-                                // animate={{opacity: 1, transition: { delay: 0.3}}}
                             >
                                 <img alt='' src={Picture} className='ab-pic'/>
                             </motion.div>
-                            <motion.div 
-                                className='ab-details-p'
-                                // variants={container}
-                                // variants={container}
-                            >
+                            <motion.div className='ab-details-p'>
                                 <motion.p
                                     className='ab-details-p1'
                                     variants={animations}
                                 >
                                     I am a recent graduate of the Fullstack Academy's part-time Flex Immersive program, seeking to transition into the
                                     tech field in a software engineering role. I am passionate about learning and improving my skillset to become a valuable asset to any team.
-
                                 </motion.p>
                                 <motion.p 
                                     className='ab-details-pr'
@@ -73,7 +62,6 @@ const About = () => {
                                     Please feel free to reach out to me
                                     with a message or connect with me on LinkedIn!
                                 </motion.p>
-
                             </motion.div>
                         </div>
                     </div>

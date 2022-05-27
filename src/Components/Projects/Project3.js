@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
-import './About.css'
-import projImg1 from '../Screenshots/Conductor.png'
+// import './About.css'
+import projImg1 from '../../Screenshots/Conductor.png'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
-import { animations, stagger2 } from '../framer'
+import { animations, stagger2 } from '../../framer'
 
 const Project3 = () => {
 
@@ -22,8 +22,8 @@ const Project3 = () => {
             className='p1' 
             initial={{opacity: 0}}
             animate={{opacity: 1}}
-            exit={{opacity: 0}
-        }>
+            exit={{opacity: 0}}
+        >
             <motion.div 
                 className='p1-img-wrapper'
                 initial='initial'
@@ -38,7 +38,10 @@ const Project3 = () => {
                     src={projImg1} 
                     className='project-img'/>
                 <motion.div className='p1-info'>
-                    <motion.div variants={animations} className='p1-info-wrapper'>
+                    <motion.div 
+                        className='p1-info-wrapper'
+                        variants={animations} 
+                    >
                         <div className='p1-info-role'>
                             <span>Role</span>
                             <h4>Sole Developer</h4>
@@ -62,8 +65,8 @@ const Project3 = () => {
                         </div>
                     </motion.div>
                     <motion.div 
-                        variants={animations} 
                         className='p1-contr'
+                        variants={animations} 
                     >
                         <motion.span>Overview</motion.span>
                         <motion.p variants={animations}>
@@ -76,7 +79,10 @@ const Project3 = () => {
                             Please check out the screen demo of the game below.
                         </motion.p>
                     </motion.div>
-                    <motion.div variants={animations} className='player-wrapper-p3'>
+                    <motion.div 
+                        className='player-wrapper-p3'
+                        variants={animations} 
+                    >
                         <ReactPlayer 
                             url={'https://vimeo.com/705247868'} 
                             width='100%' 
@@ -84,7 +90,10 @@ const Project3 = () => {
                             className='react-player-p3' 
                         />
                     </motion.div>
-                    <motion.div variants={animations} className='p1-contr2'>
+                    <motion.div 
+                        className='p1-contr2'
+                        variants={animations} 
+                    >
                         <motion.span>Contributions</motion.span>
                         <motion.p variants={animations}>
                             Utilized Teachable Machine to train different image classification models based on TensorFlow.js technology.
@@ -96,8 +105,8 @@ const Project3 = () => {
                 </motion.div>
                 <motion.div className='proj-icon'>
                     <ViewComfyIcon 
-                        fontSize='large' 
                         className='pj-icon' 
+                        fontSize='large' 
                         onClick={() => navigate('/portfolio')}
                     />
                 </motion.div>

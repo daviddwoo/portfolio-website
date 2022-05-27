@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import { useNavigate } from 'react-router-dom'
 import { Turn as Hamburger } from 'hamburger-react'
-import { motion, AnimatePresence } from 'framer-motion'
-import Menu from './Menu'
+import { AnimatePresence } from 'framer-motion'
+import Menu from '../Menu/Menu'
 
 const Navbar = () => {
 
@@ -37,7 +37,9 @@ const Navbar = () => {
                             <span className='nb-span'>ABOUT</span>
                         </div>
                         <div onClick={() => navigate('/portfolio')}>
-                            <span className='nb-span'>PORTFOLIO</span>
+                            <span className='nb-span'>
+                                PORTFOLIO
+                            </span>
                         </div>
                         <div onClick={() => navigate('/contact')}>
                             <span className='nb-span'>CONTACT</span>

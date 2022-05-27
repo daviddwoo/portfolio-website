@@ -1,10 +1,9 @@
 import React from 'react'
 import './Hero.css'
 import { motion } from 'framer-motion';
-import { heroStagger, heroAnimation } from '../framer';
+import { heroStagger, heroAnimation } from '../../framer';
 
 const Hero = () => {
-
     return (
         <motion.div 
             className='hp' 
@@ -18,9 +17,7 @@ const Hero = () => {
                 animate='animate'
                 variants={heroStagger}
             >
-                <motion.div 
-                    className='hp-name'
-                >
+                <motion.div className='hp-name'>
                     <span className='hp-name-span'>
                         <motion.span
                             style={{ display: "inline-block" }}
@@ -30,9 +27,7 @@ const Hero = () => {
                         </motion.span>
                     </span>
                 </motion.div>
-                <motion.div 
-                    className='hp-title'
-                >
+                <motion.div className='hp-title'>
                     <span className='hp-title-span'>
                         <motion.span
                             style={{ display: "inline-block" }}

@@ -1,0 +1,32 @@
+.outer-nb {
+    display: block;
+    bottom: 0;
+    margin-right: 6vw;
+    position: fixed;
+    right: 0;
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+.outer-nb-list {
+    display: flex;
+    transform: rotate(-180deg);
+    list-style: none;
+    width: 250px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.outer-nb-list span {
+    font-size: 0.85em;
+}
+
+.outer-nb-icon {
+    transform: rotate(90deg);
+}
+
+@media only screen and (max-width: 800px) {
+    .outer-nb {
+        display: none;
+    }
+}

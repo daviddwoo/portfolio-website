@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import emailjs from 'emailjs-com'
 import { motion } from 'framer-motion';
-import { animations, stagger2 } from '../framer'
+import { animations, stagger2 } from '../../framer'
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -39,10 +39,10 @@ const Contact = () => {
     const form = useRef();
     const [formData, setFormData] = useState({'from_name': '', 'from_email': '', 'message': ''})
     const [open, setOpen] = useState(false);
-    const [pos, setPos] = useState({
+    const pos = {
         vertical: 'bottom',
         horizontal: 'center'
-    });
+    }
 
     const { vertical, horizontal } = pos;
 
@@ -97,13 +97,22 @@ const Contact = () => {
                     initial='initial'
                     animate='animate'
                 >
-                    <motion.div className='ct-title' variants={stagger2}>
+                    <motion.div 
+                        className='ct-title' 
+                        variants={stagger2}
+                    >
                         <motion.h3 variants={animations}>Get in touch</motion.h3>
                         <motion.span variants={animations}>Feel free to leave a message or connect with me on LinkedIn!</motion.span>
                     </motion.div>
-                    <motion.div className='ct-form' variants={stagger2}>
+                    <motion.div 
+                        className='ct-form' 
+                        variants={stagger2}
+                    >
                         <form ref={form} onSubmit={onSubmit}>
-                            <motion.div variants={animations} className='ct-form-ne'>
+                            <motion.div
+                                className='ct-form-ne' 
+                                variants={animations} 
+                            >
                                 <div className='ct-field'>
                                     <CssTextField
                                         onChange={onChange}
@@ -176,10 +185,16 @@ const Contact = () => {
                                 </Button>              
                             </motion.div>
                         </form>
-                        <motion.div variants={animations} className='ct-pref'>
+                        <motion.div 
+                            className='ct-pref'
+                            variants={animations} 
+                        >
                             PREFER EMAIL?
                         </motion.div>
-                        <motion.div variants={animations} className='ct-em'>
+                        <motion.div 
+                            className='ct-em'
+                            variants={animations} 
+                        >
                             dwoo1016@gmail.com
                         </motion.div>
                     </motion.div>

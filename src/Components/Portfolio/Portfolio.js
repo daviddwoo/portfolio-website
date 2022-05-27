@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import './Portfolio.css'
 import { useNavigate } from 'react-router-dom'
-import projImg1 from '../Screenshots/gs-hp.png'
-import projImg2 from '../Screenshots/podify-hp.png'
-import projImg3 from '../Screenshots/Conductor.png'
+import projImg1 from '../../Screenshots/gs-hp.png'
+import projImg2 from '../../Screenshots/podify-hp.png'
+import projImg3 from '../../Screenshots/Conductor.png'
 import { motion } from 'framer-motion'
-import { animations, stagger1 } from '../framer'
+import { animations, stagger1 } from '../../framer'
 
 const Portfolio = () => {
 
@@ -28,20 +28,28 @@ const Portfolio = () => {
                 animate='animate'
                 variants={stagger1}
             >
-                <motion.div variants={animations} className='pf-proj1'>
+                <motion.div 
+                    className='pf-proj1'
+                    variants={animations} 
+                >
                     <div 
                         className='pf-proj-name' 
                         onClick={() => navigate('/unplgd')} 
-
                     >
                         <h1>UNPLGD</h1>
                         <span>e-commerce application</span>
                     </div>
-                    <div className='pf-proj-cover' onClick={() => navigate('/unplgd')}>
+                    <div 
+                        className='pf-proj-cover' 
+                        onClick={() => navigate('/unplgd')}
+                    >
                         <img className='pf-img' src={projImg1} alt=''/>
                     </div>
                 </motion.div>
-                <motion.div variants={animations} className='pf-proj'>
+                <motion.div 
+                    className='pf-proj'
+                    variants={animations} 
+                >
                     <div 
                         className='pf-proj-name' 
                         onClick={() => navigate('/podify')} 
@@ -49,11 +57,17 @@ const Portfolio = () => {
                         <h1>Podify</h1>
                         <span>Capstone Project</span>
                     </div>
-                    <div className='pf-proj-cover' onClick={() => navigate('/podify')} >
+                    <div 
+                        className='pf-proj-cover' 
+                        onClick={() => navigate('/podify')}
+                    >
                         <img className='pf-img' src={projImg2} alt=''/>
                     </div>
                 </motion.div>
-                <motion.div variants={animations} className='pf-proj'>
+                <motion.div 
+                    className='pf-proj'
+                    variants={animations} 
+                >
                     <div 
                         className='pf-proj-name'
                         onClick={() => navigate('/conductor')}  
@@ -61,7 +75,10 @@ const Portfolio = () => {
                         <h1>Conductor</h1>
                         <span>Solo Project</span>
                     </div>
-                    <div className='pf-proj-cover' onClick={() => navigate('/conductor')} >
+                    <div 
+                        className='pf-proj-cover' 
+                        onClick={() => navigate('/conductor')}
+                    >
                         <img className='pf-img' src={projImg3} alt=''/>
                     </div>
                 </motion.div>
