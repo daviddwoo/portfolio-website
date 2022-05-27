@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
-// import './About.css'
 import projImg1 from '../../Screenshots/podify-hp.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
