@@ -14,11 +14,11 @@ export const animations = {
 export const heroAnimation = {
   initial: {
     y: 400,
-    transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.4 }
+    transition: { ease: [0.6, 0.01, -0.05, 1], duration: 1.8 }
   },
   animate: {
     y: 0,
-    transition: { ease: [0.6, 0.01, -0.05, 0.95], duration: 1.4}
+    transition: { ease: [0.6, 0.01, -0.05, 1], duration: 1.8}
   }
 };
 

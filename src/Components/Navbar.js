@@ -19,7 +19,7 @@ const Navbar = () => {
                         onClick={() => navigate('/')}
                     >
                         <div className='nb-left-home'>
-                            <span>HOME</span>
+                            <span className='nb-span'>HOME</span>
                         </div>
                     </div>
                     <div 
@@ -34,35 +34,25 @@ const Navbar = () => {
                     </div>
                     <div className='nb-right'>
                         <div onClick={() => navigate('/about')}>
-                            <span>ABOUT</span>
+                            <span className='nb-span'>ABOUT</span>
                         </div>
                         <div onClick={() => navigate('/portfolio')}>
-                            <span>PORTFOLIO</span>
+                            <span className='nb-span'>PORTFOLIO</span>
                         </div>
                         <div onClick={() => navigate('/contact')}>
-                            <span>CONTACT</span>
+                            <span className='nb-span'>CONTACT</span>
                         </div>
                         <div
                             onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
                         >
-                            <span>RESUME</span>
+                            <span className='nb-span'>RESUME</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <AnimatePresence>
+            <AnimatePresence >
             {
-                navOpen && 
-                <motion.div
-                    exit={{
-                        opacity: 0, 
-                        transition: {
-                            delay: 3
-                        }
-                    }}
-                >
-                    <Menu setNavOpen={setNavOpen}/>
-                </motion.div>
+                navOpen && <Menu setNavOpen={setNavOpen}/>
             }
             </AnimatePresence>
         </div>

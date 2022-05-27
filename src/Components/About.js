@@ -69,7 +69,7 @@ const About = () => {
                                     className='ab-details-pr'
                                     variants={animations}
                                 >
-                                    While I'm not coding, I am an avid golfer, music lover, basketball enthusiast (go Knicks!) and am learning how to DJ. 
+                                    While I'm not coding, I am an avid golfer, music lover, basketball fan (go Knicks!) and am learning how to DJ. 
                                     Please feel free to reach out to me
                                     with a message or connect with me on LinkedIn!
                                 </motion.p>

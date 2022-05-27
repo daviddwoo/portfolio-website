@@ -4,11 +4,12 @@ import './About.css'
 import projImg1 from '../Screenshots/gs-hp.png'
 import projImg2 from '../Screenshots/unplgd2.png'
 import projImg3 from '../Screenshots/unplgd3.png'
+import projImg4 from '../Screenshots/unplgd4.png'
 import projImg5 from '../Screenshots/unplgd5.png'
 import projImg6 from '../Screenshots/unplgd6.png'
 import projImg7 from '../Screenshots/unplgd7.png'
 import projImg8 from '../Screenshots/unplgd8.png'
-import projImg9 from '../Screenshots/unplgdpiano.png'
+import projImgPiano from '../Screenshots/unplgdpiano.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
@@ -85,13 +86,16 @@ const Project1 = () => {
                     <motion.div variants={animations} className='p1-carousel'>
                         <Carousel infiniteLoop={true} showThumbs={false} autoPlay={true}>
                             <div>
-                                <img alt='' src={projImg9} className='proj-img'/>
+                                <img alt='' src={projImgPiano} className='proj-img'/>
                             </div>
                             <div>
                                 <img alt='' src={projImg2} className='proj-img'/>
                             </div>
                             <div>
                                 <img alt='' src={projImg3} className='proj-img'/>
+                            </div>
+                            <div>
+                                <img alt='' src={projImg4} className='proj-img'/>
                             </div>
                             <div>
                                 <img alt='' src={projImg5} className='proj-img'/>

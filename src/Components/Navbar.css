@@ -1,5 +1,4 @@
 .nb {
-    /* position: absolute; */
     display: flex;
     justify-content: center;
     padding-top: 30px;
@@ -8,11 +7,9 @@
 }
 
 .nb-menu-wrapper {
-    /* width: 90%; */
     width: 1200px;
     padding-left: 50px;
     padding-right: 50px;
-
 }
 
 .nb-bg {
@@ -49,26 +46,23 @@
     display: none;
     cursor: copy;
     z-index: 99;
-    /* position: fixed;
-    right: 2%; */
 }
 
 .nb-menu-links {
-    /* position: absolute; */
     display: flex;
     width: 100%;
     justify-content: space-around;
     margin-top: 20px;
 }
 
-.nb span {
+.nb-span {
     position: relative;
     display: block;
     font-weight: 500;
     letter-spacing: 1.1px;
 }
   
-.nb span:before, span:after {
+.nb-span:before, .nb-span:after {
     content: '';
     position: absolute;
     width: 0%;
@@ -78,23 +72,23 @@
     background: black;
 }
 
-.nb span:before {
+.nb-span:before {
     left: -2.5px;
 }
 
-.nb span:after {
+.nb-span:after {
     right: 2.5px;
     background: black;
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.nb span:hover:before {
+.nb-span:hover:before {
     background: black;
     width: 100%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.nb span:hover:after {
+.nb-span:hover:after {
     background: transparent;
     width: 100%;
     transition: 0s;
@@ -102,7 +96,6 @@
 
 .hamburger-react {
     cursor: none !important;
-    /* color: white !important; */
 }
 
 @media only screen and (max-width: 800px) {
@@ -119,7 +112,6 @@
     }
 
     .nb-wrapper {
-        /* width: 360px; */
         font-size: 1rem;
     }
 }
