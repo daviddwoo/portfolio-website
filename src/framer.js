@@ -7,7 +7,7 @@ export const animations = {
     animate: {
       opacity: 1,
       y: 0,
-      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
+      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.4}
     }
 };
 
