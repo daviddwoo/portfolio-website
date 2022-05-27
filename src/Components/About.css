@@ -10,17 +10,11 @@
 }
 
 .ab-title-wrapper {
-    /* max-width: 1500px; */
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.ab-title-wrapper h3 {
-    /* padding-top: 50px; */
-}
-
-.ab-title-wrapper span{
-    /* margin-right: 10px; */
+.ab-title-wrapper span {
     margin-top: 70px;
     margin-bottom: 70px;
 }
@@ -29,21 +23,6 @@
     font-size: 6.5em;
     font-weight: 500;
     margin-left: 10px;
-
-}
-
-.ab-title h1 {
-    font-size: 6em;
-    font-weight: 500;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.ab-title h3 {
-    font-weight: 500;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 4rem;
 }
 
 .ab-pic {
@@ -73,40 +52,31 @@
 .ab-details-img {
     display: flex;
     justify-content: center;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 .ab-details p {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .ab-details-p {
-    width: 61%;
-    font-size: 1.15em;
-    line-height: 1.8em;
+    width: 59%;
+    /* font-size: 1.15em; */
+    /* line-height: 1.8em; */
     margin-left: 100px;
 }
 
 .ab-details-p1 {
-    font-size: 1.45em;
+    font-size: 1.7em;
     line-height: 1.5em;
     font-weight: 500;
 }
 
-.ab-details-p h2 {
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 2.3rem;
-    margin-left: 28px;
-}
-
-.ab-details-title h2 {
+.ab-details-pr {
+    font-size: 1.15em;
+    line-height: 1.8em;
     font-weight: 400;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -119,20 +89,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .ab-info-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .ab-title h1 {
-        font-size: 4em;
-        font-weight: 500;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        text-align: center;
     }
 
     .ab-info-wrapper {
@@ -150,7 +114,6 @@
     .ab-details-p {
         margin-top: 40px;
         width: 83%;
-        font-size: 1.15em;
         margin-left: 0;
     }
 
@@ -169,9 +132,21 @@
         object-fit: contain;
     }
 
+    .ab-span span {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     .ab-span {
-        font-size: 2.1rem;
+        font-size: 4rem;
         font-weight: 500;
-        margin-left: 20px;
+        margin-left: 0px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .ab-details-p1 {
+        font-size: 1.5em;
     }
 }

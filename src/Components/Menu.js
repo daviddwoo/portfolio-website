@@ -4,27 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-
-const para = {
-    initial: {
-      opacity: 0,  
-      y: 40,
-      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
-    }
-};
-
-const container = {
-    animate: {
-      transition: {
-        staggerChildren: 0.12
-      }
-    }
-};
+import { animations, stagger2 } from '../framer'
 
 const Menu = ({setNavOpen}) => {
     const navigate = useNavigate();
@@ -59,7 +39,7 @@ const Menu = ({setNavOpen}) => {
                 className='menu-wrap'                             
                 initial='initial'
                 animate='animate'
-                variants={container}
+                variants={stagger2}
             >
                 <motion.div
                     className='menu-1' 
@@ -67,7 +47,7 @@ const Menu = ({setNavOpen}) => {
                         setNavOpen(false);
                         navigate('/');
                     }}
-                    variants={para}
+                    variants={animations}
                 >
                     <span>HOME</span>
                 </motion.div>
@@ -78,7 +58,7 @@ const Menu = ({setNavOpen}) => {
                         navigate('/about');
                         setNavOpen(false);
                     }}
-                    variants={para} 
+                    variants={animations} 
                  >
                     <span>ABOUT</span>
                 </motion.div>
@@ -88,12 +68,12 @@ const Menu = ({setNavOpen}) => {
                         navigate('/portfolio');
                         setNavOpen(false);
                     }} 
-                    variants={para} 
+                    variants={animations} 
                 >
                     <span>PORTFOLIO</span>
                 </motion.div>
                 <motion.div 
-                    variants={para} 
+                    variants={animations} 
                     onClick={() => {
                         setNavOpen(false);
                         navigate('/contact');
@@ -105,7 +85,7 @@ const Menu = ({setNavOpen}) => {
                 <motion.div
                     className='menu-last' 
                     onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
-                    variants={para}
+                    variants={animations}
                 >
                     <span>RESUME</span>
                 </motion.div>

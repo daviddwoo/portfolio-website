@@ -1,34 +1,11 @@
 import React, { useEffect } from 'react'
 import './Portfolio.css'
 import { useNavigate } from 'react-router-dom'
-import projImg1 from '../gs-hp.png'
-import projImg2 from '../podify-hp.png'
-import projImg3 from '../Conductor.png'
+import projImg1 from '../Screenshots/gs-hp.png'
+import projImg2 from '../Screenshots/podify-hp.png'
+import projImg3 from '../Screenshots/Conductor.png'
 import { motion } from 'framer-motion'
-
-
-const para = {
-    initial: {
-      opacity: 0,  
-      y: 40,
-      color: "#000",
-      transition: { ease: [0.16, 1, 0.3, 1], duration: 1}
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      color: "#000",
-      transition: { ease: [0.16, 1, 0.3, 1], duration: 1.5}
-    }
-};
-
-const container = {
-    animate: {
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-};
+import { animations, stagger1 } from '../framer'
 
 const Portfolio = () => {
 
@@ -49,9 +26,9 @@ const Portfolio = () => {
                 className='pf-wrapper'
                 initial='initial'
                 animate='animate'
-                variants={container}
+                variants={stagger1}
             >
-                <motion.div variants={para} className='pf-proj1'>
+                <motion.div variants={animations} className='pf-proj1'>
                     <div 
                         className='pf-proj-name' 
                         onClick={() => navigate('/unplgd')} 
@@ -64,7 +41,7 @@ const Portfolio = () => {
                         <img className='pf-img' src={projImg1} alt=''/>
                     </div>
                 </motion.div>
-                <motion.div variants={para} className='pf-proj'>
+                <motion.div variants={animations} className='pf-proj'>
                     <div 
                         className='pf-proj-name' 
                         onClick={() => navigate('/podify')} 
@@ -76,7 +53,7 @@ const Portfolio = () => {
                         <img className='pf-img' src={projImg2} alt=''/>
                     </div>
                 </motion.div>
-                <motion.div variants={para} className='pf-proj'>
+                <motion.div variants={animations} className='pf-proj'>
                     <div 
                         className='pf-proj-name'
                         onClick={() => navigate('/conductor')}  

@@ -67,7 +67,7 @@
 }
 
 .p1-info h4 {
-    font-size: 0.95em;
+    font-size: 1.03em;
     margin-top: 10px;
     font-weight: 400;
     color: gray;
@@ -109,13 +109,13 @@
 }
 
 .p1-contr span{
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .p1-contr p {
     margin-top: 20px;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.7rem;
     color: gray;
 }
@@ -131,7 +131,7 @@
 .p1-contr2 p {
     margin-top: 20px;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.7rem;
     color: gray;
 }
