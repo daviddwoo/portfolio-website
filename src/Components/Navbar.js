@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { Turn as Hamburger } from 'hamburger-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Menu from './Menu'
 
 const Navbar = () => {
 
@@ -9,6 +11,7 @@ const Navbar = () => {
     const location = useLocation();
 
     const [navOpen, setNavOpen] = useState(false);
+    console.log(navOpen);
     // const [width, setWidth] = useState(0);
 
     // //add Event Listener on window innerWidth re-size
@@ -33,16 +36,18 @@ const Navbar = () => {
         <div className='nb'>
             <div className='nb-menu-wrapper'>
                 <div className='nb-wrapper'>
-                    <div className='nb-left' onClick={() => navigate('/')}>
+                    <div className='nb-left' onClick={() => {
+                        navigate('/')
+                    }}>
                         <div className='nb-left-home'><span>HOME</span></div>
                     </div>
                     <div 
                         className='nb-right-menu' 
-                        onClick={() => location.pathname === '/menu' ? navigate(-1) : navigate('/menu')}
+                        onClick={() => setNavOpen(!navOpen)}
                     >
-                        <Hamburger 
-                            toggled={location.pathname === '/menu' ? true : false} 
-                            onClick={() => setNavOpen(!navOpen)}
+                        <Hamburger
+                            color={navOpen ? '#fff' : '#000'} 
+                            toggled={navOpen ? true : false} 
                             className='hamburger-react'
                         />
                     </div>
@@ -58,6 +63,17 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <AnimatePresence>
+            {
+                navOpen && 
+                <motion.div
+                     
+                    exit={{opacity: 0, transition: {delay: 3}}}
+                >
+                    <Menu setNavOpen={setNavOpen}/>
+                </motion.div>
+            }
+            </AnimatePresence>
         </div>
     )
 }

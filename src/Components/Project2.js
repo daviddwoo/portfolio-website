@@ -107,7 +107,7 @@ const Project2 = () => {
                     <motion.div variants={para} className='p1-contr2'>
                         <motion.span>Contributions</motion.span>
                         <motion.p variants={para}>
-                            Helped implement Spotify OAuth login and integrated user access token into our database used for data retrieval from the Spotify API.
+                            Helped implement Spotify OAuth login and integrated user access token into database used for data retrieval from the Spotify API.
                         </motion.p>
                         <motion.p variants={para}>
                             Developed Redux store and action creators / thunks for asynchronous calls to backend server used for CRUD functionality.

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Menu.css'
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router';
+import { motion, useAnimation } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
@@ -26,12 +26,23 @@ const container = {
     }
 };
 
-const Menu = () => {
+const Menu = ({setNavOpen}) => {
     const navigate = useNavigate();
+    const [width, setWidth] = useState(0);
 
     useEffect(() => {
-        if (window.innerWidth > 800) navigate('/')
-    })
+        const onResize = () => setWidth(window.innerWidth)
+        window.addEventListener('resize', onResize);
+        return () => {
+            window.removeEventListener("resize", onResize)
+        }
+    }, [setWidth])
+
+    useEffect(() => {
+        if (width > 420) {
+            setNavOpen(false);
+        }
+    }, [width, setNavOpen]);
 
     const openSite = (site) => {
         return site === 'linkedin' ? window.open('https://www.linkedin.com/in/daviddwoo/') : window.open('https://github.com/daviddwoo')
@@ -44,18 +55,56 @@ const Menu = () => {
             animate={{opacity: 1}}
             exit={{opacity: 0}}
         >
-            <motion.div                             
+            <motion.div
+                className='menu-wrap'                             
                 initial='initial'
                 animate='animate'
                 variants={container}
             >
-                <motion.div variants={para} className='menu-1' onClick={() => navigate('/')}><span>HOME</span></motion.div>
-                <motion.div variants={para} onClick={() => navigate('/about')} className='menu-div'><span>ABOUT</span></motion.div>
-                <motion.div variants={para} onClick={() => navigate('/portfolio')} className='menu-div'><span>PORTFOLIO</span></motion.div>
-                <motion.div variants={para} onClick={() => navigate('/contact')} className='menu-div'><span>CONTACT</span></motion.div>
+                <motion.div
+                    className='menu-1' 
+                    onClick={() => {
+                        setNavOpen(false);
+                        navigate('/');
+                    }}
+                    variants={para}
+                >
+                    <span>HOME</span>
+                </motion.div>
+                <motion.div
+                    className='menu-div' 
+                    onClick={() => {
+                        
+                        navigate('/about');
+                        setNavOpen(false);
+                    }}
+                    variants={para} 
+                 >
+                    <span>ABOUT</span>
+                </motion.div>
                 <motion.div 
+                    className='menu-div'
+                    onClick={() => {
+                        navigate('/portfolio');
+                        setNavOpen(false);
+                    }} 
+                    variants={para} 
+                >
+                    <span>PORTFOLIO</span>
+                </motion.div>
+                <motion.div 
+                    variants={para} 
+                    onClick={() => {
+                        setNavOpen(false);
+                        navigate('/contact');
+                    }}
+                    className='menu-div'
+                >
+                    <span>CONTACT</span>
+                </motion.div>
+                <motion.div
+                    className='menu-last' 
                     onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
-                    className='menu-last'
                     variants={para}
                 >
                     <span>RESUME</span>
@@ -86,7 +135,6 @@ const Menu = () => {
                         fontSize='medium'
                     />
                 </div>
-
             </div>
         </motion.div>
     )

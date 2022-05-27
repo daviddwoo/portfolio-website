@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-// import LandingPage from './LandingPage';
 import Hero from './Hero';
 import Portfolio from './Portfolio';
 import Project1 from './Project1'
@@ -9,17 +8,16 @@ import Project3 from './Project3'
 import About from './About';
 import Contact from './Contact';
 import { AnimatePresence } from 'framer-motion';
-import Footer from './Footer';
 import Menu from './Menu';
-// import ScrollToTop from './ScrollToTop';
 
-const AppRoutes = ({ contactRef }) => {
+const AppRoutes = () => {
+    
     const location = useLocation();
 
     return (
         <div>
             <AnimatePresence exitBeforeEnter>
-            <Routes location={location} key={location.pathname}>
+                <Routes location={location} key={location.pathname}>
                     <Route path='/' element={<><Hero /></>}/>
                     <Route exact path='/unplgd' element={<Project1 />}/>
                     <Route exact path='/podify' element={<Project2 />}/>
@@ -28,8 +26,7 @@ const AppRoutes = ({ contactRef }) => {
                     <Route exact path='/about' element={<About />}/>
                     <Route exact path='/portfolio' element={<Portfolio />}/>
                     <Route exact path='/menu' element={<Menu />}/>
-            </Routes>
-            {/* <Footer /> */}
+                </Routes>
             </AnimatePresence>
         </div>
     )

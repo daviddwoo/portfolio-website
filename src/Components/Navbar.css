@@ -4,6 +4,7 @@
     justify-content: center;
     padding-top: 30px;
     background-color: transparent;
+    z-index: 99;
 }
 
 .nb-menu-wrapper {
@@ -32,6 +33,7 @@
     width: 65px;
     height: 65px;
     object-fit: cover;
+    
 }
 
 .nb-right {
@@ -46,6 +48,9 @@
 .nb-right-menu {
     display: none;
     cursor: copy;
+    z-index: 99;
+    /* position: fixed;
+    right: 2%; */
 }
 
 .nb-menu-links {
@@ -97,6 +102,7 @@
 
 .hamburger-react {
     cursor: none !important;
+    /* color: white !important; */
 }
 
 @media only screen and (max-width: 800px) {

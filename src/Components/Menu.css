@@ -1,7 +1,21 @@
 .menu {
     display: flex;
     flex-direction: column;
-    margin-left: 9%;
+    /* margin-left: 9%; */
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 95;
+    background-color: black;
+    color: white;
+    /* background-color: #f9f9f9; */
+    top: 0;
+    left: 0;
+}
+.menu-wrap {
+    /* margin-top: 100px; */
+    margin-left: 30px;
 }
 
 .menu-div {
@@ -9,23 +23,19 @@
     margin-bottom: 30px;
     font-weight: 600;
     letter-spacing: 3px;
-    width: 200px;
 }
 
 .menu-1 {
-    /* margin-top: 10px; */
     font-size: 4.5em;
     margin-bottom: 30px;
     font-weight: 600;
     letter-spacing: 3px;
-    width: 200px;
 }
 
 .menu-last {
     font-size: 4.5em;
     font-weight: 600;
     letter-spacing: 3px;
-    width: 200px;
 }
 
 .menu-connect {
@@ -43,81 +53,78 @@
     margin-bottom: 15px;
 }
 
-.menu span {
+.menu-wrap span {
     position: relative;
     display: inline-block;
 }
   
-.menu span:before {
+.menu-wrap span:before {
     content: '';
     position: absolute;
     width: 0%;
-    height: 4px;
+    height: 2px;
     top: 50%;
     margin-top: -0.5px;
-    background: black;
+    background: white;
 }
 
-.menu span:after {
+.menu-wrap span:after {
     content: '';
     position: absolute;
     width: 0%;
-    height: 4px;
+    height: 1px;
     top: 50%;
     margin-top: -0.5px;
-    background: black;
+    background: white;
 }
 
-.menu span:before {
+.menu-wrap span:before {
     left: -2.5px;
 }
 
-.menu span:after {
+.menu-wrap span:after {
     right: 2.5px;
-    background: black;
+    background: white;
     transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.menu span:hover:before {
-    background: black;
+.menu-wrap span:hover:before {
+    background: white;
     width: 100%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.menu span:hover:after {
+.menu-wrap span:hover:after {
     background: transparent;
     width: 100%;
     transition: 0s;
-    height: 4px;
+    height: 1px;
 }
 
 
 @media only screen and (max-width: 800px) {
+
     .menu-connect {
         display: flex;
     }
 
     .menu-1 {
-        /* margin-top: 10px; */
-        font-size: 3.5em;
+        font-size: 4em;
         margin-bottom: 30px;
         font-weight: 600;
         letter-spacing: 3px;
-        width: 200px;
     }
     
     .menu-last {
-        font-size: 3.5em;
+        font-size: 4em;
         font-weight: 600;
         letter-spacing: 3px;
-        width: 200px;
     }
 
     .menu-div {
-        font-size: 3.5em;
+        font-size: 4em;
         margin-bottom: 30px;
         font-weight: 600;
         letter-spacing: 3px;
-        width: 200px;
     }
 }

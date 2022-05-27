@@ -51,12 +51,13 @@ const About = () => {
                 className='ab-container-all'
                 initial='initial'
                 animate='animate'
+                variants={container}
             >
                 <div className='ab-title'>
                     <motion.div 
                         className='ab-title-wrapper'
-                            initial='initial'
-                            animate='animate'
+                            // initial='initial'
+                            // animate='animate'
                         // variants={container}
                     >
                         <span
@@ -80,28 +81,30 @@ const About = () => {
                         <div className='ab-details'>
                             <motion.div 
                                 className='ab-details-img'
-                                // variants={para}
-                                initial={{opacity: 0}}
-                                animate={{opacity: 1, transition: { delay: 0.3}}}
+                                variants={para}
+                                // initial={{opacity: 0}}
+                                // animate={{opacity: 1, transition: { delay: 0.3}}}
                             >
                                 <img alt='' src={Picture} className='ab-pic'/>
                             </motion.div>
                             <motion.div 
                                 className='ab-details-p'
-                                variants={container}
+                                // variants={container}
                                 // variants={container}
                             >
                                 <motion.p
+                                    className='ab-details-p1'
                                     variants={para}
                                 >
-                                    I currently work in the biotech industry with over 5+ years experience specializing in equipment validation.
-                                    I previously attended Rutgers University, earning a degree in chemical engineering.
+                                    I am a recent graduate of the Fullstack Academy's part-time Flex Immersive program, currently seeking new opportunities to break into the
+                                    tech field in a software engineering role. I am passionate about learning and improving my skillset to become a valuable asset to any team.
+
                                 </motion.p>
                                 <motion.p 
                                     variants={para}
                                 >
-                                    I am a recent graduate of the Fullstack Academy's part-time Flex Immersive program, currently seeking new opportunities to break into the
-                                    tech field. I am passionate about learning and improving my skillset to become a valuable asset to any team.
+                                    I currently work in the biotech industry with over 5+ years experience specializing in equipment validation. 
+                                    I previously attended Rutgers University, earning a degree in chemical engineering.
                                 </motion.p>
                                 <motion.p
                                     variants={para}

@@ -8,6 +8,7 @@ import projImg5 from '../unplgd5.png'
 import projImg6 from '../unplgd6.png'
 import projImg7 from '../unplgd7.png'
 import projImg8 from '../unplgd8.png'
+import projImg9 from '../unplgdpiano.png'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
@@ -103,7 +104,7 @@ const Project1 = () => {
                     <motion.div variants={para} className='p1-carousel'>
                         <Carousel infiniteLoop={true} showThumbs={false} autoPlay={true}>
                             <div>
-                                <img alt='' src={projImg1} className='proj-img'/>
+                                <img alt='' src={projImg9} className='proj-img'/>
                             </div>
                             <div>
                                 <img alt='' src={projImg2} className='proj-img'/>
