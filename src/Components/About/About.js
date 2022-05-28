@@ -1,6 +1,6 @@
 import React from 'react'
 import './About.css'
-import Picture from '../../Screenshots/profile.jpeg'
+import Picture from '../../Screenshots/profile.webp'
 import { motion } from 'framer-motion'
 import { animations, stagger1 } from '../../framer'
 
