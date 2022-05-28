@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
 import projImg1 from '../../Screenshots/gs-hp.webp'
-import projImg2 from '../../Screenshots/unplgd2.png'
-import projImg3 from '../../Screenshots/unplgd3.png'
-import projImg4 from '../../Screenshots/unplgd4.png'
-import projImg5 from '../../Screenshots/unplgd5.png'
-import projImg6 from '../../Screenshots/unplgd6.png'
-import projImg7 from '../../Screenshots/unplgd7.png'
-import projImg8 from '../../Screenshots/unplgd8.png'
-import projImgPiano from '../../Screenshots/unplgdpiano.png'
+import projImg2 from '../../Screenshots/unplgd2.webp'
+import projImg3 from '../../Screenshots/unplgd3.webp'
+import projImg4 from '../../Screenshots/unplgd4.webp'
+import projImg5 from '../../Screenshots/unplgd5.webp'
+import projImg6 from '../../Screenshots/unplgd6.webp'
+import projImg7 from '../../Screenshots/unplgd7.webp'
+import projImg8 from '../../Screenshots/unplgd8.webp'
+import projImgPiano from '../../Screenshots/unplgdpiano.webp'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
