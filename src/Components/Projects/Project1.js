@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
-import projImg1 from '../../Screenshots/gs-hp.webp'
+import projImg1 from '../../Screenshots/unplgd-hp.webp'
 import projImg2 from '../../Screenshots/unplgd2.webp'
 import projImg3 from '../../Screenshots/unplgd3.webp'
 import projImg4 from '../../Screenshots/unplgd4.webp'
