@@ -41,8 +41,8 @@
 }
 
 .ab-details img {
-    width: 340px;
-    height: 420px;
+    /* width: 340px;
+    height: 420px; */
     object-fit: cover;
 }
 
