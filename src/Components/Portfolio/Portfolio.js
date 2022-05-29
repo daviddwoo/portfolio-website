@@ -43,7 +43,13 @@ const Portfolio = () => {
                         className='pf-proj-cover' 
                         onClick={() => navigate('/unplgd')}
                     >
-                        <img className='pf-img' src={projImg1} alt='' loading='lazy'/>
+                        <img 
+                            className='pf-img' 
+                            width={'610px'} 
+                            src={projImg1} 
+                            alt='' 
+                            loading='lazy'
+                        />
                     </div>
                 </motion.div>
                 <motion.div 
@@ -61,7 +67,13 @@ const Portfolio = () => {
                         className='pf-proj-cover' 
                         onClick={() => navigate('/podify')}
                     >
-                        <img className='pf-img' src={projImg2} alt='' loading='lazy'/>
+                        <img 
+                            className='pf-img' 
+                            width={'610px'} 
+                            src={projImg2} 
+                            alt='' 
+                            loading='lazy'
+                        />
                     </div>
                 </motion.div>
                 <motion.div 
@@ -79,7 +91,13 @@ const Portfolio = () => {
                         className='pf-proj-cover' 
                         onClick={() => navigate('/conductor')}
                     >
-                        <img className='pf-img' src={projImg3} alt='' loading='lazy'/>
+                        <img 
+                            className='pf-img' 
+                            width={'610px'} 
+                            src={projImg3} 
+                            alt='' 
+                            loading='lazy'
+                        />
                     </div>
                 </motion.div>
             </motion.div>

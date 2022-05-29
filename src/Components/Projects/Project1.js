@@ -47,7 +47,8 @@ const Project1 = () => {
                 <motion.h1 variants={animations}>UNPLGD</motion.h1>
                 <motion.h3 variants={animations}>E-COMMERCE APPLICATION</motion.h3>
                 <motion.img 
-                    className='project-img' 
+                    className='project-img'
+                    width={'770px'} 
                     alt='' 
                     src={projImg1} 
                     variants={animations} 

@@ -35,7 +35,8 @@ const Project2 = () => {
                 <motion.h1 variants={animations}>Podify</motion.h1>
                 <motion.h3 variants={animations}>CAPSTONE PROJECT</motion.h3>
                 <motion.img 
-                    variants={animations} 
+                    variants={animations}
+                    width={'770px'}  
                     alt='' 
                     src={projImg1} 
                     className='project-img' 
