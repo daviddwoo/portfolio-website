@@ -46,7 +46,13 @@ const Project1 = () => {
             >
                 <motion.h1 variants={animations}>UNPLGD</motion.h1>
                 <motion.h3 variants={animations}>E-COMMERCE APPLICATION</motion.h3>
-                <motion.img className='project-img' alt='' src={projImg1} variants={animations} />
+                <motion.img 
+                    className='project-img' 
+                    alt='' 
+                    src={projImg1} 
+                    variants={animations} 
+                    loading='lazy'
+                />
                 <motion.div className='p1-info'>
                     <motion.div 
                         className='p1-info-wrapper'

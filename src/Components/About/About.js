@@ -37,7 +37,7 @@ const About = () => {
                                 className='ab-details-img'
                                 variants={animations}
                             >
-                                <img alt='' src={Picture} className='ab-pic'/>
+                                <img alt='' src={Picture} className='ab-pic' loading='lazy'/>
                             </motion.div>
                             <motion.div className='ab-details-p'>
                                 <motion.p

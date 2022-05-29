@@ -35,7 +35,9 @@ const Project3 = () => {
                     variants={animations} 
                     alt='' 
                     src={projImg1} 
-                    className='project-img'/>
+                    className='project-img'
+                    loading='lazy'
+                />
                 <motion.div className='p1-info'>
                     <motion.div 
                         className='p1-info-wrapper'
