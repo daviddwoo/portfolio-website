@@ -6,8 +6,6 @@ I built this portfolio website to showcase the projects that I have worked on th
 
 Javascript, React, CSS, Material UI, Framer-Motion
 
-# [Live Link](https://www.davidwoo.dev/)
-
 # Screenshots
 
 ![Screen Shot 2022-05-27 at 5 27 47 PM](https://user-images.githubusercontent.com/88349865/170793084-a7f2b342-e3f1-486d-a31b-7f7af7e12112.png)
