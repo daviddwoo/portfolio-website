@@ -36,11 +36,11 @@ const Project2 = () => {
                 <motion.h3 variants={animations}>CAPSTONE PROJECT</motion.h3>
                 <motion.img 
                     variants={animations}
-                    width={'770px'}  
+                    width='770px'
+                    height='352px'  
                     alt='' 
                     src={projImg1} 
                     className='project-img' 
-                    loading='lazy'
                 />
                 <motion.div className='p1-info'>
                     <motion.div 

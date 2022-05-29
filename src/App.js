@@ -29,7 +29,7 @@ function App() {
 
     const images = [Picture, projImg1, projImg2, projImg3];
 
-    cacheImages(images);
+    console.log(cacheImages(images));
 
   }, []);
 

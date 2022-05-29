@@ -45,10 +45,10 @@ const Portfolio = () => {
                     >
                         <img 
                             className='pf-img' 
-                            width={'610px'} 
+                            width='610px'
+                            height='300px' 
                             src={projImg1} 
                             alt='' 
-                            loading='lazy'
                         />
                     </div>
                 </motion.div>
@@ -69,10 +69,10 @@ const Portfolio = () => {
                     >
                         <img 
                             className='pf-img' 
-                            width={'610px'} 
+                            width='610px'
+                            height='300px'  
                             src={projImg2} 
                             alt='' 
-                            loading='lazy'
                         />
                     </div>
                 </motion.div>
@@ -93,10 +93,10 @@ const Portfolio = () => {
                     >
                         <img 
                             className='pf-img' 
-                            width={'610px'} 
+                            width='610px'
+                            height='300px'  
                             src={projImg3} 
                             alt='' 
-                            loading='lazy'
                         />
                     </div>
                 </motion.div>
