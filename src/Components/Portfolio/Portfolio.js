@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import './Portfolio.css'
 import { useNavigate } from 'react-router-dom'
-import projImg1 from '../../Screenshots/unplgd-hp.webp'
-import projImg2 from '../../Screenshots/podify-hp.webp'
-import projImg3 from '../../Screenshots/Conductor.webp'
+import projImg1 from '../../Screenshots/gs-hp2.webp'
+import projImg2 from '../../Screenshots/podify2.webp'
+import projImg3 from '../../Screenshots/Conductor2.webp'
 import { motion } from 'framer-motion'
 import { animations, stagger1 } from '../../framer'
 

@@ -4,34 +4,33 @@ import AppRoutes from './Components/AppRoutes'
 import Navbar from './Components//Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import AnimatedCursor from 'react-animated-cursor'
-import Picture from './Screenshots/profile.webp'
-import projImg1 from './Screenshots/unplgd-hp.webp'
-import projImg2 from './Screenshots/podify-hp.webp'
-import projImg3 from './Screenshots/Conductor.webp'
+// import Picture from './Screenshots/profile.webp'
+// import projImg2 from './Screenshots/podify-hp.webp'
+// import projImg3 from './Screenshots/Conductor.webp'
 
 function App() {
 
-  const cacheImages = async(images) => {
-    const promises = await images.map((image) => {
-      return new Promise((res, rej) => {
-        const img = new Image();
+  // const cacheImages = async(images) => {
+  //   const promises = await images.map((image) => {
+  //     return new Promise((res, rej) => {
+  //       const img = new Image();
 
-        img.src = image;
-        img.onload = res();
-        img.onerror = rej();
-      })
-    });
+  //       img.src = image;
+  //       img.onload = res();
+  //       img.onerror = rej();
+  //     })
+  //   });
 
-    await Promise.all(promises);
-  }
+  //   await Promise.all(promises);
+  // }
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const images = [Picture, projImg1, projImg2, projImg3];
+  //   const images = [Picture, projImg2, projImg3];
 
-    console.log(cacheImages(images));
+  //   console.log(cacheImages(images));
 
-  }, []);
+  // }, []);
 
   return (
     <div>

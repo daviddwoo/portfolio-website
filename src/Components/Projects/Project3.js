@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
-import projImg1 from '../../Screenshots/Conductor.webp'
+import projImg1 from '../../Screenshots/Conductor1.webp'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import ReactPlayer from 'react-player';

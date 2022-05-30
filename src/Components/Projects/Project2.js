@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
-import projImg1 from '../../Screenshots/podify-hp.webp'
+import projImg1 from '../../Screenshots/podify1.webp'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ReactPlayer from 'react-player';

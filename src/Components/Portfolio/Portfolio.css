@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 .pf-proj1 {

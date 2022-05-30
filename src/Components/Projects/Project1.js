@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './Project1.css'
-import projImg1 from '../../Screenshots/unplgd-hp.webp'
+import projImg1 from '../../Screenshots/gs-hp1.webp'
 import projImg2 from '../../Screenshots/unplgd2.webp'
 import projImg3 from '../../Screenshots/unplgd3.webp'
 import projImg4 from '../../Screenshots/unplgd4.webp'
@@ -8,7 +8,6 @@ import projImg5 from '../../Screenshots/unplgd5.webp'
 import projImg6 from '../../Screenshots/unplgd6.webp'
 import projImg7 from '../../Screenshots/unplgd7.webp'
 import projImg8 from '../../Screenshots/unplgd8.webp'
-import projImgPiano from '../../Screenshots/unplgdpiano.webp'
 import LinkIcon from '@mui/icons-material/Link';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ViewComfyIcon from '@mui/icons-material/ViewComfy';
@@ -111,9 +110,6 @@ const Project1 = () => {
                             autoPlay={true}
                         >
                             <div>
-                                <img alt='' src={projImgPiano} className='proj-img'/>
-                            </div>
-                            <div>
                                 <img alt='' src={projImg2} className='proj-img'/>
                             </div>
                             <div>
@@ -137,7 +133,7 @@ const Project1 = () => {
                         </Carousel>
                      </motion.div>
                     <motion.div 
-                        className='p1-contr'
+                        className='p1-contr2'
                         variants={animations} 
                     >
                         <motion.span>Contributions</motion.span>
