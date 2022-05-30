@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react'
+import React from 'react'
 import AppRoutes from './Components/AppRoutes'
 import Navbar from './Components//Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
