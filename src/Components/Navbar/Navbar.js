@@ -4,8 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Turn as Hamburger } from 'hamburger-react'
 import { AnimatePresence } from 'framer-motion'
 import Menu from '../Menu/Menu'
-import resume from '../../Screenshots/dwooresume.pdf'
-import { motion } from 'framer-motion'
+import resume from '../../Screenshots/DavidWooResume.pdf'
 
 const Navbar = () => {
 
@@ -13,12 +12,7 @@ const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <motion.div 
-            className='nb'
-            initial={{opacity: 0}}
-            animate={{opacity: 1, transition: {delay: 0.3, duration: 0.5}}}
-            exit={{opacity: 0}}
-        >
+        <div className='nb'>
             <div className='nb-menu-wrapper'>
                 <div className='nb-wrapper'>
                     <div 
@@ -69,7 +63,7 @@ const Navbar = () => {
                 navOpen && <Menu setNavOpen={setNavOpen}/>
             }
             </AnimatePresence>
-        </motion.div>
+        </div>
     )
 }
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import resume from '../../Screenshots/dwooresume.pdf'
+import resume from '../../Screenshots/DavidWooResume.pdf'
 import { animations, stagger2 } from '../../framer'
 
 const Menu = ({setNavOpen}) => {
