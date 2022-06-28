@@ -4,14 +4,21 @@ import { useNavigate } from 'react-router-dom'
 import { Turn as Hamburger } from 'hamburger-react'
 import { AnimatePresence } from 'framer-motion'
 import Menu from '../Menu/Menu'
+import resume from '../../Screenshots/dwooresume.pdf'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
 
     const navigate = useNavigate();
     const [navOpen, setNavOpen] = useState(false);
-    
+
     return (
-        <div className='nb'>
+        <motion.div 
+            className='nb'
+            initial={{opacity: 0}}
+            animate={{opacity: 1, transition: {delay: 0.3, duration: 0.5}}}
+            exit={{opacity: 0}}
+        >
             <div className='nb-menu-wrapper'>
                 <div className='nb-wrapper'>
                     <div 
@@ -44,20 +51,25 @@ const Navbar = () => {
                         <div onClick={() => navigate('/contact')}>
                             <span className='nb-span'>CONTACT</span>
                         </div>
-                        <div
-                            onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
-                        >
-                            <span className='nb-span'>RESUME</span>
+                        <div>
+                            <a 
+                                href={resume} 
+                                target='_blank' 
+                                rel="noreferrer"
+                                className='nb-a'
+                            >
+                                <span className='nb-span'>RESUME</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <AnimatePresence >
+            <AnimatePresence>
             {
                 navOpen && <Menu setNavOpen={setNavOpen}/>
             }
             </AnimatePresence>
-        </div>
+        </motion.div>
     )
 }
 

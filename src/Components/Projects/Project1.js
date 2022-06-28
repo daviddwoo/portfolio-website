@@ -14,7 +14,6 @@ import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
 import { Carousel } from 'react-responsive-carousel';
-import { animations, stagger2 } from '../../framer'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 
@@ -34,43 +33,38 @@ const Project1 = () => {
         <motion.div 
             className='p1' 
             initial={{opacity: 0}}
-            animate={{opacity: 1}}
+            animate={{opacity: 1, transition: {delay: 0.3, duration: 0.5}}}
             exit={{opacity: 0}}
         >
-            <motion.div 
+            <div 
                 className='p1-img-wrapper'
                 initial='initial'
                 animate='animate'
-                variants={stagger2}
             >
-                <motion.h1 variants={animations}>UNPLGD</motion.h1>
-                <motion.h3 variants={animations}>E-COMMERCE APPLICATION</motion.h3>
-                <motion.img 
+                <h1>UNPLGD</h1>
+                <h3>E-COMMERCE APPLICATION</h3>
+                <img 
                     className='project-img'
                     width='769px'
                     height='389px' 
                     alt='' 
                     src={projImg1} 
-                    variants={animations} 
                 />
-                <motion.div className='p1-info'>
-                    <motion.div 
-                        className='p1-info-wrapper'
-                        variants={animations} 
-                    >
-                        <motion.div className='p1-info-role'>
+                <div className='p1-info'>
+                    <div className='p1-info-wrapper'>
+                        <div className='p1-info-role'>
                             <span>Role</span>
                             <h4>Developer</h4>
-                        </motion.div>
-                        <motion.div className='p1-info-role'>
+                        </div>
+                        <div className='p1-info-role'>
                             <span>Date</span>
                             <h4>Feb 2022</h4>
-                        </motion.div>
-                        <motion.div className='p1-info-role'>
+                        </div>
+                        <div className='p1-info-role'>
                             <span>Technologies</span>
                             <h4>React / Redux, Express, Sequelize, PostgreSQL, Stripe API</h4>
-                        </motion.div>
-                        <motion.div className='p1-info-links'>
+                        </div>
+                        <div className='p1-info-links'>
                             <div 
                                 className='p1-links' 
                                 onClick={() => openSite('live')}
@@ -85,25 +79,19 @@ const Project1 = () => {
                                 <GitHubIcon fontSize='medium'/>
                                 <h4>Github</h4>
                             </div>
-                        </motion.div>
-                    </motion.div>
-                    <motion.div 
-                        className='p1-contr'
-                        variants={animations} 
-                    >
-                        <motion.span >Overview</motion.span>
-                        <motion.p variants={animations}>
+                        </div>
+                    </div>
+                    <div className='p1-contr'>
+                        <span>Overview</span>
+                        <p>
                             UNPLGD is a fullstack e-commerce application that focuses on selling acoustic instruments, like guitars, drums, cellos and pianos. 
-                        </motion.p >
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             In my team of three developers, we were all either current or previous musicians, so we thought 
                             it would be a good idea to use musical instruments for our site!
-                        </motion.p>
-                    </motion.div>
-                    <motion.div 
-                        className='p1-carousel'
-                        variants={animations} 
-                    >
+                        </p>
+                    </div>
+                    <div className='p1-carousel'>
                         <Carousel 
                             infiniteLoop={true} 
                             showThumbs={false} 
@@ -131,36 +119,33 @@ const Project1 = () => {
                                 <img alt='' src={projImg8} className='proj-img'/>
                             </div>
                         </Carousel>
-                     </motion.div>
-                    <motion.div 
-                        className='p1-contr2'
-                        variants={animations} 
-                    >
-                        <motion.span>Contributions</motion.span>
-                        <motion.p variants={animations}>
+                     </div>
+                    <div className='p1-contr2'>
+                        <span>Contributions</span>
+                        <p>
                             Integrated guest and user cart experience, where both can add, edit, or remove products in the shopping cart. 
                             This functionality was built using React / Redux and Express API routes
-                        </motion.p>
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             Implemented the Stripe API for registered user checkout process.                           
-                        </motion.p>
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             Built and designed entire UX / UI experience for both guest and registered users. 
                             CSS and Material UI were utilized to design the application.                          
-                        </motion.p>
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             Helped set up Sequelize models / associations and Express routes for back-end data implementation. 
-                        </motion.p>
-                    </motion.div>
-                </motion.div>
-                <motion.div className='proj-icon'>
+                        </p>
+                    </div>
+                </div>
+                <div className='proj-icon'>
                     <ViewComfyIcon 
                         className='pj-icon' 
                         fontSize='large' 
                         onClick={() => navigate('/portfolio')}
                     />
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </motion.div>
     )
 }

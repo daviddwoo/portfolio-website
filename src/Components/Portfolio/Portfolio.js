@@ -5,7 +5,6 @@ import projImg1 from '../../Screenshots/gs-hp2.webp'
 import projImg2 from '../../Screenshots/podify2.webp'
 import projImg3 from '../../Screenshots/Conductor2.webp'
 import { motion } from 'framer-motion'
-import { animations, stagger1 } from '../../framer'
 
 const Portfolio = () => {
 
@@ -19,19 +18,15 @@ const Portfolio = () => {
         <motion.div 
             className='pf' 
             initial={{opacity: 0}}
-            animate={{opacity: 1}}
+            animate={{opacity: 1, transition: {delay: 0.3, duration: 0.5}}}
             exit={{opacity: 0}}
         >
-            <motion.div 
+            <div 
                 className='pf-wrapper'
                 initial='initial'
                 animate='animate'
-                variants={stagger1}
             >
-                <motion.div 
-                    className='pf-proj1'
-                    variants={animations} 
-                >
+                <div className='pf-proj1'>
                     <div 
                         className='pf-proj-name' 
                         onClick={() => navigate('/unplgd')} 
@@ -51,11 +46,8 @@ const Portfolio = () => {
                             alt='' 
                         />
                     </div>
-                </motion.div>
-                <motion.div 
-                    className='pf-proj'
-                    variants={animations} 
-                >
+                </div>
+                <div className='pf-proj'>
                     <div 
                         className='pf-proj-name' 
                         onClick={() => navigate('/podify')} 
@@ -75,11 +67,8 @@ const Portfolio = () => {
                             alt='' 
                         />
                     </div>
-                </motion.div>
-                <motion.div 
-                    className='pf-proj'
-                    variants={animations} 
-                >
+                </div>
+                <div className='pf-proj'>
                     <div 
                         className='pf-proj-name'
                         onClick={() => navigate('/conductor')}  
@@ -99,8 +88,8 @@ const Portfolio = () => {
                             alt='' 
                         />
                     </div>
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </motion.div>
     )
 }

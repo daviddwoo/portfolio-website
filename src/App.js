@@ -18,7 +18,6 @@ function App() {
     const promises = await images.map((image) => {
       return new Promise((res, rej) => {
         const img = new Image();
-
         img.src = image;
         img.onload = res();
         img.onerror = rej();
@@ -28,11 +27,8 @@ function App() {
   }
 
   useEffect(() => {
-
-    const images = [Picture, gshp1, gshp2, podify1, podify2, conductor1, conductor2];
-
+    const images = [ Picture, gshp1, gshp2, podify1, podify2, conductor1, conductor2 ];
     cacheImages(images)
-
   }, []);
 
   return (

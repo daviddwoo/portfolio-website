@@ -9,7 +9,6 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import emailjs from 'emailjs-com'
 import { motion } from 'framer-motion';
-import { animations, stagger2 } from '../../framer'
 
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
@@ -33,7 +32,6 @@ const CssTextField = styled(TextField)({
     },
 });
   
-
 const Contact = () => {
 
     const form = useRef();
@@ -43,7 +41,6 @@ const Contact = () => {
         vertical: 'bottom',
         horizontal: 'center'
     }
-
     const { vertical, horizontal } = pos;
 
     const handleClick = () => setOpen(true);
@@ -80,39 +77,30 @@ const Contact = () => {
 
     const onChange = (ev) => {
         const change = formData;
-        change[ev.target.name] = ev.target.value
-        setFormData({...change, [ev.target.name]: ev.target.value})
+        change[ev.target.name] = ev.target.value;
+        setFormData({...change, [ev.target.name]: ev.target.value});
     }
 
     return (
-        <motion.div 
+        <motion.div
+            id='contact' 
             initial={{opacity: 0}}
-            animate={{opacity: 1}}
+            animate={{opacity: 1, transition: {delay: 0.3, duration: 0.5}}}
             exit={{opacity: 0}}
-            id='contact'
         >
             <div className='ct-wrapper'>
-                <motion.div 
+                <div 
                     className='ct-info-wrapper'
                     initial='initial'
                     animate='animate'
                 >
-                    <motion.div 
-                        className='ct-title' 
-                        variants={stagger2}
-                    >
-                        <motion.h3 variants={animations}>Get in touch</motion.h3>
-                        <motion.span variants={animations}>Feel free to leave a message or connect with me on LinkedIn!</motion.span>
-                    </motion.div>
-                    <motion.div 
-                        className='ct-form' 
-                        variants={stagger2}
-                    >
+                    <div className='ct-title'>
+                        <h3>Get in touch</h3>
+                        <span>Feel free to leave a message or connect with me on LinkedIn!</span>
+                    </div>
+                    <div className='ct-form'>
                         <form ref={form} onSubmit={onSubmit}>
-                            <motion.div
-                                className='ct-form-ne' 
-                                variants={animations} 
-                            >
+                            <div className='ct-form-ne'>
                                 <div className='ct-field'>
                                     <CssTextField
                                         onChange={onChange}
@@ -143,8 +131,8 @@ const Contact = () => {
                                         value={formData['from_email']}
                                     />
                                 </div>
-                            </motion.div>
-                            <motion.div variants={animations} className='ct-field'>
+                            </div>
+                            <div className='ct-field'>
                                 <CssTextField
                                     onChange={onChange} 
                                     required
@@ -159,8 +147,8 @@ const Contact = () => {
                                     }} 
                                     value={formData['message']}
                                 />
-                            </motion.div>
-                            <motion.div variants={animations} className='form-btn'>         
+                            </div>
+                            <div className='form-btn'>         
                                 <Button
                                     variant="text"
                                     type='submit' 
@@ -183,22 +171,16 @@ const Contact = () => {
                                 >
                                     SEND MESSAGE
                                 </Button>              
-                            </motion.div>
+                            </div>
                         </form>
-                        <motion.div 
-                            className='ct-pref'
-                            variants={animations} 
-                        >
+                        <div className='ct-pref'>
                             PREFER EMAIL?
-                        </motion.div>
-                        <motion.div 
-                            className='ct-em'
-                            variants={animations} 
-                        >
+                        </div>
+                        <div className='ct-em'>
                             dwoo1016@gmail.com
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
+                        </div>
+                    </div>
+                </div>
                 <Snackbar
                     anchorOrigin={{vertical, horizontal}}
                     open={open}

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import resume from '../../Screenshots/dwooresume.pdf'
 import { animations, stagger2 } from '../../framer'
 
 const Menu = ({setNavOpen}) => {
@@ -83,10 +84,16 @@ const Menu = ({setNavOpen}) => {
                 </motion.div>
                 <motion.div
                     className='menu-last' 
-                    onClick={() => window.open(process.env.REACT_APP_RESUME_LINK)}
                     variants={animations}
                 >
-                    <span>RESUME</span>
+                    <a 
+                        href={resume} 
+                        target='_blank' 
+                        rel="noreferrer"
+                        className='menu-a'
+                    >
+                        <span className='nb-span'>RESUME</span>
+                    </a>
                 </motion.div>
             </motion.div>
             <div className='menu-connect'>

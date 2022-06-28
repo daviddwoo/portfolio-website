@@ -6,7 +6,6 @@ import ViewComfyIcon from '@mui/icons-material/ViewComfy';
 import ReactPlayer from 'react-player';
 import { useNavigate } from 'react-router';
 import { motion } from 'framer-motion';
-import { animations, stagger2 } from '../../framer'
 
 const Project3 = () => {
 
@@ -20,30 +19,25 @@ const Project3 = () => {
         <motion.div 
             className='p1' 
             initial={{opacity: 0}}
-            animate={{opacity: 1}}
+            animate={{opacity: 1, transition: {delay: 0.3, duration: 0.5}}}
             exit={{opacity: 0}}
         >
-            <motion.div 
+            <div 
                 className='p1-img-wrapper'
                 initial='initial'
                 animate='animate'
-                variants={stagger2}
             >
-                <motion.h1 variants={animations}>Conductor</motion.h1>
-                <motion.h3 variants={animations}>SOLO PROJECT</motion.h3>
-                <motion.img 
-                    variants={animations}
+                <h1>Conductor</h1>
+                <h3>SOLO PROJECT</h3>
+                <img 
                     width='769px'
                     height='388px'  
                     alt='' 
                     src={projImg1} 
                     className='project-img'
                 />
-                <motion.div className='p1-info'>
-                    <motion.div 
-                        className='p1-info-wrapper'
-                        variants={animations} 
-                    >
+                <div className='p1-info'>
+                    <div className='p1-info-wrapper'>
                         <div className='p1-info-role'>
                             <span>Role</span>
                             <h4>Sole Developer</h4>
@@ -65,54 +59,45 @@ const Project3 = () => {
                                 <h4>Github</h4>
                             </div>
                         </div>
-                    </motion.div>
-                    <motion.div 
-                        className='p1-contr'
-                        variants={animations} 
-                    >
-                        <motion.span>Overview</motion.span>
-                        <motion.p variants={animations}>
+                    </div>
+                    <div className='p1-contr'>
+                        <span>Overview</span>
+                        <p>
                             I was fascinated by machine learning and decided to work with this technology to build Conductor. 
-                        </motion.p>
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             Conductor is a web based game where character movement is not controlled by the keyboard or mouse, but instead by hand motions in the webcam!
-                        </motion.p>
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             Please check out the screen demo of the game below.
-                        </motion.p>
-                    </motion.div>
-                    <motion.div 
-                        className='player-wrapper-p3'
-                        variants={animations} 
-                    >
+                        </p>
+                    </div>
+                    <div className='player-wrapper-p3'>
                         <ReactPlayer 
                             url={'https://vimeo.com/705247868'} 
                             width='100%' 
                             height='100%'
                             className='react-player-p3' 
                         />
-                    </motion.div>
-                    <motion.div 
-                        className='p1-contr2'
-                        variants={animations} 
-                    >
-                        <motion.span>Contributions</motion.span>
-                        <motion.p variants={animations}>
+                    </div>
+                    <div className='p1-contr2'>
+                        <span>Contributions</span>
+                        <p>
                             Utilized Teachable Machine to train different image classification models based on TensorFlow.js technology.
-                        </motion.p>
-                        <motion.p variants={animations}>
+                        </p>
+                        <p>
                             Built the web game using the Phaser3 library.
-                        </motion.p>
-                    </motion.div>
-                </motion.div>
-                <motion.div className='proj-icon'>
+                        </p>
+                    </div>
+                </div>
+                <div className='proj-icon'>
                     <ViewComfyIcon 
                         className='pj-icon' 
                         fontSize='large' 
                         onClick={() => navigate('/portfolio')}
                     />
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </motion.div>
     )
 }
